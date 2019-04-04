@@ -21,5 +21,6 @@ team modify pink nametagVisibility always
 team modify gray_dark nametagVisibility always
 team modify aqua nametagVisibility always
 team modify aqua_dark nametagVisibility always
+team modify betrayer nametagVisibility always
 
 team modify solo nametagVisibility always

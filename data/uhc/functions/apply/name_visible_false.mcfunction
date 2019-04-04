@@ -21,5 +21,6 @@ team modify pink nametagVisibility hideForOtherTeams
 team modify gray_dark nametagVisibility hideForOtherTeams
 team modify aqua nametagVisibility hideForOtherTeams
 team modify aqua_dark nametagVisibility hideForOtherTeams
+team modify betrayer nametagVisibility hideForOtherTeams
 
 team modify solo nametagVisibility never

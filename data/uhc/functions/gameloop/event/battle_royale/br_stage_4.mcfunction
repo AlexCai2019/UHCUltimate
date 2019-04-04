@@ -32,4 +32,4 @@ execute as 00000000-0000-0000-0000-000000000001 if score @s map_size matches 752
 execute as 00000000-0000-0000-0000-000000000001 if score @s map_size matches 1008 run function uhc:gameloop/event/battle_royale/border/1008_2
 
 #border damage
-worldborder damage amount 0.3
+worldborder damage amount 0.1

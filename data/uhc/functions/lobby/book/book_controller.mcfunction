@@ -7,7 +7,7 @@
 # func    : Handle all book-setting sub-functions.
 #########################################################
 
-#non-used number: 12~15, 29~30, 34, 70, 84, 103~
+#non-used number: 12~15, 29~30, 34, 70, 84, 91, 113~
 
 #play sound
 execute as @a[scores={book=1..}] at @s run playsound entity.experience_orb.pickup voice @s ~ ~ ~ 0.7
@@ -73,6 +73,9 @@ execute if entity @a[scores={book=28}] run function uhc:lobby/settings/allow_dia
 
 #book = 31 ~ 33, nether
 execute if entity @a[scores={book=31..33}] run function uhc:lobby/settings/nether
+
+#book = 106 ~ 112, betrayer
+execute if entity @a[scores={book=106..112}] run function uhc:lobby/settings/betray
 
 #book = 35 ~ 40, potion, include notch apple and suspicious stew
 execute if entity @a[scores={book=35..40}] run function uhc:lobby/settings/potion
@@ -141,7 +144,7 @@ execute if entity @a[scores={book=88}] run function uhc:lobby/settings/saddle_cr
 execute if entity @a[scores={book=90}] run function uhc:lobby/settings/fish_craft
 
 #book = 91, nerf arrow
-execute if entity @a[scores={book=91}] run function uhc:lobby/settings/nerf_arrow
+execute if entity @a[scores={book=104..105}] run function uhc:lobby/settings/nerf_arrow
 
 #book = 92, random chest
 execute if entity @a[scores={book=92..94}] run function uhc:lobby/settings/random_chest

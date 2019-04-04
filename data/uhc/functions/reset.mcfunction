@@ -63,6 +63,10 @@ scoreboard objectives remove night_vision
 scoreboard objectives remove allow_diamond
 scoreboard objectives remove nether_open
 scoreboard objectives remove nether_time
+scoreboard objectives remove betray
+scoreboard objectives remove betray_time
+scoreboard objectives remove betray_tp
+scoreboard objectives remove betray_num
 scoreboard objectives remove stew_get
 scoreboard objectives remove potion_brew
 #scoreboard objectives remove potion_regen
@@ -107,6 +111,7 @@ scoreboard objectives remove reverse_craft
 scoreboard objectives remove saddle
 scoreboard objectives remove fish_bucket
 scoreboard objectives remove nerf_arrow
+scoreboard objectives remove no_burn
 scoreboard objectives remove random_chest
 scoreboard objectives remove chest_num
 scoreboard objectives remove information
@@ -130,10 +135,10 @@ scoreboard objectives remove posX
 scoreboard objectives remove posY
 scoreboard objectives remove posZ
 scoreboard objectives remove stone_penalty
-scoreboard objectives remove silver
-scoreboard objectives remove leaf
-scoreboard objectives remove shear
-scoreboard objectives remove uuid
+#scoreboard objectives remove silver
+#scoreboard objectives remove leaf
+#scoreboard objectives remove shear
+#scoreboard objectives remove uuid
 scoreboard objectives remove I 
 scoreboard objectives remove V
 scoreboard objectives remove X
@@ -153,10 +158,10 @@ scoreboard objectives remove pufferfish
 scoreboard objectives remove tropicalfish
 scoreboard objectives remove lottery
 scoreboard objectives remove lottery_count
-scoreboard objectives remove rescure
-scoreboard objectives remove modify_health
-scoreboard objectives remove rescure_tick
-scoreboard objectives remove rescure_time
+#scoreboard objectives remove rescure
+#scoreboard objectives remove modify_health
+#scoreboard objectives remove rescure_tick
+#scoreboard objectives remove rescure_time
 
 #remove tag
 tag @a remove player
@@ -184,8 +189,9 @@ tag @a remove silverfish
 tag @a remove lucky_leaves
 tag @a remove gold_head_normal
 tag @a remove gold_head_fast
-tag @a remove knocked_down
-tag @a remove relife
+tag @a remove betrayer
+#tag @a remove knocked_down
+#tag @a remove relife
 
 #remove team
 team remove solo
@@ -204,6 +210,7 @@ team remove aqua
 team remove aqua_dark
 team remove pink
 team remove gray_dark
+team remove betrayer
 team remove winner
 
 #bossbar
@@ -240,6 +247,7 @@ kill @e[tag=sec]
 kill @e[tag=min]
 kill @e[tag=ref]
 kill @e[tag=tp]
+kill @e[tag=bty_set]
 kill @e[tag=silver]
 kill @e[tag=apple]
 kill @e[tag=arrow]

@@ -87,8 +87,7 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:debug_stick"}}] at @s run funct
 #scoreboard players set @a[scores={shear=1..}] shear 0
 
 #nerf arrow.
-execute if score @s nerf_arrow matches 1 as @e[type=arrow,tag=!arrow] run function uhc:apply/nerf_arrow
-execute if score @s nerf_arrow matches 1 as @e[type=spectral_arrow,tag=!arrow] run function uhc:apply/nerf_arrow
+execute if score @s nerf_arrow matches 1 as @e[type=#uhc:arrow,tag=!arrow] run function uhc:apply/nerf_arrow
 
 #random chest penalty.
 execute as @e[type=item,nbt={Item:{id:"minecraft:structure_void"}}] at @s run function uhc:apply/random_chest_bad

@@ -36,6 +36,7 @@ execute if entity @s[team=pink] unless entity @a[team=pink,gamemode=survival] ru
 execute if entity @s[team=gray_dark] unless entity @a[team=gray_dark,gamemode=survival] run kill @e[tag=ref,tag=gyd]
 execute if entity @s[team=aqua] unless entity @a[team=aqua,gamemode=survival] run kill @e[tag=ref,tag=aq]
 execute if entity @s[team=aqua_dark] unless entity @a[team=aqua_dark,gamemode=survival] run kill @e[tag=ref,tag=aqd]
+execute if entity @s[team=betrayer] unless entity @a[team=betrayer,gamemode=survival] run kill @e[tag=ref,tag=bty]
 
 tag @s add died
 

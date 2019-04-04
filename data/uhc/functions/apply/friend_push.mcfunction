@@ -21,3 +21,4 @@ team modify pink collisionRule pushOtherTeams
 team modify gray_dark collisionRule pushOtherTeams
 team modify aqua collisionRule pushOtherTeams
 team modify aqua_dark collisionRule pushOtherTeams
+team modify betrayer collisionRule pushOtherTeams

@@ -99,6 +99,10 @@ scoreboard objectives add allow_diamond dummy {"text":"允許鑽裝"}
 #### book2 ##########################################################
 scoreboard objectives add nether_open dummy {"text":"開放地獄"}
 scoreboard objectives add nether_time dummy {"text":"地獄時間"}
+scoreboard objectives add betray dummy {"text":"背叛"}
+scoreboard objectives add betray_time dummy {"text":"背叛時間"}
+scoreboard objectives add betray_tp dummy {"text":"背叛傳送時間"}
+scoreboard objectives add betray_num dummy {"text":"背叛人數"}
 scoreboard objectives add stew_get dummy {"text":"可疑的湯"}
 scoreboard objectives add potion_brew dummy {"text":"釀造藥水"}
 #scoreboard objectives add potion_regen dummy {"text":"回復藥水"}
@@ -146,6 +150,7 @@ scoreboard objectives add reverse_craft dummy {"text":"分解金裝"}
 scoreboard objectives add saddle dummy {"text":"合成馬鞍"}
 scoreboard objectives add fish_bucket dummy {"text":"合成魚桶"}
 scoreboard objectives add nerf_arrow dummy {"text":"弓箭削弱"}
+scoreboard objectives add no_burn dummy {"text":"弓箭熄火"}
 scoreboard objectives add random_chest dummy {"text":"隨機物資箱"}
 scoreboard objectives add chest_num dummy {"text":"物資箱數量"}
 #### stats ############################################################
@@ -202,11 +207,11 @@ scoreboard objectives add tropicalfish minecraft.crafted:minecraft.tropical_fish
 #### lottery ################################################################
 scoreboard objectives add lottery trigger {"text":"抽獎"}
 scoreboard objectives add lottery_count dummy {"text":"抽獎計數"}
-#### rescure ###############################################################
-scoreboard objectives add rescure dummy {"text":"救援隊友"}
-scoreboard objectives add modify_health dummy {"text":"血量"}
-scoreboard objectives add rescure_tick dummy {"text":"救援刻"}
-scoreboard objectives add rescure_time dummy {"text":"救援秒"}
+#### rescure (have not been implemented) #####################################
+#scoreboard objectives add rescure dummy {"text":"救援隊友"}
+#scoreboard objectives add modify_health dummy {"text":"血量"}
+#scoreboard objectives add rescure_tick dummy {"text":"救援刻"}
+#scoreboard objectives add rescure_time dummy {"text":"救援秒"}
 
 #scoreboard initialize
 scoreboard players set @e[tag=main] underclock 0
@@ -214,8 +219,8 @@ scoreboard players set @e[tag=main] underclock 0
 scoreboard players set @e[tag=main] random_team_stop 1
 scoreboard players set @e[tag=main] random_team_num 7
 scoreboard players set @e[tag=main] rteam_start 0
-scoreboard players set @e[tag=main] team_permission 1
-scoreboard players set @e[tag=assist] team_permission 0
+scoreboard players set @e[tag=main] team_permission 0
+scoreboard players set @e[tag=assist] team_permission 1
 scoreboard players set @e[tag=main] spec_permission 1
 scoreboard players set @e[tag=assist] spec_permission 0
 scoreboard players set @e[tag=main] map_size 496
@@ -256,6 +261,11 @@ scoreboard players set @e[tag=assist] allow_diamond 0
 scoreboard players set @e[tag=main] nether_open 1
 scoreboard players set @e[tag=assist] nether_open 0
 scoreboard players set @e[tag=main] nether_time 80
+scoreboard players set @e[tag=main] betray 0
+scoreboard players set @e[tag=assist] betray 1
+scoreboard players set @e[tag=main] betray_time 35
+scoreboard players set @e[tag=main] betray_tp 40
+scoreboard players set @e[tag=main] betray_num 3
 scoreboard players set @e[tag=main] stew_get 0
 scoreboard players set @e[tag=assist] stew_get 1
 scoreboard players set @e[tag=main] potion_brew 0
@@ -333,6 +343,8 @@ scoreboard players set @e[tag=main] fish_bucket 1
 scoreboard players set @e[tag=assist] fish_bucket 0
 scoreboard players set @e[tag=main] nerf_arrow 1
 scoreboard players set @e[tag=assist] nerf_arrow 0
+scoreboard players set @e[tag=main] no_burn 1
+scoreboard players set @e[tag=assist] no_burn 0
 scoreboard players set @e[tag=main] random_chest 0
 scoreboard players set @e[tag=assist] random_chest 1
 scoreboard players set @e[tag=main] chest_num 20
@@ -349,10 +361,10 @@ scoreboard players set negative_I n_I -1
 #### lottery ########################################################
 scoreboard players set @e[tag=lottery] lottery_count 0
 #### rescure ########################################################
-scoreboard players set @e[tag=main] rescure 0
-scoreboard players set @e[tag=assist] rescure 1
-scoreboard players set @a rescure_tick 0
-scoreboard players set @a rescure_time 0
+#scoreboard players set @e[tag=main] rescure 0
+#scoreboard players set @e[tag=assist] rescure 1
+#scoreboard players set @a rescure_tick 0
+#scoreboard players set @a rescure_time 0
 
 #team creat
 team add solo
@@ -371,6 +383,7 @@ team add aqua
 team add aqua_dark
 team add pink
 team add gray_dark
+team add betrayer
 team add winner
 
 #team color
@@ -390,6 +403,7 @@ team modify aqua color aqua
 team modify aqua_dark color dark_aqua
 team modify pink color light_purple
 team modify gray_dark color dark_gray
+team modify betrayer color black
 
 #bossbar
 bossbar add uhc:read_progress {"text":"跑圖進度"}

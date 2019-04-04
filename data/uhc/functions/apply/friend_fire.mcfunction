@@ -21,3 +21,4 @@ team modify pink friendlyFire false
 team modify gray_dark friendlyFire false
 team modify aqua friendlyFire false
 team modify aqua_dark friendlyFire false
+team modify betrayer friendlyFire false

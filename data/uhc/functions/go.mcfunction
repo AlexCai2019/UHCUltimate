@@ -88,7 +88,9 @@ execute if score @s slow_fall matches 1 run function uhc:apply/spread_1
 execute as @a at @s run playsound minecraft:entity.ender_dragon.growl ambient @s ~ ~ ~ 0.5
 
 #clear lobby
-execute at @s run fill ~-9 149 ~-9 ~8 155 ~8 air replace
+execute at @s run fill ~-8 150 ~-8 ~7 160 ~7 air replace
+execute if score @s betray matches 0 at @s run fill ~-9 149 ~-9 ~8 160 ~8 air replace
+execute if score @s betray matches 1 at @s run summon area_effect_cloud ~ 151 ~ {Tags:[bty_set],Duration:2147483647,Particle:"block air"}
 tp @s 00000000-0000-0000-0000-000000000002
 kill @e[tag=show]
 kill @e[type=item]

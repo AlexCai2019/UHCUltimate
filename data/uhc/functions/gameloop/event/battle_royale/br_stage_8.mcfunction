@@ -33,4 +33,4 @@ execute if score 00000000-0000-0000-0000-000000000001 BR_shrink_time matches 4 r
 execute if score 00000000-0000-0000-0000-000000000001 BR_shrink_time matches 5 run worldborder set 16 300
 
 #border damage
-worldborder damage amount 0.5
+worldborder damage amount 0.25

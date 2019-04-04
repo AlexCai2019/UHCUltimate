@@ -26,6 +26,7 @@ execute if entity @e[tag=ref,tag=pk] run tag @a[team=pink] add win
 execute if entity @e[tag=ref,tag=gyd] run tag @a[team=gray_dark] add win
 execute if entity @e[tag=ref,tag=aq] run tag @a[team=aqua] add win
 execute if entity @e[tag=ref,tag=aqd] run tag @a[team=aqua_dark] add win
+execute if entity @e[tag=ref,tag=bty] run tag @a[team=betrayer] add win
 
 #winner suffix
 team join winner @a[tag=win,team=solo]
@@ -44,6 +45,7 @@ execute if entity @a[tag=win,team=pink] run team modify pink suffix {"text":" [�
 execute if entity @a[tag=win,team=gray_dark] run team modify gray_dark suffix {"text":" [勝利者]"}
 execute if entity @a[tag=win,team=aqua] run team modify aqua suffix {"text":" [勝利者]"}
 execute if entity @a[tag=win,team=aqua_dark] run team modify aqua_dark suffix {"text":" [勝利者]"}
+execute if entity @a[tag=win,team=betrayer] run team modify betrayer suffix {"text":" [勝利者]"}
 
 #stats
 execute as @a run scoreboard players operation @s final_kill = @s temp_kill

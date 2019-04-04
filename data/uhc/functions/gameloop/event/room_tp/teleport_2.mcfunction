@@ -9,6 +9,7 @@
 
 tp @a[team=solo] ~ ~ ~
 tp @a[team=spec] ~ ~ ~
+tp @a[team=betrayer] ~ ~ ~
 tp @a[team=winner] ~ ~ ~
 execute at @e[tag=r_tp] run tp @a[team=red] ~ ~ ~ facing entity @s eyes
 execute at @e[tag=b_tp] run tp @a[team=blue] ~ ~ ~ facing entity @s eyes

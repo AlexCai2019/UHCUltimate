@@ -18,6 +18,10 @@ summon area_effect_cloud ~ ~ ~ {Tags:[min],Age:-1200,Particle:"block air"}
 execute if score @s[scores={nether_open=1}] timer_min >= @s nether_notifier run function uhc:gameloop/event/notifier/nether
 execute if score @s[scores={nether_open=1}] timer_min >= @s nether_time run function uhc:gameloop/event/nether_close
 
+#betrayer
+execute if score @s[scores={betray=1}] timer_min >= @s betray_time run function uhc:gameloop/event/betray/select
+execute if score @s[scores={betray=1}] timer_min >= @s betray_tp run function uhc:gameloop/event/betray/teleport
+
 #border mode --- shrink
 execute if score @s[scores={border_on=1}] timer_min >= @s border_start if entity @e[tag=m1,scores={border_mode=1}] run function uhc:gameloop/event/shrink_start
 
