@@ -7,6 +7,6 @@
 # func    : Select betrayers.
 #########################################################
 
-execute at @e[tag=bty_set] run spreadplayers ~ ~ 0 124 true @a[team=betrayer]
+execute at @e[tag=set] run spreadplayers ~ ~ 0 124 true @a[team=betrayer]
 
-kill @e[tag=bty_set]
+#kill @e[tag=set]

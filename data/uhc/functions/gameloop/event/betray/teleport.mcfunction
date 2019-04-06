@@ -36,7 +36,7 @@ execute if entity @a[tag=betrayer,gamemode=survival] run summon area_effect_clou
 title @a[tag=betrayer,gamemode=survival] title {"text":"整裝時間: 3分鐘"}
 title @a[tag=betrayer,gamemode=survival] subtitle {"text":""}
 
-tp @a[tag=betrayer] @e[tag=bty_set,limit=1]
+tp @a[tag=betrayer] @e[tag=set,limit=1]
 
 scoreboard players set @s betray_tp 999
 

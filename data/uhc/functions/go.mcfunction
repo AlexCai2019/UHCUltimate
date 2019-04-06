@@ -82,6 +82,7 @@ scoreboard players operation @s BR_factor /= @s BR_shrink_time
 
 #spreadplayers 
 execute if score @s slow_fall matches 1 run function uhc:apply/spread_1
+execute if score @s slow_fall matches 0 as @a at @s run tp @s ~ 147 ~
 #function uhc:apply/spread_1
 
 #start sound
@@ -90,7 +91,6 @@ execute as @a at @s run playsound minecraft:entity.ender_dragon.growl ambient @s
 #clear lobby
 execute at @s run fill ~-8 150 ~-8 ~7 160 ~7 air replace
 execute if score @s betray matches 0 at @s run fill ~-9 149 ~-9 ~8 160 ~8 air replace
-execute if score @s betray matches 1 at @s run summon area_effect_cloud ~ 151 ~ {Tags:[bty_set],Duration:2147483647,Particle:"block air"}
 tp @s 00000000-0000-0000-0000-000000000002
 kill @e[tag=show]
 kill @e[type=item]
@@ -138,10 +138,7 @@ scoreboard players set @a temp_stone 0
 scoreboard players set @a temp_diamond 0
 scoreboard players set @a temp_gold 0
 scoreboard players set @a temp_apple 0
-#scoreboard players set @a temp_hit 0
-#scoreboard players set @a temp_hit_m 0
 scoreboard players set @a temp_hurt 0
-#scoreboard players set @a hit_adv_buffer 0
 scoreboard players set @a gh_craft 0
 scoreboard players set @a cod 0
 scoreboard players set @a salmon 0

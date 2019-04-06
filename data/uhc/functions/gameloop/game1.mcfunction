@@ -16,6 +16,9 @@ execute as @a[tag=!game_start] run function uhc:gameloop/join_game
 #damage notifier
 execute unless entity @e[tag=win] as @a[scores={warn=1..},gamemode=survival] run function uhc:gameloop/damage
 
+#betrayer lava limit
+execute if entity @s[scores={betray_time=999,betray_tp=..900}] if entity @a[tag=betrayer,scores={lava=1..}] run function uhc:gameloop/event/betray/lava
+
 #stew_take
 execute if score @s stew_get matches 0 run clear @a suspicious_stew
 

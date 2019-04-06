@@ -47,6 +47,7 @@ execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w2,car
 execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w3,carry],CustomName:"{\"text\":\"§8雷暴\"}",Duration:2147483647,Particle:"block air",UUIDLeast:15,UUIDMost:0}
 execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[gh,g1,carry],CustomName:"{\"text\":\"§5標準\"}",Duration:2147483647,Particle:"block air",UUIDLeast:16,UUIDMost:0}
 execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[gh,g2,carry],CustomName:"{\"text\":\"§5快速\"}",Duration:2147483647,Particle:"block air",UUIDLeast:17,UUIDMost:0}
+execute at @e[tag=main] run summon area_effect_cloud ~ 151 ~ {Tags:[set],Duration:2147483647,Particle:"block air",UUIDLeast:18,UUIDMost:0}
 
 #set world center
 execute at @e[tag=main] run tp @e[tag=lobby] ~-0.5 150 ~-0.5
@@ -103,6 +104,7 @@ scoreboard objectives add betray dummy {"text":"背叛"}
 scoreboard objectives add betray_time dummy {"text":"背叛時間"}
 scoreboard objectives add betray_tp dummy {"text":"背叛傳送時間"}
 scoreboard objectives add betray_num dummy {"text":"背叛人數"}
+scoreboard objectives add lava minecraft.used:minecraft.lava_bucket {"text":"使用岩漿桶"}
 scoreboard objectives add stew_get dummy {"text":"可疑的湯"}
 scoreboard objectives add potion_brew dummy {"text":"釀造藥水"}
 #scoreboard objectives add potion_regen dummy {"text":"回復藥水"}
@@ -263,8 +265,8 @@ scoreboard players set @e[tag=assist] nether_open 0
 scoreboard players set @e[tag=main] nether_time 80
 scoreboard players set @e[tag=main] betray 0
 scoreboard players set @e[tag=assist] betray 1
-scoreboard players set @e[tag=main] betray_time 35
-scoreboard players set @e[tag=main] betray_tp 40
+scoreboard players set @e[tag=main] betray_time 50
+scoreboard players set @e[tag=main] betray_tp 60
 scoreboard players set @e[tag=main] betray_num 3
 scoreboard players set @e[tag=main] stew_get 0
 scoreboard players set @e[tag=assist] stew_get 1

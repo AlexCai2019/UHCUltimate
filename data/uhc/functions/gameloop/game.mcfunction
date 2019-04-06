@@ -44,6 +44,9 @@ execute if score @s allow_diamond matches 0 run clear @a #uhc:diamond
 #nether.
 execute if score @s nether_open matches ..0 run function uhc:gameloop/event/nether_penalty
 
+#betrayer lava limit
+execute if entity @s[scores={betray_time=999,betray_tp=..900}] if entity @a[tag=betrayer,scores={lava=1..}] run function uhc:gameloop/event/betray/lava
+
 #stew_take.
 execute if score @s stew_get matches 0 run clear @a suspicious_stew
 

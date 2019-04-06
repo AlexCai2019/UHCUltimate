@@ -67,6 +67,7 @@ scoreboard objectives remove betray
 scoreboard objectives remove betray_time
 scoreboard objectives remove betray_tp
 scoreboard objectives remove betray_num
+scoreboard objectives remove lava
 scoreboard objectives remove stew_get
 scoreboard objectives remove potion_brew
 #scoreboard objectives remove potion_regen
@@ -247,7 +248,7 @@ kill @e[tag=sec]
 kill @e[tag=min]
 kill @e[tag=ref]
 kill @e[tag=tp]
-kill @e[tag=bty_set]
+kill @e[tag=set]
 kill @e[tag=silver]
 kill @e[tag=apple]
 kill @e[tag=arrow]

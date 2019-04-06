@@ -30,4 +30,5 @@ title @a[tag=betrayer] title {"text":"你成為了背叛者","color":"red"}
 title @a[tag=betrayer] subtitle {"text":"隱藏身份 掠奪資源 協助隊友","italic":true}
 tellraw @a[tag=betrayer] {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"你的隊友:"},{"selector":"@a[tag=betrayer]"}]}
 
+scoreboard players set @a lava 0
 scoreboard players set @s betray_time 999

@@ -23,8 +23,7 @@ execute store result score 邊界大小 information run worldborder get
 execute if score @s glowing matches 2 run effect give @a glowing 999999 0 true
 
 #nerf arrow
-execute if score @s nerf_arrow matches 1 as @e[type=arrow,tag=!arrow] run function uhc:apply/nerf_arrow
-execute if score @s nerf_arrow matches 1 as @e[type=spectral_arrow,tag=!arrow] run function uhc:apply/nerf_arrow
+execute if score @s nerf_arrow matches 1 as @e[type=#uhc:arrow,tag=!arrow] run function uhc:apply/nerf_arrow
 
 #battle royale hint
 execute if score @s BR_stage matches 1..8 run function uhc:gameloop/event/battle_royale/self_check_2
