@@ -26,8 +26,7 @@ execute if score @s ground_limit matches 2 run function uhc:gameloop/event/groun
 
 #random silverfish
 #execute if score @s rand_silverfish matches 1 at @a[scores={silver=1..}] run function uhc:apply/rand_silverfish
-execute as @e[type=item,nbt={Item:{id:"minecraft:debug_stick"}}] run function uhc:apply/rand_silverfish
-
+execute as @e[type=item,nbt={Item:{id:"minecraft:debug_stick"}}] at @s run function uhc:apply/rand_silverfish
 #random chest penalty
 execute as @e[type=item,nbt={Item:{id:"minecraft:structure_void"}}] at @s run function uhc:apply/random_chest_bad
 
