@@ -183,6 +183,7 @@ scoreboard objectives add posZ dummy {"text":"Z座標"}
 #### other ####################################################################
 #scoreboard objectives add remain dummy {"text":"剩餘隊伍"}
 scoreboard objectives add I dummy {"text":"常數1"}
+scoreboard objectives add III dummy {"text":"常數3"}
 scoreboard objectives add V dummy {"text":"常數5"}
 scoreboard objectives add X dummy {"text":"常數10"}
 scoreboard objectives add XIII dummy {"text":"常數13"}
@@ -190,6 +191,7 @@ scoreboard objectives add XIII dummy {"text":"常數13"}
 scoreboard objectives add sky_notifier dummy {"text":"制空提醒"}
 scoreboard objectives add gnd_notifier dummy {"text":"遁地提醒"}
 scoreboard objectives add nether_notifier dummy {"text":"地獄提醒"}
+scoreboard objectives add betray_notifier dummy {"text":"背叛提醒"}
 scoreboard objectives add stone_penalty minecraft.mined:minecraft.stone {"text":"石頭懲罰"}
 #scoreboard objectives add silver minecraft.mined:minecraft.stone {"text":"蠹魚生成"}
 #scoreboard objectives add leaf minecraft.mined:minecraft.oak_leaves {"text":"破壞樹葉"}
@@ -356,6 +358,7 @@ scoreboard players set @e[tag=main] BR_stage 0
 scoreboard players set @e[tag=main] BR_factor 20
 #### constant ########################################################
 scoreboard players set const1 I 1
+scoreboard players set const3 III 3
 scoreboard players set const5 V 5
 scoreboard players set const10 X 10
 scoreboard players set const13 XIII 13

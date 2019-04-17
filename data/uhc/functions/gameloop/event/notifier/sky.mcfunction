@@ -1,6 +1,6 @@
 #########################################################
 # UHC Project 
-# Name    : nether.mcfunction 
+# Name    : sky.mcfunction 
 # Made by : jelly99709
 # Path    : /gameloop/event/notifier/
 # Loop    : No

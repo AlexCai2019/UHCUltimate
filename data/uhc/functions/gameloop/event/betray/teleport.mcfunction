@@ -42,6 +42,7 @@ scoreboard players set @s betray_tp 999
 
 execute store result score 剩餘隊伍 information run execute if entity @e[tag=ref]
 
+schedule function uhc:gameloop/event/notifier/betray3 2400t
 schedule function uhc:gameloop/event/betray/spread 3600t
 
 

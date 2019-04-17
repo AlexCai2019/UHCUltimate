@@ -27,7 +27,7 @@ execute if score @s betray_num matches 14 run tag @r[gamemode=survival,limit=14]
 execute if score @s betray_num matches 15 run tag @r[gamemode=survival,limit=15] add betrayer
 
 title @a[tag=betrayer] title {"text":"你成為了背叛者","color":"red"}
-title @a[tag=betrayer] subtitle {"text":"隱藏身份 掠奪資源 協助隊友","italic":true}
+title @a[tag=betrayer] subtitle {"text":"","extra":[{"text":"你的隊友:"},{"selector":"@a[tag=betrayer]","italic":true}]}
 tellraw @a[tag=betrayer] {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"你的隊友:"},{"selector":"@a[tag=betrayer]"}]}
 
 scoreboard players set @a lava 0

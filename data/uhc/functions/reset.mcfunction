@@ -140,13 +140,15 @@ scoreboard objectives remove stone_penalty
 #scoreboard objectives remove leaf
 #scoreboard objectives remove shear
 #scoreboard objectives remove uuid
-scoreboard objectives remove I 
+scoreboard objectives remove I
+scoreboard objectives remove III
 scoreboard objectives remove V
 scoreboard objectives remove X
 scoreboard objectives remove XIII
 scoreboard objectives remove sky_notifier
 scoreboard objectives remove gnd_notifier
 scoreboard objectives remove nether_notifier
+scoreboard objectives remove betray_notifier
 scoreboard objectives remove BR_move
 scoreboard objectives remove BR_xdiff
 scoreboard objectives remove BR_zdiff

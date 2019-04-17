@@ -130,6 +130,8 @@ scoreboard players operation @s gnd_notifier = @s ground_time
 scoreboard players operation @s gnd_notifier -= const5 V
 scoreboard players operation @s sky_notifier = @s sky_time
 scoreboard players operation @s sky_notifier -= const5 V
+scoreboard players operation @s betray_notifier = @s betray_time
+scoreboard players operation @s betray_notifier -= const3 III
 
 #stats reset
 scoreboard players set @a death 0
