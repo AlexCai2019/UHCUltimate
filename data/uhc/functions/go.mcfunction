@@ -121,6 +121,8 @@ tag @a add game_start
 execute if score 00000000-0000-0000-0000-000000000001 rand_silverfish matches 1 run tag @a add silverfish
 execute if score 00000000-0000-0000-0000-000000000001 rand_apple matches 1 run tag @a add lucky_leaves
 execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if score 00000000-0000-0000-0000-000000000010 gh_mode matches 1 run tag @a add gold_head_normal
+execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 0 run recipe take @a uhc:gold_head
+execute if score 00000000-0000-0000-0000-000000000010 gh_mode matches 0 run recipe take @a uhc:gold_head
 execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if score 00000000-0000-0000-0000-000000000011 gh_mode matches 1 run tag @a add gold_head_fast
 
 #notifier
