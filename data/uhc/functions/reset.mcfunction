@@ -193,6 +193,7 @@ tag @a remove lucky_leaves
 tag @a remove gold_head_normal
 tag @a remove gold_head_fast
 tag @a remove betrayer
+tag @a remove candidate
 #tag @a remove knocked_down
 #tag @a remove relife
 

@@ -17,7 +17,7 @@ gamerule commandBlockOutput false
 gamerule sendCommandFeedback false
 gamerule logAdminCommands false
 gamerule disableElytraMovementCheck true
-gamerule spectatorsGenerateChunks false
+gamerule spectatorsGenerateChunks true
 gamerule spawnRadius 0
 defaultgamemode survival
 weather clear 1
@@ -39,7 +39,7 @@ execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~1 {Tags:[pause,p2,carr
 execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~1 {Tags:[sub3],Duration:2147483647,Particle:"block air",UUIDLeast:7,UUIDMost:0}
 execute at @e[tag=main] run summon area_effect_cloud ~ ~1 ~2 {Tags:[load],Duration:2147483647,Particle:"block air",UUIDLeast:8,UUIDMost:0,Rotation:[180.0f,0.0f]}
 execute at @e[tag=main] run summon area_effect_cloud ~ 255 ~ {Tags:[center],Duration:2147483647,Particle:"block air",UUIDLeast:9,UUIDMost:0}
-execute at @e[tag=main] run summon armor_stand ~ 255 ~ {Tags:[move],Invisible:1,Invulnerable:1,Marker:1,Small:1,NoGravity:1,UUIDLeast:12,UUIDMost:0} 
+execute at @e[tag=main] run summon armor_stand ~ 255 ~ {Tags:[move],Invisible:1,Invulnerable:1,Small:1,NoGravity:1,UUIDLeast:12,UUIDMost:0} 
 execute at @e[tag=main] run summon armor_stand ~ ~ ~ {Tags:[show,lobby],CustomName:"{\"text\":\"UHC: \",\"color\":\"red\",\"bold\":true,\"extra\":[{\"text\":\"Evolve\",\"color\":\"gold\",\"italic\":true,\"bold\":false}]}",CustomNameVisible:1,NoGravity:1,Marker:0,Invisible:1,Invulnerable:1,Small:1,UUIDLeast:10,UUIDMost:0,DisabledSlots:2096896,ShowArms:1,ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"jelly99709"}}],HandItems:[{id:"trident",Count:1b,tag:{ench:[{id:16,lvl:1}]}},{id:"trident",Count:1b,tag:{ench:[{id:16,lvl:1}]}}],Pose:{LeftArm:[330f,90f,0f],RightArm:[330f,270f,0f]}}
 #execute at @e[tag=main] run summon armor_stand ~ ~1 ~ {Tags:[show,lobby],CustomName:"{\"text\":\"UHC: \",\"color\":\"red\",\"bold\":true,\"extra\":[{\"text\":\"Evolve\",\"color\":\"gold\",\"italic\":true,\"bold\":false}]}",CustomNameVisible:1,NoGravity:1,Marker:0,Invisible:1,Invulnerable:1,Small:1,UUIDLeast:10,UUIDMost:0,DisabledSlots:2096896}
 execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w1,carry],CustomName:"{\"text\":\"§8晴朗\"}",Duration:2147483647,Particle:"block air",UUIDLeast:13,UUIDMost:0}

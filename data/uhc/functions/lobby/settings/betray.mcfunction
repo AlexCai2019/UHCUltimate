@@ -25,8 +25,8 @@ execute if entity @a[scores={book=111}] run scoreboard players remove @s betray_
 execute if entity @a[scores={book=112}] run scoreboard players add @s betray_tp 20
 
 scoreboard players set @e[tag=book,scores={betray=2..}] betray 0
-scoreboard players set @s[scores={betray_num=15..}] betray_num 1
-scoreboard players set @s[scores={betray_num=..0}] betray_num 15
+scoreboard players set @s[scores={betray_num=5..}] betray_num 1
+scoreboard players set @s[scores={betray_num=..0}] betray_num 4
 scoreboard players set @s[scores={betray_time=76..}] betray_time 5
 scoreboard players set @s[scores={betray_time=..4}] betray_time 75
 scoreboard players set @s[scores={betray_tp=81..}] betray_tp 20

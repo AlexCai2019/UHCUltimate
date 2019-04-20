@@ -14,6 +14,7 @@ execute as @a at @s run playsound minecraft:entity.firework_rocket.launch ambien
 team join betrayer @a[tag=betrayer]
 
 effect give @a[tag=betrayer] resistance 180 9 true
+effect give @a[tag=betrayer] weakness 180 9 true
 
 execute as @a[tag=betrayer,team=solo] run kill @e[tag=ref,tag=solo]
 execute unless entity @a[team=red,gamemode=survival] run kill @e[tag=ref,tag=r]
