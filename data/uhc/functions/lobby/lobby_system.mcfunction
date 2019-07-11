@@ -34,7 +34,10 @@ execute store result score 人數 information run execute if entity @a[team=!spe
 #show
 execute as 00000000-0000-0000-0000-00000000000a at @s run tp @s ~ ~ ~ ~4 ~ 
 execute at @s run particle minecraft:portal ~ ~ ~ .5 .25 .5 .5 1 force
+
+#signs
 execute if entity @a[scores={lottery=1}] as @e[tag=lottery] at @s run function uhc:lobby/lottery/init
+execute as @a[scores={view_settings=1}] run function uhc:lobby/view_settings
 
 #choose team controller
 execute if entity @a[scores={choose_team=1},team=!solo] run team join solo @a[scores={choose_team=1},team=!solo]

@@ -21,3 +21,4 @@ execute if entity @s[scores={room=0}] run scoreboard players set @s room -1
 execute if entity @s[scores={room=1}] run scoreboard players set @e[tag=assist] room 1
 execute if entity @s[scores={room=1}] run scoreboard players set @s room 0
 
+execute if entity @e[tag=assist,scores={room=0}] run tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定","color":"aqua"},{"text":" | ","color":"white"},{"text":"決戰房間","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}

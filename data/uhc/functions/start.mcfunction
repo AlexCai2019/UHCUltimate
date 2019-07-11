@@ -17,8 +17,9 @@ gamerule commandBlockOutput false
 gamerule sendCommandFeedback false
 gamerule logAdminCommands false
 gamerule disableElytraMovementCheck true
-gamerule spectatorsGenerateChunks true
+gamerule spectatorsGenerateChunks false
 gamerule spawnRadius 0
+gamerule disableRaids true
 defaultgamemode survival
 weather clear 1
 difficulty hard
@@ -58,7 +59,7 @@ worldborder set 496
 #construct lobby
 #execute at @e[tag=main] run fill ~-9 ~-1 ~-9 ~8 ~4 ~8 barrier hollow
 #execute at @e[tag=main] run fill ~-8 ~4 ~-8 ~7 ~4 ~7 air replace
-execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:new_lobby",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
+execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:lobby_v3",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
 execute at @e[tag=main] run setblock ~ ~1 ~ redstone_block replace
 
 #scoreboard creat
@@ -104,7 +105,7 @@ scoreboard objectives add betray dummy {"text":"背叛"}
 scoreboard objectives add betray_time dummy {"text":"背叛時間"}
 scoreboard objectives add betray_tp dummy {"text":"背叛傳送時間"}
 scoreboard objectives add betray_num dummy {"text":"背叛人數"}
-scoreboard objectives add lava minecraft.used:minecraft.lava_bucket {"text":"使用岩漿桶"}
+#scoreboard objectives add lava minecraft.used:minecraft.lava_bucket {"text":"使用岩漿桶"}
 scoreboard objectives add stew_get dummy {"text":"可疑的湯"}
 scoreboard objectives add potion_brew dummy {"text":"釀造藥水"}
 #scoreboard objectives add potion_regen dummy {"text":"回復藥水"}
@@ -146,13 +147,15 @@ scoreboard objectives add room_time dummy {"text":"小房間時間"}
 scoreboard objectives add branch_mine dummy {"text":"魚骨"}
 scoreboard objectives add branch_limit dummy {"text":"魚骨限制"}
 scoreboard objectives add branch_position dummy {"text":"魚骨座標"}
+scoreboard objectives add branch_bomb dummy {"text":"魚骨爆炸"}
+scoreboard objectives add branch_bomb_num dummy {"text":"魚骨爆炸次數"}
 scoreboard objectives add rand_silverfish dummy {"text":"隨機蠹魚"}
 scoreboard objectives add rand_apple dummy {"text":"隨機金蘋果"}
-scoreboard objectives add reverse_craft dummy {"text":"分解金裝"}
+#scoreboard objectives add reverse_craft dummy {"text":"分解金裝"}
 scoreboard objectives add saddle dummy {"text":"合成馬鞍"}
 scoreboard objectives add fish_bucket dummy {"text":"合成魚桶"}
 scoreboard objectives add nerf_arrow dummy {"text":"弓箭削弱"}
-scoreboard objectives add no_burn dummy {"text":"弓箭熄火"}
+#scoreboard objectives add no_burn dummy {"text":"弓箭熄火"}
 scoreboard objectives add random_chest dummy {"text":"隨機物資箱"}
 scoreboard objectives add chest_num dummy {"text":"物資箱數量"}
 #### stats ############################################################
@@ -211,6 +214,8 @@ scoreboard objectives add tropicalfish minecraft.crafted:minecraft.tropical_fish
 #### lottery ################################################################
 scoreboard objectives add lottery trigger {"text":"抽獎"}
 scoreboard objectives add lottery_count dummy {"text":"抽獎計數"}
+#### view setings #######################################################
+scoreboard objectives add view_settings trigger {"text":"檢視設定"}
 #### rescure (have not been implemented) #####################################
 #scoreboard objectives add rescure dummy {"text":"救援隊友"}
 #scoreboard objectives add modify_health dummy {"text":"血量"}
@@ -262,8 +267,8 @@ scoreboard players set @e[tag=assist] night_vision 1
 scoreboard players set @e[tag=main] allow_diamond 1
 scoreboard players set @e[tag=assist] allow_diamond 0
 #### book2 ##########################################################
-scoreboard players set @e[tag=main] nether_open 1
-scoreboard players set @e[tag=assist] nether_open 0
+scoreboard players set @e[tag=main] nether_open 0
+scoreboard players set @e[tag=assist] nether_open 1
 scoreboard players set @e[tag=main] nether_time 80
 scoreboard players set @e[tag=main] betray 0
 scoreboard players set @e[tag=assist] betray 1
@@ -335,20 +340,23 @@ scoreboard players set @e[tag=assist] branch_mine 0
 scoreboard players set @e[tag=main] branch_limit 800
 scoreboard players set @e[tag=main] branch_position 0
 scoreboard players set @e[tag=assist] branch_position 1
+scoreboard players set @e[tag=main] branch_bomb 0
+scoreboard players set @e[tag=assist] branch_bomb 1
+scoreboard players set @e[tag=main] branch_bomb_num 3
 scoreboard players set @e[tag=main] rand_silverfish 0
 scoreboard players set @e[tag=assist] rand_silverfish 1
 scoreboard players set @e[tag=main] rand_apple 0
 scoreboard players set @e[tag=assist] rand_apple 1
-scoreboard players set @e[tag=main] reverse_craft 1
-scoreboard players set @e[tag=assist] reverse_craft 0
+#scoreboard players set @e[tag=main] reverse_craft 1
+#scoreboard players set @e[tag=assist] reverse_craft 0
 scoreboard players set @e[tag=main] saddle 1
 scoreboard players set @e[tag=assist] saddle 0
 scoreboard players set @e[tag=main] fish_bucket 1
 scoreboard players set @e[tag=assist] fish_bucket 0
 scoreboard players set @e[tag=main] nerf_arrow 1
 scoreboard players set @e[tag=assist] nerf_arrow 0
-scoreboard players set @e[tag=main] no_burn 1
-scoreboard players set @e[tag=assist] no_burn 0
+#scoreboard players set @e[tag=main] no_burn 1
+#scoreboard players set @e[tag=assist] no_burn 0
 scoreboard players set @e[tag=main] random_chest 0
 scoreboard players set @e[tag=assist] random_chest 1
 scoreboard players set @e[tag=main] chest_num 20

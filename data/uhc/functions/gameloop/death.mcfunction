@@ -12,7 +12,7 @@ gamemode spectator @s
 scoreboard players set @s death 0
 spawnpoint @s ~ ~ ~
 execute if score 00000000-00000000-0000-000000000001 spec_permission matches 0 run effect give @s blindness 999999 0 true
-execute as @a at @s run playsound minecraft:entity.lightning_bolt.impact ambient @s ~ ~ ~
+execute as @a at @s run playsound minecraft:entity.lightning_bolt.impact player @s ~ ~ ~
 #effect give @s night_vision 999999 0 true
 
 #tag

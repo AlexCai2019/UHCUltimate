@@ -24,4 +24,4 @@ execute as 00000000-0000-0000-0000-000000000001 if entity @s[scores={underclock=
 
 #functions cannot be underclocked
 execute if score 00000000-0000-0000-0000-000000000001 BR_move matches 1 as 00000000-0000-0000-0000-00000000000c at @s run function uhc:gameloop/event/battle_royale/center_move
-execute if score 00000000-0000-0000-0000-000000000001 nerf_arrow matches 1 if score 00000000-0000-0000-0000-000000000001 no_burn matches 1 as @e[type=#uhc:arrow] run data merge entity @s {Fire:-1000s,Color:-1}
+#execute if score 00000000-0000-0000-0000-000000000001 nerf_arrow matches 1 if score 00000000-0000-0000-0000-000000000001 no_burn matches 1 as @e[type=#uhc:arrow] run data merge entity @s {Fire:-1000s,Color:-1}

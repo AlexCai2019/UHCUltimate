@@ -11,7 +11,7 @@
 execute unless entity @e[tag=win] as @a[scores={warn=1..},gamemode=survival] run function uhc:gameloop/damage
 
 #action bar information.
-execute as @a[gamemode=!spectator] run title @s actionbar {"text":"","color":"light_purple","bold":true,"extra":[{"text":"中心座標: ("},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"posX"}},{"text":","},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"posZ"}},{"text":")  擊殺數: "},{"score":{"name":"@s","objective":"temp_kill"}},{"text":"  挖掘石頭數: "},{"score":{"name":"@s","objective":"temp_stone"}}]}
+execute as @a run title @s actionbar {"text":"","color":"light_purple","bold":true,"extra":[{"text":"中心座標: ("},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"posX"}},{"text":","},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"posZ"}},{"text":")  擊殺數: "},{"score":{"name":"@s","objective":"temp_kill"}},{"text":"  挖掘石頭數: "},{"score":{"name":"@s","objective":"temp_stone"}}]}
 
 #Y position.
 execute as @a[gamemode=survival] store result score @s posY run data get entity @s Pos[1]
@@ -45,7 +45,7 @@ execute if score @s allow_diamond matches 0 run clear @a #uhc:diamond
 execute if score @s nether_open matches ..0 run function uhc:gameloop/event/nether_penalty
 
 #betrayer lava limit
-execute if entity @s[scores={betray_time=999,betray_tp=..900}] if entity @a[tag=betrayer,scores={lava=1..}] run function uhc:gameloop/event/betray/lava
+#execute if entity @s[scores={betray_time=999,betray_tp=..900}] if entity @a[tag=betrayer,scores={lava=1..}] run function uhc:gameloop/event/betray/lava
 
 #stew_take.
 execute if score @s stew_get matches 0 run clear @a suspicious_stew
@@ -80,6 +80,7 @@ execute if score @s ground_limit matches 2 run function uhc:gameloop/event/groun
 
 #branch mined penalty.
 execute if score @s branch_mine matches 1 as @a[scores={stone_penalty=100}] run function uhc:apply/branch_penalty_effect
+execute as @e[type=item,nbt={Item:{id:"minecraft:tropical_fish_spawn_egg"}}] at @s run function uhc:apply/branch_bomb
 
 #random silverfish.
 #execute if score @s rand_silverfish matches 1 at @a[scores={silver=1..}] run function uhc:apply/rand_silverfish

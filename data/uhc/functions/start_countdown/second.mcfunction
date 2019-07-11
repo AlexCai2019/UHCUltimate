@@ -12,6 +12,6 @@ execute if score @s timer_sec matches 1..10 run title @a title {"text":"遊戲�
 execute if score @s timer_sec matches 0 run title @a title {"text":">>> ","color":"dark_gray","extra":[{"text":"戰鬥開始","color":"red"},{"text":" <<<","color":"dark_gray"}]}
 execute if score @s timer_sec matches 10 at @a run difficulty peaceful
 execute if score @s timer_sec matches 10 as @a at @s run playsound minecraft:block.tripwire.attach block @s ~ ~ ~
-execute if score @s timer_sec matches 1..5 as @a at @s run playsound minecraft:block.note_block.hat ambient @s ~ ~ ~
+execute if score @s timer_sec matches 1..5 as @a at @s run playsound minecraft:block.note_block.hat block @s ~ ~ ~
 
 summon area_effect_cloud ~ ~ ~ {Tags:[sec],Age:-21,Particle:"block air"}

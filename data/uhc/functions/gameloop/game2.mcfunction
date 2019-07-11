@@ -27,8 +27,6 @@ execute if score @s sky_limit matches 2 run function uhc:gameloop/event/sky_pena
 
 #monster clean
 execute if score @s monster_clean matches 2 as @e[type=#uhc:hostile] at @s run tp @s ~ -999999 ~
-#execute if score @s monster_clean matches 2 run function uhc:gameloop/event/monster/monster_2
-#execute if entity @s[scores={monster_clean=2}] run function uhc:gameloop/event/monster/monster_3
 
 #branch mined penalty
 execute if score @s branch_mine matches 1 as @a[scores={stone_penalty=100}] run function uhc:apply/branch_penalty_effect

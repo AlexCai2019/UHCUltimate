@@ -33,3 +33,5 @@ execute if entity @s[scores={map_size=1264}] run scoreboard players set @s width
 execute if entity @s[scores={mapsize=1264}] run scoreboard players set @s inv_width_chunk -63
 execute if entity @s[scores={map_size=1520}] run scoreboard players set @s width_chunk 79
 execute if entity @s[scores={mapsize=1520}] run scoreboard players set @s inv_width_chunk -79
+
+tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定","color":"aqua"},{"text":" | ","color":"white"},{"text":"地圖大小","color":"gold"},{"text":" | ","color":"white"},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"map_size"},"color":"yellow"},{"text":"格","color":"yellow"}]}

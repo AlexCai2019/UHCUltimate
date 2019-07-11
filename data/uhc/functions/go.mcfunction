@@ -32,6 +32,7 @@ gamerule doFireTick false
 gamerule doMobSpawning true
 gamerule doWeatherCycle true
 gamerule doDaylightCycle true
+gamerule disableRaids false
 time set day
 weather thunder 1
 
@@ -69,7 +70,7 @@ execute if score @s hide_name matches 1 run function uhc:apply/name_visible_fals
 #execute at @e[tag=assist,scores={room=0}] run setblock ~ 126 ~ redstone_block replace
 
 #book settings --- reverse_craft
-execute if score @s reverse_craft matches 0 run function uhc:apply/golden_craft
+#execute if score @s reverse_craft matches 0 run function uhc:apply/golden_craft
 
 #book settings --- saddle_craft
 execute if score @s saddle matches 0 run function uhc:apply/saddle_craft
@@ -95,6 +96,7 @@ tp @s 00000000-0000-0000-0000-000000000002
 kill @e[tag=show]
 kill @e[type=item]
 kill @e[tag=lottery]
+#kill @e[type=#uhc:hostile_normal]
 
 #clear room setting ambiguity
 execute at 00000000-0000-0000-0000-000000000002 run setblock ~ 125 ~ air replace
@@ -144,6 +146,7 @@ scoreboard players set @a temp_gold 0
 scoreboard players set @a temp_apple 0
 scoreboard players set @a temp_hurt 0
 scoreboard players set @a gh_craft 0
+scoreboard players set @a branch_bomb_num 0
 scoreboard players set @a cod 0
 scoreboard players set @a salmon 0
 scoreboard players set @a pufferfish 0

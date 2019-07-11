@@ -17,7 +17,7 @@ execute as @a[tag=!game_start] run function uhc:gameloop/join_game
 execute unless entity @e[tag=win] as @a[scores={warn=1..},gamemode=survival] run function uhc:gameloop/damage
 
 #betrayer lava limit
-execute if entity @s[scores={betray_time=999,betray_tp=..900}] if entity @a[tag=betrayer,scores={lava=1..}] run function uhc:gameloop/event/betray/lava
+#execute if entity @s[scores={betray_time=999,betray_tp=..900}] if entity @a[tag=betrayer,scores={lava=1..}] run function uhc:gameloop/event/betray/lava
 
 #stew_take
 execute if score @s stew_get matches 0 run clear @a suspicious_stew
@@ -30,6 +30,9 @@ execute if score @s nether_open matches ..0 run function uhc:gameloop/event/neth
 
 #cut clean
 execute if score @s cut_clean matches 1 run function uhc:apply/cut_clean
+
+#branch_bomb
+execute as @e[type=item,nbt={Item:{id:"minecraft:tropical_fish_spawn_egg"}}] at @s run function uhc:apply/branch_bomb
 
 #random apple
 #execute if score @s rand_apple matches 1 at @a[scores={leaf=1..,shear=0}] run function uhc:apply/rand_apple

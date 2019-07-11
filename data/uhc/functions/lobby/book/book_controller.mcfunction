@@ -7,7 +7,7 @@
 # func    : Handle all book-setting sub-functions.
 #########################################################
 
-#non-used number: 12~15, 29~30, 34, 70, 84, 91, 113~
+#non-used number: 12~15, 29~30, 34, 70, 84, 87, 91, 100~103, 120~
 
 #play sound
 execute as @a[scores={book=1..}] at @s run playsound entity.experience_orb.pickup voice @s ~ ~ ~ 0.7
@@ -126,7 +126,7 @@ execute if entity @a[scores={book=89}] run function uhc:lobby/settings/room_chec
 #### book5 #######################################################################################################################################
 
 #book = 100 ~ 102, branch mine
-execute if entity @a[scores={book=100..103}] run function uhc:lobby/settings/branch_mine
+execute if entity @a[scores={book=113..119}] run function uhc:lobby/settings/branch_mine
 
 #book = 85, random silverfish
 execute if entity @a[scores={book=85}] run function uhc:lobby/settings/rand_silver
@@ -135,7 +135,7 @@ execute if entity @a[scores={book=85}] run function uhc:lobby/settings/rand_silv
 execute if entity @a[scores={book=86}] run function uhc:lobby/settings/rand_apple
 
 #book = 87, reverse craft of golden equipmentxs
-execute if entity @a[scores={book=87}] run function uhc:lobby/settings/golden_craft
+#execute if entity @a[scores={book=87}] run function uhc:lobby/settings/golden_craft
 
 #book = 88, custom saddle recipe
 execute if entity @a[scores={book=88}] run function uhc:lobby/settings/saddle_craft

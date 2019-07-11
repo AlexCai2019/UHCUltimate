@@ -21,6 +21,7 @@ gamerule spectatorsGenerateChunks true
 gamerule spawnRadius 10
 gamerule doLimitedCrafting false
 gamerule naturalRegeneration true
+gamerule disableRaids false
 weather thunder 1
 worldborder set 2999998
 time set day
@@ -67,7 +68,7 @@ scoreboard objectives remove betray
 scoreboard objectives remove betray_time
 scoreboard objectives remove betray_tp
 scoreboard objectives remove betray_num
-scoreboard objectives remove lava
+#scoreboard objectives remove lava
 scoreboard objectives remove stew_get
 scoreboard objectives remove potion_brew
 #scoreboard objectives remove potion_regen
@@ -106,13 +107,15 @@ scoreboard objectives remove room_time
 scoreboard objectives remove branch_mine
 scoreboard objectives remove branch_limit
 scoreboard objectives remove branch_position
+scoreboard objectives remove branch_bomb
+scoreboard objectives remove branch_bomb_num
 scoreboard objectives remove rand_silverfish
 scoreboard objectives remove rand_apple
-scoreboard objectives remove reverse_craft
+#scoreboard objectives remove reverse_craft
 scoreboard objectives remove saddle
 scoreboard objectives remove fish_bucket
 scoreboard objectives remove nerf_arrow
-scoreboard objectives remove no_burn
+#scoreboard objectives remove no_burn
 scoreboard objectives remove random_chest
 scoreboard objectives remove chest_num
 scoreboard objectives remove information
@@ -161,6 +164,7 @@ scoreboard objectives remove pufferfish
 scoreboard objectives remove tropicalfish
 scoreboard objectives remove lottery
 scoreboard objectives remove lottery_count
+scoreboard objectives remove view_settings
 #scoreboard objectives remove rescure
 #scoreboard objectives remove modify_health
 #scoreboard objectives remove rescure_tick
@@ -188,6 +192,7 @@ tag @a remove danger_x
 tag @a remove danger_z
 tag @a remove player
 tag @a remove game_start
+tag @a remove mine_bomb
 tag @a remove silverfish
 tag @a remove lucky_leaves
 tag @a remove gold_head_normal

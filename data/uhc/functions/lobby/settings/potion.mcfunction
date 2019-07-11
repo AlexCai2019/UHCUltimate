@@ -20,3 +20,10 @@ scoreboard players set @e[tag=book,scores={potion_brew=2..}] potion_brew 0
 #scoreboard players set @e[tag=book,scores={potion_reinforce=2..}] potion_reinforce 0
 #scoreboard players set @e[tag=book,scores={potion_turtle=2..}] potion_turtle 0
 scoreboard players set @e[tag=book,scores={notch_apple=2..}] notch_apple 0
+
+execute if entity @a[scores={book=35}] if score @s stew_get matches 1 run tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定","color":"aqua"},{"text":" | ","color":"white"},{"text":"可疑的燉湯","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
+execute if entity @a[scores={book=35}] if score @s stew_get matches 0 run tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定","color":"aqua"},{"text":" | ","color":"white"},{"text":"可疑的燉湯","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
+execute if entity @a[scores={book=36}] if score @s potion_brew matches 1 run tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定","color":"aqua"},{"text":" | ","color":"white"},{"text":"釀造藥水","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
+execute if entity @a[scores={book=36}] if score @s potion_brew matches 0 run tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定","color":"aqua"},{"text":" | ","color":"white"},{"text":"釀造藥水","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
+execute if entity @a[scores={book=40}] if score @s notch_apple matches 1 run tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定","color":"aqua"},{"text":" | ","color":"white"},{"text":"附魔金蘋果","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
+execute if entity @a[scores={book=40}] if score @s notch_apple matches 0 run tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定","color":"aqua"},{"text":" | ","color":"white"},{"text":"附魔金蘋果","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}

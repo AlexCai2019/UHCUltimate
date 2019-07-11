@@ -25,3 +25,4 @@ tag @s add player
 tag @s add gold_head_normal
 recipe give @s *
 scoreboard players enable @s lottery
+scoreboard players enable @s view_settings

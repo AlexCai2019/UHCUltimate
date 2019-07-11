@@ -62,6 +62,30 @@
           "name":"minecraft:debug_stick"
         }
       ]
+    },
+    {
+      "rolls":1,
+      "conditions":[
+        {
+          "condition":"entity_properties",
+          "predicate":{
+            "nbt":"{Tags:[mine_bomb]}"
+          },
+          "entity":"this"
+        }
+      ],
+      "entries":[
+        {
+          "type":"minecraft:item",
+          "conditions":[
+            {
+              "condition":"random_chance",
+              "chance":0.02
+            }
+          ],
+          "name":"minecraft:tropical_fish_spawn_egg"
+        }
+      ]
     }
   ]
 }
