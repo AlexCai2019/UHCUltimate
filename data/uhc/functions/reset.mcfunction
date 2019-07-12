@@ -115,6 +115,7 @@ scoreboard objectives remove rand_apple
 scoreboard objectives remove saddle
 scoreboard objectives remove fish_bucket
 scoreboard objectives remove nerf_arrow
+scoreboard objectives remove auto_crossbow
 #scoreboard objectives remove no_burn
 scoreboard objectives remove random_chest
 scoreboard objectives remove chest_num

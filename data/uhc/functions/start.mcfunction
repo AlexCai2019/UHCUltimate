@@ -155,6 +155,7 @@ scoreboard objectives add rand_apple dummy {"text":"隨機金蘋果"}
 scoreboard objectives add saddle dummy {"text":"合成馬鞍"}
 scoreboard objectives add fish_bucket dummy {"text":"合成魚桶"}
 scoreboard objectives add nerf_arrow dummy {"text":"弓箭削弱"}
+scoreboard objectives add auto_crossbow dummy {"text":"自動弩機"}
 #scoreboard objectives add no_burn dummy {"text":"弓箭熄火"}
 scoreboard objectives add random_chest dummy {"text":"隨機物資箱"}
 scoreboard objectives add chest_num dummy {"text":"物資箱數量"}
@@ -355,6 +356,8 @@ scoreboard players set @e[tag=main] fish_bucket 1
 scoreboard players set @e[tag=assist] fish_bucket 0
 scoreboard players set @e[tag=main] nerf_arrow 1
 scoreboard players set @e[tag=assist] nerf_arrow 0
+scoreboard players set @e[tag=main] auto_crossbow 0
+scoreboard players set @e[tag=assist] auto_crossbow 1
 #scoreboard players set @e[tag=main] no_burn 1
 #scoreboard players set @e[tag=assist] no_burn 0
 scoreboard players set @e[tag=main] random_chest 0

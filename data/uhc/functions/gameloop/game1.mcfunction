@@ -34,6 +34,9 @@ execute if score @s cut_clean matches 1 run function uhc:apply/cut_clean
 #branch_bomb
 execute as @e[type=item,nbt={Item:{id:"minecraft:tropical_fish_spawn_egg"}}] at @s run function uhc:apply/branch_bomb
 
+#auto crossbow
+execute if score @s auto_crossbow matches 1 as @a[nbt={SelectedItem:{id:"minecraft:crossbow"},Inventory:[{id:"minecraft:arrow"}]}] unless entity @s[nbt={SelectedItem:{tag:{Charged:1b}}}] unless data entity @s SelectedItem.tag.Enchantments run function uhc:apply/auto_crossbow
+
 #random apple
 #execute if score @s rand_apple matches 1 at @a[scores={leaf=1..,shear=0}] run function uhc:apply/rand_apple
 #scoreboard players set @a[scores={shear=1..}] shear 0

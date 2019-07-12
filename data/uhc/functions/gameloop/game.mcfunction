@@ -93,6 +93,9 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:debug_stick"}}] at @s run funct
 #nerf arrow.
 execute if score @s nerf_arrow matches 1 as @e[type=#uhc:arrow,tag=!arrow] run function uhc:apply/nerf_arrow
 
+#auto crossbow
+execute if score @s auto_crossbow matches 1 as @a[nbt={SelectedItem:{id:"minecraft:crossbow"},Inventory:[{id:"minecraft:arrow"}]}] unless entity @s[nbt={SelectedItem:{tag:{Charged:1b}}}] unless data entity @s SelectedItem.tag.Enchantments run function uhc:apply/auto_crossbow
+
 #random chest penalty.
 execute as @e[type=item,nbt={Item:{id:"minecraft:structure_void"}}] at @s run function uhc:apply/random_chest_bad
 

@@ -125,7 +125,7 @@ execute if entity @a[scores={book=89}] run function uhc:lobby/settings/room_chec
 
 #### book5 #######################################################################################################################################
 
-#book = 100 ~ 102, branch mine
+#book = 113 ~ 119, branch mine
 execute if entity @a[scores={book=113..119}] run function uhc:lobby/settings/branch_mine
 
 #book = 85, random silverfish
@@ -143,10 +143,13 @@ execute if entity @a[scores={book=88}] run function uhc:lobby/settings/saddle_cr
 #book = 90, custom fish bucket recipe
 execute if entity @a[scores={book=90}] run function uhc:lobby/settings/fish_craft
 
-#book = 91, nerf arrow
+#book = 104 ~ 105, nerf arrow
 execute if entity @a[scores={book=104..105}] run function uhc:lobby/settings/nerf_arrow
 
-#book = 92, random chest
+#book = 103, automatic crossbow
+execute if entity @a[scores={book=103}] run function uhc:lobby/settings/auto_crossbow
+
+#book = 92 ~94, random chest
 execute if entity @a[scores={book=92..94}] run function uhc:lobby/settings/random_chest
 
 #### reset ########################################################################################################################################
