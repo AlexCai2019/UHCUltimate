@@ -16,6 +16,9 @@ execute as @a[tag=!game_start] run function uhc:gameloop/join_game
 #damage notifier
 execute unless entity @e[tag=win] as @a[scores={warn=1..},gamemode=survival] run function uhc:gameloop/damage
 
+#slow fall barrier check
+execute if score @s slow_fall matches 0 if score @s timer_min matches 0 as @a at @s if block ~ ~-1 ~ barrier run tp @s ~ ~-1 ~
+
 #betrayer lava limit
 #execute if entity @s[scores={betray_time=999,betray_tp=..900}] if entity @a[tag=betrayer,scores={lava=1..}] run function uhc:gameloop/event/betray/lava
 

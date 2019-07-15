@@ -25,6 +25,9 @@ execute as @a[tag=!game_start] run function uhc:gameloop/join_game
 #chunk loader
 execute unless entity @a[gamemode=!spectator,nbt={Dimension:0}] run function uhc:gameloop/chunk_loader
 
+#slow fall barrier check
+execute if score @s slow_fall matches 0 if score @s timer_min matches 0 as @a at @s if block ~ ~-1 ~ barrier run tp @s ~ ~-4 ~
+
 #win judge.
 execute if score 剩餘隊伍 information matches 1 unless entity @a[tag=win] run function uhc:win
 
@@ -96,6 +99,9 @@ execute if score @s nerf_arrow matches 1 as @e[type=#uhc:arrow,tag=!arrow] run f
 #auto crossbow
 execute if score @s auto_crossbow matches 1 as @a[nbt={SelectedItem:{id:"minecraft:crossbow"},Inventory:[{id:"minecraft:arrow"}]}] unless entity @s[nbt={SelectedItem:{tag:{Charged:1b}}}] unless data entity @s SelectedItem.tag.Enchantments run function uhc:apply/auto_crossbow
 
+#fish rush
+execute if score @s fish_rush matches 1 as @a[nbt={SelectedItem:{id:"minecraft:fishing_rod"}}] unless data entity @s SelectedItem.tag.FishRush run data modify entity @s SelectedItem.tag merge value {FishRush:1}
+
 #random chest penalty.
 execute as @e[type=item,nbt={Item:{id:"minecraft:structure_void"}}] at @s run function uhc:apply/random_chest_bad
 
@@ -108,7 +114,7 @@ execute as @a[scores={salmon=1..}] if entity @s[nbt={Inventory:[{id:"minecraft:b
 execute as @a[scores={pufferfish=1..}] if entity @s[nbt={Inventory:[{id:"minecraft:bucket"}]}] run function uhc:apply/fish/pufferfish
 execute as @a[scores={tropicalfish=1..}] if entity @s[nbt={Inventory:[{id:"minecraft:bucket"}]}] run function uhc:apply/fish/tropicalfish
 
-############################################################################################
+###########################################################################################
 
 #timer.
 execute at @s unless entity @e[tag=min] run function uhc:gameloop/check_event

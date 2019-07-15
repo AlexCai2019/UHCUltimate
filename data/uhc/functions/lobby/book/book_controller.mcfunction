@@ -149,8 +149,11 @@ execute if entity @a[scores={book=104..105}] run function uhc:lobby/settings/ner
 #book = 103, automatic crossbow
 execute if entity @a[scores={book=103}] run function uhc:lobby/settings/auto_crossbow
 
-#book = 92 ~94, random chest
+#book = 92 ~ 94, random chest
 execute if entity @a[scores={book=92..94}] run function uhc:lobby/settings/random_chest
+
+#book = 91, fishing rush
+execute if entity @a[scores={book=91}] run function uhc:lobby/settings/fish_rush
 
 #### reset ########################################################################################################################################
 

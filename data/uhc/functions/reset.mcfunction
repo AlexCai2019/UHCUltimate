@@ -119,6 +119,7 @@ scoreboard objectives remove auto_crossbow
 #scoreboard objectives remove no_burn
 scoreboard objectives remove random_chest
 scoreboard objectives remove chest_num
+scoreboard objectives remove fish_rush
 scoreboard objectives remove information
 scoreboard objectives remove health
 scoreboard objectives remove death

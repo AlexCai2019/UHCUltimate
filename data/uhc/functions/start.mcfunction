@@ -159,6 +159,7 @@ scoreboard objectives add auto_crossbow dummy {"text":"自動弩機"}
 #scoreboard objectives add no_burn dummy {"text":"弓箭熄火"}
 scoreboard objectives add random_chest dummy {"text":"隨機物資箱"}
 scoreboard objectives add chest_num dummy {"text":"物資箱數量"}
+scoreboard objectives add fish_rush dummy {"text":"釣魚派對"}
 #### stats ############################################################
 scoreboard objectives add information dummy {"text":"遊戲資訊","color":"gold","italic":true}
 scoreboard objectives add health health {"text":"血量"}
@@ -363,6 +364,8 @@ scoreboard players set @e[tag=assist] auto_crossbow 1
 scoreboard players set @e[tag=main] random_chest 0
 scoreboard players set @e[tag=assist] random_chest 1
 scoreboard players set @e[tag=main] chest_num 20
+scoreboard players set @e[tag=main] fish_rush 0
+scoreboard players set @e[tag=assist] fish_rush 1
 #### battleroyale ####################################################
 scoreboard players set @e[tag=main] BR_move 0
 scoreboard players set @e[tag=main] BR_stage 0

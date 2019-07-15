@@ -14,4 +14,6 @@ execute if score @s timer_sec matches 10 at @a run difficulty peaceful
 execute if score @s timer_sec matches 10 as @a at @s run playsound minecraft:block.tripwire.attach block @s ~ ~ ~
 execute if score @s timer_sec matches 1..5 as @a at @s run playsound minecraft:block.note_block.hat block @s ~ ~ ~
 
+#execute if score @s slow_fall matches 0 if score @s timer_sec matches 1 as @a at @s run playsound minecraft:entity.firework_rocket.launch block @s ~ ~ ~ 1 0.2
+
 summon area_effect_cloud ~ ~ ~ {Tags:[sec],Age:-21,Particle:"block air"}

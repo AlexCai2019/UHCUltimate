@@ -16,11 +16,13 @@ advancement revoke @a everything
 
 #give effect
 effect give @a instant_health 1 9 true
-effect give @a[team=!spec] resistance 15 9 true
+effect give @a[team=!spec] resistance 40 9 true
 effect give @a[team=!spec] hunger 15 3 true
 effect give @a[team=spec] night_vision 999999 0 true
 execute if score @s spec_permission matches 0 run effect give @a[team=spec] blindness 999999 0 true
-execute if score @s slow_fall matches 0 run effect give @a slow_falling 20 0 true
+#move to start_countdown
+#execute if score @s slow_fall matches 0 run effect give @a levitation 1 55 true
+execute if score @s slow_fall matches 0 run effect give @a slow_falling 30 0 true
 
 #gamemode
 gamemode survival @a[team=!spec]
@@ -83,11 +85,11 @@ scoreboard players operation @s BR_factor /= @s BR_shrink_time
 
 #spreadplayers 
 execute if score @s slow_fall matches 1 run function uhc:apply/spread_1
-execute if score @s slow_fall matches 0 as @a at @s run tp @s ~ 147 ~
+#execute if score @s slow_fall matches 0 as @a at @s run tp @s ~ 147 ~
 #function uhc:apply/spread_1
 
 #start sound
-execute as @a at @s run playsound minecraft:entity.ender_dragon.growl ambient @s ~ ~ ~ 0.5
+execute if score @s slow_fall matches 0 as @a at @s run playsound minecraft:entity.ender_dragon.growl ambient @s ~ ~ ~ 0.5
 
 #clear lobby
 execute at @s run fill ~-8 150 ~-8 ~7 160 ~7 air replace
