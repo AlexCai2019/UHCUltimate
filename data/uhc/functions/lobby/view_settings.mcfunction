@@ -149,8 +149,8 @@ execute if score 00000000-0000-0000-0000-000000000001 auto_crossbow matches 0 ru
 execute if score 00000000-0000-0000-0000-000000000001 random_chest matches 1 run tellraw @s {"text":"","extra":[{"text":"隨機物資箱","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"},{"text":" | ","color":"white"},{"text":"數量","color":"gold"},{"text":" | ","color":"white"},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"chest_num"},"color":"yellow"},{"text":"個","color":"yellow"}]}
 execute if score 00000000-0000-0000-0000-000000000001 random_chest matches 0 run tellraw @s {"text":"","extra":[{"text":"隨機物資箱","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
 #fish rush
-execute if score 00000000-0000-0000-0000-000000000001 fish_rush matches 1 run tellraw @s {"text":"","extra":[{"text":"釣魚派對","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
-execute if score 00000000-0000-0000-0000-000000000001 fish_rush matches 0 run tellraw @s {"text":"","extra":[{"text":"釣魚派對","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
+execute if score 00000000-0000-0000-0000-000000000001 fish_rush matches 1 run tellraw @s {"text":"","extra":[{"text":"釣魚狂熱","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
+execute if score 00000000-0000-0000-0000-000000000001 fish_rush matches 0 run tellraw @s {"text":"","extra":[{"text":"釣魚狂熱","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
 
 tellraw @s {"text":"***********************************************************","color":"green","bold":"false"}
 
