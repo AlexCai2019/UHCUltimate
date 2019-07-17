@@ -23,6 +23,7 @@ execute if score @s spec_permission matches 0 run effect give @a[team=spec] blin
 #move to start_countdown
 #execute if score @s slow_fall matches 0 run effect give @a levitation 1 55 true
 execute if score @s slow_fall matches 0 run effect give @a slow_falling 30 0 true
+execute if score @s invisible matches 1 run effect give @a invisibility 600 0 true
 
 #gamemode
 gamemode survival @a[team=!spec]

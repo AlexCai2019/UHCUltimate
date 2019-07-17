@@ -55,6 +55,9 @@ execute if score 00000000-0000-0000-0000-000000000001 advance_announce matches 0
 #diamond equipment craft
 execute if score 00000000-0000-0000-0000-000000000001 allow_diamond matches 1 run tellraw @s {"text":"","extra":[{"text":"鑽裝合成","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
 execute if score 00000000-0000-0000-0000-000000000001 allow_diamond matches 0 run tellraw @s {"text":"","extra":[{"text":"鑽裝合成","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
+#diamond equipment craft
+execute if score 00000000-0000-0000-0000-000000000001 invisible matches 1 run tellraw @s {"text":"","extra":[{"text":"隱形保護","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
+execute if score 00000000-0000-0000-0000-000000000001 invisible matches 0 run tellraw @s {"text":"","extra":[{"text":"隱形保護","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
 
 #book2
 tellraw @s {"text":"-------------------------------","color":"aqua"}

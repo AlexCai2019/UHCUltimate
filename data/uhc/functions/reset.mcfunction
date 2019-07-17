@@ -62,6 +62,7 @@ scoreboard objectives remove gh_mode
 scoreboard objectives remove gh_craft
 scoreboard objectives remove night_vision
 scoreboard objectives remove allow_diamond
+scoreboard objectives remove invisible
 scoreboard objectives remove nether_open
 scoreboard objectives remove nether_time
 scoreboard objectives remove betray

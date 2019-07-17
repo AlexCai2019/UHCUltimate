@@ -98,6 +98,7 @@ scoreboard objectives add gh_mode dummy {"text":"金頭顱模式"}
 scoreboard objectives add gh_craft minecraft.crafted:minecraft.creeper_head {"text":"金頭顱合成"}
 scoreboard objectives add night_vision dummy {"text":"夜視效果"}
 scoreboard objectives add allow_diamond dummy {"text":"允許鑽裝"}
+scoreboard objectives add invisible dummy {"text":"隱形保護"}
 #### book2 ##########################################################
 scoreboard objectives add nether_open dummy {"text":"開放地獄"}
 scoreboard objectives add nether_time dummy {"text":"地獄時間"}
@@ -268,6 +269,8 @@ scoreboard players set @e[tag=main] night_vision 0
 scoreboard players set @e[tag=assist] night_vision 1
 scoreboard players set @e[tag=main] allow_diamond 1
 scoreboard players set @e[tag=assist] allow_diamond 0
+scoreboard players set @e[tag=main] invisible 0
+scoreboard players set @e[tag=assist] invisible 1
 #### book2 ##########################################################
 scoreboard players set @e[tag=main] nether_open 0
 scoreboard players set @e[tag=assist] nether_open 1

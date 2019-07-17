@@ -11,8 +11,8 @@
 scoreboard players add @s timer_min 1
 summon area_effect_cloud ~ ~ ~ {Tags:[min],Age:-1200,Particle:"block air"}
 
-#first day protection cancel
-#execute if score @s[scores={first_day=1}] timer_min matches 10.. run function uhc:gameloop/event/protect_close
+#first day invisibility protection cancel
+execute if score @s[scores={invisible=1}] timer_min matches 10.. run function uhc:gameloop/event/invisible_close
 
 #nether_open
 execute if score @s[scores={nether_open=1}] timer_min >= @s nether_notifier run function uhc:gameloop/event/notifier/nether

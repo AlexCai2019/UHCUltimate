@@ -7,7 +7,7 @@
 # func    : Handle all book-setting sub-functions.
 #########################################################
 
-#non-used number: 12~15, 29~30, 34, 70, 84, 87, 91, 100~103, 120~
+#non-used number: 12~15, 30, 34, 70, 84, 87, 91, 100~103, 120~
 
 #play sound
 execute as @a[scores={book=1..}] at @s run playsound entity.experience_orb.pickup voice @s ~ ~ ~ 0.7
@@ -68,6 +68,9 @@ execute if entity @a[scores={book=26}] run function uhc:lobby/settings/night_vis
 
 #book = 28, allow_diamond
 execute if entity @a[scores={book=28}] run function uhc:lobby/settings/allow_diamond
+
+#book = 29, invisible
+execute if entity @a[scores={book=29}] run function uhc:lobby/settings/invisible
 
 #### third book (book2) ##########################################################################################################################
 
