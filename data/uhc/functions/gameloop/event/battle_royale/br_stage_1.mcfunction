@@ -47,4 +47,4 @@ execute if score 00000000-0000-0000-0000-000000000001 map_size matches 752 run s
 execute if score 00000000-0000-0000-0000-000000000001 map_size matches 1008 run scoreboard players set 安全區半軸長 information 376
 
 #border damage
-worldborder damage buffer 0 
+worldborder damage buffer 1
