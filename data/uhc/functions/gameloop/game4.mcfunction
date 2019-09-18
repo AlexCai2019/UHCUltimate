@@ -16,9 +16,6 @@ execute if score @s spec_permission matches 0 run effect give @a[gamemode=specta
 #information
 execute store result score 邊界大小 information run worldborder get
 
-#potion_regen.
-#execute if score @s potion_regen matches 0 run clear @a ghast_tear
-
 #glow
 execute if score @s glowing matches 2 run effect give @a glowing 999999 0 true
 
@@ -32,7 +29,7 @@ execute if score @s BR_stage matches 1..8 run function uhc:gameloop/event/battle
 execute at @s unless entity @e[tag=min] run function uhc:gameloop/check_event
 
 #chunk loader
-execute unless entity @a[gamemode=!spectator,nbt={Dimension:0}] run function uhc:gameloop/chunk_loader
+#execute unless entity @a[gamemode=!spectator,nbt={Dimension:0}] run function uhc:gameloop/chunk_loader
 
 #fish bucket craft correction
 execute as @a[scores={tropicalfish=1..}] if entity @s[nbt={Inventory:[{id:"minecraft:bucket"}]}] run function uhc:apply/fish/tropicalfish

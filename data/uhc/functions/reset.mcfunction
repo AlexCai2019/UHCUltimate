@@ -69,12 +69,8 @@ scoreboard objectives remove betray
 scoreboard objectives remove betray_time
 scoreboard objectives remove betray_tp
 scoreboard objectives remove betray_num
-#scoreboard objectives remove lava
 scoreboard objectives remove stew_get
 scoreboard objectives remove potion_brew
-#scoreboard objectives remove potion_regen
-#scoreboard objectives remove potion_reinforce
-#scoreboard objectives remove potion_turtle
 scoreboard objectives remove notch_apple
 scoreboard objectives remove cut_clean
 scoreboard objectives remove advance_announce
@@ -112,15 +108,15 @@ scoreboard objectives remove branch_bomb
 scoreboard objectives remove branch_bomb_num
 scoreboard objectives remove rand_silverfish
 scoreboard objectives remove rand_apple
-#scoreboard objectives remove reverse_craft
 scoreboard objectives remove saddle
 scoreboard objectives remove fish_bucket
 scoreboard objectives remove nerf_arrow
-scoreboard objectives remove auto_crossbow
-#scoreboard objectives remove no_burn
+#scoreboard objectives remove auto_crossbow
+scoreboard objectives remove nerf_crossbow
 scoreboard objectives remove random_chest
 scoreboard objectives remove chest_num
 scoreboard objectives remove fish_rush
+scoreboard objectives remove show_trace
 scoreboard objectives remove information
 scoreboard objectives remove health
 scoreboard objectives remove death
@@ -234,6 +230,7 @@ bossbar remove uhc:danger_z
 
 #clear lobby
 execute at @e[tag=main] run fill ~-9 149 ~-9 ~8 155 ~8 air replace
+forceload remove all
 
 #clear room
 execute at @e[tag=main] run fill ~-9 123 ~-9 ~8 131 ~8 air replace

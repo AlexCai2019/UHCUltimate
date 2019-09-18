@@ -23,7 +23,7 @@ execute as @a[scores={death=1..},gamemode=survival] at @s run function uhc:gamel
 execute as @a[tag=!game_start] run function uhc:gameloop/join_game
 
 #chunk loader
-execute unless entity @a[gamemode=!spectator,nbt={Dimension:0}] run function uhc:gameloop/chunk_loader
+#execute unless entity @a[gamemode=!spectator,nbt={Dimension:0}] run function uhc:gameloop/chunk_loader
 
 #slow fall barrier check
 execute if score @s slow_fall matches 0 if score @s timer_min matches 0 as @a at @s if block ~ ~-1 ~ barrier run tp @s ~ ~-4 ~
@@ -97,7 +97,10 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:debug_stick"}}] at @s run funct
 execute if score @s nerf_arrow matches 1 as @e[type=#uhc:arrow,tag=!arrow] run function uhc:apply/nerf_arrow
 
 #auto crossbow
-execute if score @s auto_crossbow matches 1 as @a[nbt={SelectedItem:{id:"minecraft:crossbow"},Inventory:[{id:"minecraft:arrow"}]}] unless entity @s[nbt={SelectedItem:{tag:{Charged:1b}}}] unless data entity @s SelectedItem.tag.Enchantments run function uhc:apply/auto_crossbow
+#execute if score @s auto_crossbow matches 1 as @a[nbt={SelectedItem:{id:"minecraft:crossbow"},Inventory:[{id:"minecraft:arrow"}]}] unless entity @s[nbt={SelectedItem:{tag:{Charged:1b}}}] unless data entity @s SelectedItem.tag.Enchantments run function uhc:apply/auto_crossbow
+
+#nerf crossbow
+execute if score @s nerf_crossbow matches 1 run function uhc:apply/nerf_crossbow
 
 #fish rush
 execute if score @s fish_rush matches 1 as @a[nbt={SelectedItem:{id:"minecraft:fishing_rod"}}] unless data entity @s SelectedItem.tag.FishRush run data modify entity @s SelectedItem.tag merge value {FishRush:1}

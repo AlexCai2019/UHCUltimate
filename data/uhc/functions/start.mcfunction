@@ -55,11 +55,12 @@ execute at @e[tag=main] run tp @e[tag=lobby] ~-0.5 150 ~-0.5
 execute at @e[tag=main] run setworldspawn ~ 150 ~
 execute at @e[tag=main] run worldborder center ~-0.5 ~-0.5
 worldborder set 496
+execute at @e[tag=main] run forceload add ~ ~
 
 #construct lobby
 #execute at @e[tag=main] run fill ~-9 ~-1 ~-9 ~8 ~4 ~8 barrier hollow
 #execute at @e[tag=main] run fill ~-8 ~4 ~-8 ~7 ~4 ~7 air replace
-execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:lobby_v3",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
+execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:lobby_v4",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
 execute at @e[tag=main] run setblock ~ ~1 ~ redstone_block replace
 
 #scoreboard creat
@@ -106,7 +107,6 @@ scoreboard objectives add betray dummy {"text":"背叛"}
 scoreboard objectives add betray_time dummy {"text":"背叛時間"}
 scoreboard objectives add betray_tp dummy {"text":"背叛傳送時間"}
 scoreboard objectives add betray_num dummy {"text":"背叛人數"}
-#scoreboard objectives add lava minecraft.used:minecraft.lava_bucket {"text":"使用岩漿桶"}
 scoreboard objectives add stew_get dummy {"text":"可疑的湯"}
 scoreboard objectives add potion_brew dummy {"text":"釀造藥水"}
 #scoreboard objectives add potion_regen dummy {"text":"回復藥水"}
@@ -152,15 +152,15 @@ scoreboard objectives add branch_bomb dummy {"text":"魚骨爆炸"}
 scoreboard objectives add branch_bomb_num dummy {"text":"魚骨爆炸次數"}
 scoreboard objectives add rand_silverfish dummy {"text":"隨機蠹魚"}
 scoreboard objectives add rand_apple dummy {"text":"隨機金蘋果"}
-#scoreboard objectives add reverse_craft dummy {"text":"分解金裝"}
 scoreboard objectives add saddle dummy {"text":"合成馬鞍"}
 scoreboard objectives add fish_bucket dummy {"text":"合成魚桶"}
 scoreboard objectives add nerf_arrow dummy {"text":"弓箭削弱"}
-scoreboard objectives add auto_crossbow dummy {"text":"自動弩機"}
-#scoreboard objectives add no_burn dummy {"text":"弓箭熄火"}
+#scoreboard objectives add auto_crossbow dummy {"text":"自動弩機"}
+scoreboard objectives add nerf_crossbow dummy {"text":"貫穿懲罰"}
 scoreboard objectives add random_chest dummy {"text":"隨機物資箱"}
 scoreboard objectives add chest_num dummy {"text":"物資箱數量"}
-scoreboard objectives add fish_rush dummy {"text":"釣魚派對"}
+scoreboard objectives add fish_rush dummy {"text":"釣魚狂熱"}
+scoreboard objectives add show_trace dummy {"text":"顯示蹤跡"}
 #### stats ############################################################
 scoreboard objectives add information dummy {"text":"遊戲資訊","color":"gold","italic":true}
 scoreboard objectives add health health {"text":"血量"}
@@ -193,15 +193,11 @@ scoreboard objectives add III dummy {"text":"常數3"}
 scoreboard objectives add V dummy {"text":"常數5"}
 scoreboard objectives add X dummy {"text":"常數10"}
 scoreboard objectives add XIII dummy {"text":"常數13"}
-#scoreboard objectives add uuid dummy {"text":"UUID"}
 scoreboard objectives add sky_notifier dummy {"text":"制空提醒"}
 scoreboard objectives add gnd_notifier dummy {"text":"遁地提醒"}
 scoreboard objectives add nether_notifier dummy {"text":"地獄提醒"}
 scoreboard objectives add betray_notifier dummy {"text":"背叛提醒"}
 scoreboard objectives add stone_penalty minecraft.mined:minecraft.stone {"text":"石頭懲罰"}
-#scoreboard objectives add silver minecraft.mined:minecraft.stone {"text":"蠹魚生成"}
-#scoreboard objectives add leaf minecraft.mined:minecraft.oak_leaves {"text":"破壞樹葉"}
-#scoreboard objectives add shear minecraft.used:minecraft.shears {"text":"使用剪刀"}
 #### battle royale border ####################################################
 scoreboard objectives add BR_move dummy {"text":"中心移動狀態"}
 scoreboard objectives add BR_xdiff dummy {"text":"X距離差"}
@@ -352,23 +348,23 @@ scoreboard players set @e[tag=main] rand_silverfish 0
 scoreboard players set @e[tag=assist] rand_silverfish 1
 scoreboard players set @e[tag=main] rand_apple 0
 scoreboard players set @e[tag=assist] rand_apple 1
-#scoreboard players set @e[tag=main] reverse_craft 1
-#scoreboard players set @e[tag=assist] reverse_craft 0
 scoreboard players set @e[tag=main] saddle 1
 scoreboard players set @e[tag=assist] saddle 0
 scoreboard players set @e[tag=main] fish_bucket 1
 scoreboard players set @e[tag=assist] fish_bucket 0
 scoreboard players set @e[tag=main] nerf_arrow 1
 scoreboard players set @e[tag=assist] nerf_arrow 0
-scoreboard players set @e[tag=main] auto_crossbow 0
-scoreboard players set @e[tag=assist] auto_crossbow 1
-#scoreboard players set @e[tag=main] no_burn 1
-#scoreboard players set @e[tag=assist] no_burn 0
+#scoreboard players set @e[tag=main] auto_crossbow 0
+#scoreboard players set @e[tag=assist] auto_crossbow 1
+scoreboard players set @e[tag=main] nerf_crossbow 1
+scoreboard players set @e[tag=assist] nerf_crossbow 0
 scoreboard players set @e[tag=main] random_chest 0
 scoreboard players set @e[tag=assist] random_chest 1
 scoreboard players set @e[tag=main] chest_num 20
 scoreboard players set @e[tag=main] fish_rush 0
 scoreboard players set @e[tag=assist] fish_rush 1
+scoreboard players set @e[tag=main] show_trace 0
+scoreboard players set @e[tag=assist] show_trace 1
 #### battleroyale ####################################################
 scoreboard players set @e[tag=main] BR_move 0
 scoreboard players set @e[tag=main] BR_stage 0

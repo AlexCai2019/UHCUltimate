@@ -25,7 +25,6 @@ execute if score @s notch_apple matches 0 as @a[nbt={Inventory:[{id:"minecraft:e
 execute if score @s ground_limit matches 2 run function uhc:gameloop/event/ground_penalty
 
 #random silverfish
-#execute if score @s rand_silverfish matches 1 at @a[scores={silver=1..}] run function uhc:apply/rand_silverfish
 execute as @e[type=item,nbt={Item:{id:"minecraft:debug_stick"}}] at @s run function uhc:apply/rand_silverfish
 
 #random chest penalty

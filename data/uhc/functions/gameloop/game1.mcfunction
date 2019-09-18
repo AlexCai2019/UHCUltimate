@@ -19,14 +19,8 @@ execute unless entity @e[tag=win] as @a[scores={warn=1..},gamemode=survival] run
 #slow fall barrier check
 execute if score @s slow_fall matches 0 if score @s timer_min matches 0 as @a at @s if block ~ ~-1 ~ barrier run tp @s ~ ~-1 ~
 
-#betrayer lava limit
-#execute if entity @s[scores={betray_time=999,betray_tp=..900}] if entity @a[tag=betrayer,scores={lava=1..}] run function uhc:gameloop/event/betray/lava
-
 #stew_take
 execute if score @s stew_get matches 0 run clear @a suspicious_stew
-
-#potion_reinforce
-#execute if score @s potion_reinforce matches 0 as @e[type=item,nbt={Item:{id:"minecraft:glowstone_dust"}}] run data merge entity @s {Item:{id:"minecraft:glowstone"}}
 
 #nether
 execute if score @s nether_open matches ..0 run function uhc:gameloop/event/nether_penalty
@@ -38,11 +32,10 @@ execute if score @s cut_clean matches 1 run function uhc:apply/cut_clean
 execute as @e[type=item,nbt={Item:{id:"minecraft:tropical_fish_spawn_egg"}}] at @s run function uhc:apply/branch_bomb
 
 #auto crossbow
-execute if score @s auto_crossbow matches 1 as @a[nbt={SelectedItem:{id:"minecraft:crossbow"},Inventory:[{id:"minecraft:arrow"}]}] unless entity @s[nbt={SelectedItem:{tag:{Charged:1b}}}] unless data entity @s SelectedItem.tag.Enchantments run function uhc:apply/auto_crossbow
+#execute if score @s auto_crossbow matches 1 as @a[nbt={SelectedItem:{id:"minecraft:crossbow"},Inventory:[{id:"minecraft:arrow"}]}] unless entity @s[nbt={SelectedItem:{tag:{Charged:1b}}}] unless data entity @s SelectedItem.tag.Enchantments run function uhc:apply/auto_crossbow
 
-#random apple
-#execute if score @s rand_apple matches 1 at @a[scores={leaf=1..,shear=0}] run function uhc:apply/rand_apple
-#scoreboard players set @a[scores={shear=1..}] shear 0
+#nerf crossbow
+execute if score @s nerf_crossbow matches 1 run function uhc:apply/nerf_crossbow
 
 #fish bucket craft correction
 execute as @a[scores={pufferfish=1..}] if entity @s[nbt={Inventory:[{id:"minecraft:bucket"}]}] run function uhc:apply/fish/pufferfish

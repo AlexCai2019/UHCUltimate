@@ -7,7 +7,7 @@
 # func    : Handle all book-setting sub-functions.
 #########################################################
 
-#non-used number: 12~15, 30, 34, 70, 84, 87, 91, 100~103, 120~
+#non-used number: 12~15, 30, 34, 70, 84, 100~102, 120~
 
 #play sound
 execute as @a[scores={book=1..}] at @s run playsound entity.experience_orb.pickup voice @s ~ ~ ~ 0.7
@@ -150,7 +150,10 @@ execute if entity @a[scores={book=90}] run function uhc:lobby/settings/fish_craf
 execute if entity @a[scores={book=104..105}] run function uhc:lobby/settings/nerf_arrow
 
 #book = 103, automatic crossbow
-execute if entity @a[scores={book=103}] run function uhc:lobby/settings/auto_crossbow
+#execute if entity @a[scores={book=103}] run function uhc:lobby/settings/auto_crossbow
+
+#book = 103, nerf crossbow
+execute if entity @a[scores={book=103}] run function uhc:lobby/settings/nerf_crossbow
 
 #book = 92 ~ 94, random chest
 execute if entity @a[scores={book=92..94}] run function uhc:lobby/settings/random_chest

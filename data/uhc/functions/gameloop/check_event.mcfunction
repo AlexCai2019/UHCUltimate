@@ -61,3 +61,6 @@ execute if score @s[scores={ground_limit=1}] timer_min >= @s ground_time run fun
 
 #room
 execute if score @s[scores={room=1}] timer_min >= @s room_time run function uhc:gameloop/event/room_setup
+
+#show_trace
+#execute if score @s show_trace matches 1 at @a[gamemode=survival] run summon area_effect_cloud ~ ~ ~ {Duration:1200,Particle:""}

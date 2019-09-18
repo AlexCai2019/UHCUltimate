@@ -19,9 +19,6 @@ execute if score @s allow_diamond matches 0 run clear @a #uhc:diamond
 #potion_brew
 execute if score @s potion_brew matches 0 run clear @a #uhc:brew
 
-#potion_turtle
-#execute if entity @s[scores={potion_turtle=0,potion_get=1,potion_brew=1}] run function uhc:apply/potion_turtle
-
 #height limit
 execute if score @s sky_limit matches 2 run function uhc:gameloop/event/sky_penalty
 

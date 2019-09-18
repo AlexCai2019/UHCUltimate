@@ -22,5 +22,8 @@ title @a[tag=betrayer] title {"text":"你成為了背叛者","color":"red"}
 title @a[tag=betrayer] subtitle {"text":"","extra":[{"text":"你的隊友:"},{"selector":"@a[tag=betrayer]","italic":true}]}
 tellraw @a[tag=betrayer] {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"你的隊友:"},{"selector":"@a[tag=betrayer]"}]}
 
-scoreboard players set @a lava 0
+give @a[tag=betrayer] bucket 1
+give @a[tag=betrayer] flint_and_steel 1
+execute as @a[tag=betrayer] run function uhc:gameloop/event/betray/position
+
 scoreboard players set @s betray_time 999
