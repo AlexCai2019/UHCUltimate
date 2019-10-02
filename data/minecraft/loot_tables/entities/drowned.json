@@ -32,11 +32,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:gold_ingot"
+          "name": "minecraft:trident"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:trident"
+          "name": "minecraft:gold_ingot"
         }
       ],
       "conditions": [
@@ -45,7 +45,7 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.08,
+          "chance": 0.1,
           "looting_multiplier": 0.01
         }
       ]

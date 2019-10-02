@@ -191,6 +191,7 @@ scoreboard objectives add posZ dummy {"text":"Z座標"}
 scoreboard objectives add I dummy {"text":"常數1"}
 scoreboard objectives add III dummy {"text":"常數3"}
 scoreboard objectives add V dummy {"text":"常數5"}
+scoreboard objectives add VII dummy {"text":"常數7"}
 scoreboard objectives add X dummy {"text":"常數10"}
 scoreboard objectives add XIII dummy {"text":"常數13"}
 scoreboard objectives add sky_notifier dummy {"text":"制空提醒"}
@@ -373,6 +374,7 @@ scoreboard players set @e[tag=main] BR_factor 20
 scoreboard players set const1 I 1
 scoreboard players set const3 III 3
 scoreboard players set const5 V 5
+scoreboard players set const7 VII 7
 scoreboard players set const10 X 10
 scoreboard players set const13 XIII 13
 scoreboard players set negative_I n_I -1

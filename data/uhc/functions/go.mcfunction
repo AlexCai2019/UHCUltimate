@@ -111,7 +111,7 @@ execute at 00000000-0000-0000-0000-000000000002 run setblock ~ 126 ~ air replace
 #book settings about scoreboard --- time stop
 execute if score @s day_time matches 0 if score @s day_stop matches 1 run function uhc:gameloop/event/day
 execute if score @s day_time matches 0 if score @s day_stop matches 1 if score 00000000-0000-0000-0000-000000000006 day_mode matches 1 run time set midnight
-execute if score 00000000-0000-0000-0000-000000000006 day_mode matches 1 run scoreboard players operation @s day_time += const13 XIII
+execute if score 00000000-0000-0000-0000-000000000006 day_mode matches 1 run scoreboard players operation @s day_time -= const7 VII
 
 #book settings about scoreboard --- branch_mine
 scoreboard players set @a stone_penalty 100
