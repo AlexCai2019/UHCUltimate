@@ -47,9 +47,6 @@ execute if score @s allow_diamond matches 0 run clear @a #uhc:diamond
 #nether.
 execute if score @s nether_open matches ..0 run function uhc:gameloop/event/nether_penalty
 
-#betrayer lava limit
-#execute if entity @s[scores={betray_time=999,betray_tp=..900}] if entity @a[tag=betrayer,scores={lava=1..}] run function uhc:gameloop/event/betray/lava
-
 #stew_take.
 execute if score @s stew_get matches 0 run clear @a suspicious_stew
 
@@ -103,7 +100,11 @@ execute if score @s nerf_arrow matches 1 as @e[type=#uhc:arrow,tag=!arrow] run f
 execute if score @s nerf_crossbow matches 1 run function uhc:apply/nerf_crossbow
 
 #fish rush
-execute if score @s fish_rush matches 1 as @a[nbt={SelectedItem:{id:"minecraft:fishing_rod"}}] unless data entity @s SelectedItem.tag.FishRush run data modify entity @s SelectedItem.tag merge value {FishRush:1}
+#execute if score @s fish_rush matches 1 as @a[nbt={SelectedItem:{id:"minecraft:fishing_rod"}}] unless data entity @s SelectedItem.tag.FishRush run data modify entity @s SelectedItem.tag merge value {FishRush:1}
+execute if score @s fish_rush matches 1 as @a[predicate=uhc:fishing1,predicate=uhc:fishing2] run loot replace entity @s weapon.mainhand loot uhc:fish_rush
+
+#pearl tear
+execute if score @s pearl_tear matches 1 run function uhc:apply/pearl_tear/pearl_detect
 
 #random chest penalty.
 execute as @e[type=item,nbt={Item:{id:"minecraft:structure_void"}}] at @s run function uhc:apply/random_chest_bad

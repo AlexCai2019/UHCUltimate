@@ -116,7 +116,9 @@ scoreboard objectives remove nerf_crossbow
 scoreboard objectives remove random_chest
 scoreboard objectives remove chest_num
 scoreboard objectives remove fish_rush
-scoreboard objectives remove show_trace
+scoreboard objectives remove pearl_tear
+scoreboard objectives remove pearl_craft
+scoreboard objectives remove pearl_own
 scoreboard objectives remove information
 scoreboard objectives remove health
 scoreboard objectives remove death
@@ -145,6 +147,7 @@ scoreboard objectives remove stone_penalty
 scoreboard objectives remove I
 scoreboard objectives remove III
 scoreboard objectives remove V
+scoreboard objectives remove VII
 scoreboard objectives remove X
 scoreboard objectives remove XIII
 scoreboard objectives remove sky_notifier
@@ -198,6 +201,7 @@ tag @a remove gold_head_normal
 tag @a remove gold_head_fast
 tag @a remove betrayer
 tag @a remove candidate
+tag @a remove peral_used
 #tag @a remove knocked_down
 #tag @a remove relife
 
@@ -229,14 +233,14 @@ bossbar remove uhc:danger_x
 bossbar remove uhc:danger_z
 
 #clear lobby
-execute at @e[tag=main] run fill ~-9 149 ~-9 ~8 155 ~8 air replace
+execute at @e[tag=main] run fill ~-9 149 ~-9 ~8 155 ~8 air
 forceload remove all
 
 #clear room
-execute at @e[tag=main] run fill ~-9 123 ~-9 ~8 131 ~8 air replace
+execute at @e[tag=main] run fill ~-9 123 ~-9 ~8 131 ~8 air
 
 #clear command region
-execute at @e[tag=load] run fill ~ ~ ~ ~1 ~-1 ~-2 bedrock replace
+execute at @e[tag=load] run fill ~ ~ ~ ~1 ~-1 ~-2 bedrock
 
 #clear random chest
 execute at @e[tag=chest] run setblock ~ ~ ~ air replace
@@ -267,3 +271,4 @@ kill @e[tag=weather]
 kill @e[tag=gh]
 kill @e[tag=lottery]
 kill @e[type=item]
+kill @e[tag=bee]

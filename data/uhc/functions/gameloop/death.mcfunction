@@ -20,6 +20,9 @@ tag @s remove sky
 tag @s remove gnd
 tag @s remove nether
 
+#pearl tear
+execute if score 00000000-00000000-0000-000000000001 pearl_tear matches 1 if entity @s[scores={pearl_own=1..},tag=!pearl_used] run function uhc:apply/pearl_tear/dead
+
 #judge system
 execute if entity @s[team=solo,tag=!died] run kill @e[tag=ref,tag=solo,limit=1]
 execute if entity @s[team=red] unless entity @a[team=red,gamemode=survival] run kill @e[tag=ref,tag=r]

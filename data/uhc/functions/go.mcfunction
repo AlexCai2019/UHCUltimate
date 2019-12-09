@@ -36,6 +36,8 @@ gamerule doMobSpawning true
 gamerule doWeatherCycle true
 gamerule doDaylightCycle true
 gamerule disableRaids false
+gamerule doInsomnia true
+gamerule doLimitedCrafting true
 time set day
 weather thunder 1
 
@@ -81,6 +83,9 @@ execute if score @s saddle matches 0 run function uhc:apply/saddle_craft
 #book settings --- fish_bucket craft
 execute if score @s fish_bucket matches 0 run function uhc:apply/fish_craft
 
+#book settings --- pearl tear
+execute if score @s pearl_tear matches 0 run function uhc:setting/pearl_tear/no_pearl
+
 #book settings --- battle royale moving factor
 scoreboard players operation @s BR_factor /= @s BR_shrink_time
 
@@ -93,12 +98,13 @@ execute if score @s slow_fall matches 1 run function uhc:apply/spread_1
 execute if score @s slow_fall matches 0 as @a at @s run playsound minecraft:entity.ender_dragon.growl ambient @s ~ ~ ~ 0.5
 
 #clear lobby
-execute at @s run fill ~-8 150 ~-8 ~7 160 ~7 air replace
-execute if score @s betray matches 0 at @s run fill ~-9 149 ~-9 ~8 160 ~8 air replace
+execute at @s run fill ~-8 150 ~-8 ~7 160 ~7 air
+execute if score @s betray matches 0 at @s run fill ~-9 149 ~-9 ~8 160 ~8 air
 tp @s 00000000-0000-0000-0000-000000000002
 kill @e[tag=show]
 kill @e[type=item]
 kill @e[tag=lottery]
+execute as @e[tag=bee] at @s run tp @s ~ -100 ~
 #kill @e[type=#uhc:hostile_normal]
 
 #clear room setting ambiguity
@@ -154,6 +160,7 @@ scoreboard players set @a cod 0
 scoreboard players set @a salmon 0
 scoreboard players set @a pufferfish 0
 scoreboard players set @a tropicalfish 0
+scoreboard players set @a pearl_craft 0
 
 #judge system
 execute as @a[team=solo] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,solo],Duration:2147483647,Particle:"block air"}

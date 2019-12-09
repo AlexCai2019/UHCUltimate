@@ -20,6 +20,7 @@ gamerule disableElytraMovementCheck true
 gamerule spectatorsGenerateChunks false
 gamerule spawnRadius 0
 gamerule disableRaids true
+gamerule doInsomnia false
 defaultgamemode survival
 weather clear 1
 difficulty hard
@@ -27,7 +28,7 @@ time set day
 
 #command region settings
 fill ~-1 0 ~-1 ~2 3 ~3 bedrock hollow
-fill ~ 1 ~2 ~1 1 ~2 end_portal replace
+fill ~ 1 ~2 ~1 1 ~2 end_portal
 
 #armor_stand settings
 execute align xz run summon area_effect_cloud ~0.5 1 ~0.5 {Tags:[main,book,lobby,carry],CustomName:"{\"text\":\"§a✔\"}",Duration:2147483647,Particle:"block air",UUIDLeast:1,UUIDMost:0}
@@ -60,7 +61,7 @@ execute at @e[tag=main] run forceload add ~ ~
 #construct lobby
 #execute at @e[tag=main] run fill ~-9 ~-1 ~-9 ~8 ~4 ~8 barrier hollow
 #execute at @e[tag=main] run fill ~-8 ~4 ~-8 ~7 ~4 ~7 air replace
-execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:lobby_v4",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
+execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:lobby_v5",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
 execute at @e[tag=main] run setblock ~ ~1 ~ redstone_block replace
 
 #scoreboard creat
@@ -160,7 +161,9 @@ scoreboard objectives add nerf_crossbow dummy {"text":"貫穿懲罰"}
 scoreboard objectives add random_chest dummy {"text":"隨機物資箱"}
 scoreboard objectives add chest_num dummy {"text":"物資箱數量"}
 scoreboard objectives add fish_rush dummy {"text":"釣魚狂熱"}
-scoreboard objectives add show_trace dummy {"text":"顯示蹤跡"}
+scoreboard objectives add pearl_tear dummy {"text":"珍珠之淚"}
+scoreboard objectives add pearl_craft minecraft.crafted:minecraft.heart_of_the_sea {"text":"合成珍珠之淚"}
+scoreboard objectives add pearl_own dummy {"text":"擁有珍珠之淚"}
 #### stats ############################################################
 scoreboard objectives add information dummy {"text":"遊戲資訊","color":"gold","italic":true}
 scoreboard objectives add health health {"text":"血量"}
@@ -364,8 +367,8 @@ scoreboard players set @e[tag=assist] random_chest 1
 scoreboard players set @e[tag=main] chest_num 20
 scoreboard players set @e[tag=main] fish_rush 0
 scoreboard players set @e[tag=assist] fish_rush 1
-scoreboard players set @e[tag=main] show_trace 0
-scoreboard players set @e[tag=assist] show_trace 1
+scoreboard players set @e[tag=main] pearl_tear 0
+scoreboard players set @e[tag=assist] pearl_tear 1
 #### battleroyale ####################################################
 scoreboard players set @e[tag=main] BR_move 0
 scoreboard players set @e[tag=main] BR_stage 0

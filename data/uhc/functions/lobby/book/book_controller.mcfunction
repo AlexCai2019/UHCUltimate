@@ -7,7 +7,7 @@
 # func    : Handle all book-setting sub-functions.
 #########################################################
 
-#non-used number: 12~15, 30, 34, 70, 84, 100~102, 120~
+#non-used number: 12~15, 30, 34, 70, 100~102, 120~
 
 #play sound
 execute as @a[scores={book=1..}] at @s run playsound entity.experience_orb.pickup voice @s ~ ~ ~ 0.7
@@ -160,6 +160,9 @@ execute if entity @a[scores={book=92..94}] run function uhc:lobby/settings/rando
 
 #book = 91, fishing rush
 execute if entity @a[scores={book=91}] run function uhc:lobby/settings/fish_rush
+
+#book = 84, pearl tear
+execute if entity @a[scores={book=84}] run function uhc:lobby/settings/pearl_tear
 
 #### reset ########################################################################################################################################
 
