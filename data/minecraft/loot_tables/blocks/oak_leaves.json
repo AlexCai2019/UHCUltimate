@@ -185,11 +185,11 @@
           "type": "minecraft:item",
           "conditions": [
             {
-              "condition": "random_chance",
+              "condition": "minecraft:random_chance",
               "chance": 0.002
             },
             {
-              "condition": "entity_properties",
+              "condition": "minecraft:entity_properties",
               "predicate": {
                 "nbt": "{Tags:[lucky_leaves]}"
               },

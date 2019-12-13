@@ -201,7 +201,10 @@ tag @a remove gold_head_normal
 tag @a remove gold_head_fast
 tag @a remove betrayer
 tag @a remove candidate
-tag @a remove peral_used
+tag @a remove pearl_tear
+tag @a remove pearl_craft
+tag @a remove pearl_used
+tag @a remove touch_bee
 #tag @a remove knocked_down
 #tag @a remove relife
 
@@ -249,7 +252,7 @@ execute at @e[tag=chest] run setblock ~ ~ ~ air replace
 effect clear @a
 clear @a
 
-#delete armor_stand
+#delete entity
 kill @e[tag=book]
 kill @e[tag=mode]
 kill @e[tag=pause]

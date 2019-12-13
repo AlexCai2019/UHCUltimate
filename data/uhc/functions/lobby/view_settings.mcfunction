@@ -155,8 +155,8 @@ execute if score 00000000-0000-0000-0000-000000000001 random_chest matches 0 run
 execute if score 00000000-0000-0000-0000-000000000001 fish_rush matches 1 run tellraw @s {"text":"","extra":[{"text":"釣魚狂熱","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
 execute if score 00000000-0000-0000-0000-000000000001 fish_rush matches 0 run tellraw @s {"text":"","extra":[{"text":"釣魚狂熱","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
 #pearl_tear
-execute if score 00000000-0000-0000-0000-000000000001 pearl_tear matches 1 run tellraw @s {"text":"","extra":[{"text":"珍珠之淚","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
-execute if score 00000000-0000-0000-0000-000000000001 pearl_tear matches 0 run tellraw @s {"text":"","extra":[{"text":"珍珠之淚","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
+execute if score 00000000-0000-0000-0000-000000000001 pearl_tear matches 1 run tellraw @s {"text":"","extra":[{"text":"碧藍之淚","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
+execute if score 00000000-0000-0000-0000-000000000001 pearl_tear matches 0 run tellraw @s {"text":"","extra":[{"text":"碧藍之淚","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
 
 tellraw @s {"text":"***********************************************************","color":"green","bold":"false"}
 

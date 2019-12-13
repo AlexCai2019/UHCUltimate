@@ -135,6 +135,7 @@ execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if sco
 execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 0 run recipe take @a uhc:gold_head
 execute if score 00000000-0000-0000-0000-000000000010 gh_mode matches 0 run recipe take @a uhc:gold_head
 execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if score 00000000-0000-0000-0000-000000000011 gh_mode matches 1 run tag @a add gold_head_fast
+execute if score 00000000-0000-0000-0000-000000000001 pearl_tear matches 1 run tag @a add pearl_tear
 
 #notifier
 scoreboard players operation @s nether_notifier = @s nether_time

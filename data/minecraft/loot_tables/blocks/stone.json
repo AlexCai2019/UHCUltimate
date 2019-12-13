@@ -43,7 +43,7 @@
       "rolls":1,
       "conditions":[
         {
-          "condition":"entity_properties",
+          "condition":"minecraft:entity_properties",
           "predicate":{
             "nbt":"{Tags:[silverfish]}"
           },
@@ -55,7 +55,7 @@
           "type":"minecraft:item",
           "conditions":[
             {
-              "condition":"random_chance",
+              "condition":"minecraft:random_chance",
               "chance":0.005
             }
           ],
@@ -67,7 +67,7 @@
       "rolls":1,
       "conditions":[
         {
-          "condition":"entity_properties",
+          "condition":"minecraft:entity_properties",
           "predicate":{
             "nbt":"{Tags:[mine_bomb]}"
           },
@@ -79,7 +79,7 @@
           "type":"minecraft:item",
           "conditions":[
             {
-              "condition":"random_chance",
+              "condition":"minecraft:random_chance",
               "chance":0.01
             }
           ],

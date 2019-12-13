@@ -26,4 +26,7 @@ give @a[tag=betrayer] bucket 1
 give @a[tag=betrayer] flint_and_steel 1
 execute as @a[tag=betrayer] run function uhc:gameloop/event/betray/position
 
+#pearl tear
+execute if score @s pearl_tear matches 1 unless entity @a[tag=betrayer,scores={pearl_own=1..}] run function uhc:apply/pearl_tear/betrayer
+
 scoreboard players set @s betray_time 999

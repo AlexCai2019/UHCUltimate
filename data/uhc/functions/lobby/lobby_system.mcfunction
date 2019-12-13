@@ -35,6 +35,11 @@ execute store result score 人數 information run execute if entity @a[team=!spe
 execute as 00000000-0000-0000-0000-00000000000a at @s run tp @s ~ ~ ~ ~4 ~ 
 execute at @s run particle minecraft:portal ~ ~ ~ .5 .25 .5 .5 1 force
 
+#bee
+execute as @e[tag=bee1] at @s run tellraw @a[tag=!touch_bee,distance=..1.5] {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"蜜蜂嗡嗡!","color":"yellow"}]}
+execute as @e[tag=bee1] at @s run tag @a[tag=!touch_bee,distance=..1.5] add touch_bee
+execute as @e[tag=bee1] at @s run tag @a[tag=touch_bee,distance=1.5..] remove touch_bee
+
 #signs
 execute if entity @a[scores={lottery=1}] as @e[tag=lottery] at @s run function uhc:lobby/lottery/init
 execute as @a[scores={view_settings=1}] run function uhc:lobby/view_settings

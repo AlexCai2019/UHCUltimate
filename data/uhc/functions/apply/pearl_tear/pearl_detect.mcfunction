@@ -8,7 +8,8 @@
 ###################################################
 
 #craft
-execute as @a[scores={pearl_craft=1..}] run function uhc:apply/pearl_craft
+execute as @a[scores={pearl_craft=1..},tag=pearl_craft] run function uhc:apply/pearl_tear/craft_cheat
+execute as @a[scores={pearl_craft=1..},tag=!pearl_craft] run function uhc:apply/pearl_tear/pearl_craft
 
 #own
-execute as @s store result score @s pearl_own run clear @s heart_of_the_sea{Enchantments:[{id:"minecraft:vanishing_curse"}]} 0
+execute as @a store result score @s pearl_own run clear @s heart_of_the_sea{Enchantments:[{id:"minecraft:vanishing_curse"}]} 0

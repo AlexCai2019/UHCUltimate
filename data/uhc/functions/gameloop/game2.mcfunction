@@ -10,11 +10,11 @@
 #Y position
 execute as @a[gamemode=survival] store result score @s posY run data get entity @s Pos[1]
 
-#pearl tear
-execute if score @s pearl_tear matches 1 run function uhc:apply/pearl_tear/pearl_detect
-
 #death
 execute as @a[scores={death=1..},gamemode=survival] at @s run function uhc:gameloop/death
+
+#pearl tear
+execute if score @s pearl_tear matches 1 run function uhc:apply/pearl_tear/pearl_detect
 
 #diamond armor take
 execute if score @s allow_diamond matches 0 run clear @a #uhc:diamond

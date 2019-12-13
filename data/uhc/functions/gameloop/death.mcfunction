@@ -11,7 +11,7 @@
 gamemode spectator @s
 scoreboard players set @s death 0
 spawnpoint @s ~ ~ ~
-execute if score 00000000-00000000-0000-000000000001 spec_permission matches 0 run effect give @s blindness 999999 0 true
+execute if score 00000000-0000-0000-0000-000000000001 spec_permission matches 0 run effect give @s blindness 999999 0 true
 execute as @a at @s run playsound minecraft:entity.lightning_bolt.impact player @s ~ ~ ~
 #effect give @s night_vision 999999 0 true
 
@@ -21,7 +21,7 @@ tag @s remove gnd
 tag @s remove nether
 
 #pearl tear
-execute if score 00000000-00000000-0000-000000000001 pearl_tear matches 1 if entity @s[scores={pearl_own=1..},tag=!pearl_used] run function uhc:apply/pearl_tear/dead
+execute if score 00000000-0000-0000-0000-000000000001 pearl_tear matches 1 if entity @s[scores={pearl_own=1..},tag=!pearl_used] run function uhc:apply/pearl_tear/dead
 
 #judge system
 execute if entity @s[team=solo,tag=!died] run kill @e[tag=ref,tag=solo,limit=1]
