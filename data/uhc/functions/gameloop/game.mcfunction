@@ -106,6 +106,9 @@ execute if score @s fish_rush matches 1 as @a[predicate=uhc:fishing1,predicate=u
 #pearl tear
 execute if score @s pearl_tear matches 1 run function uhc:apply/pearl_tear/pearl_detect
 
+#shawdow-invisible
+execute if score @s shadow_invisible matches 1 run function uhc:apply/shadow_invisible
+
 #random chest penalty.
 execute as @e[type=item,nbt={Item:{id:"minecraft:structure_void"}}] at @s run function uhc:apply/random_chest_bad
 

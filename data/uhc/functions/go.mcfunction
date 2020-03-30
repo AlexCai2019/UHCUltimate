@@ -105,6 +105,8 @@ kill @e[tag=show]
 kill @e[type=item]
 kill @e[tag=lottery]
 execute as @e[tag=bee] at @s run tp @s ~ -100 ~
+kill @e[tag=nether]
+execute as @e[tag=piglin] at @s run tp @s ~ -100 ~
 #kill @e[type=#uhc:hostile_normal]
 
 #clear room setting ambiguity
@@ -155,6 +157,7 @@ scoreboard players set @a temp_diamond 0
 scoreboard players set @a temp_gold 0
 scoreboard players set @a temp_apple 0
 scoreboard players set @a temp_hurt 0
+scoreboard players set @a gold_head 0
 scoreboard players set @a gh_craft 0
 scoreboard players set @a branch_bomb_num 0
 scoreboard players set @a cod 0

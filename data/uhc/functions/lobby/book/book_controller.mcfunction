@@ -164,6 +164,9 @@ execute if entity @a[scores={book=91}] run function uhc:lobby/settings/fish_rush
 #book = 84, pearl tear
 execute if entity @a[scores={book=84}] run function uhc:lobby/settings/pearl_tear
 
+#book = 70, shadow-invisible
+execute if entity @a[scores={book=70}] run function uhc:lobby/settings/shadow
+
 #### reset ########################################################################################################################################
 
 scoreboard players reset @a book

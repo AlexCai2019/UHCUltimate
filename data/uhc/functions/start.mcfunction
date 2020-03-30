@@ -64,6 +64,9 @@ execute at @e[tag=main] run forceload add ~ ~
 execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:lobby_v5",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
 execute at @e[tag=main] run setblock ~ ~1 ~ redstone_block replace
 
+#easter egg
+execute at @e[tag=main] run summon area_effect_cloud ~7.5 ~ ~-7.5 {Tags:[nether],Duration:2147483647,Particle:"block air",UUIDLeast:19,UUIDMost:0}
+
 #scoreboard creat
 #### state #########################################################
 scoreboard objectives add state dummy {"text":"遊戲狀態"}
@@ -164,6 +167,7 @@ scoreboard objectives add fish_rush dummy {"text":"釣魚狂熱"}
 scoreboard objectives add pearl_tear dummy {"text":"珍珠之淚"}
 scoreboard objectives add pearl_craft minecraft.crafted:minecraft.heart_of_the_sea {"text":"合成珍珠之淚"}
 scoreboard objectives add pearl_own dummy {"text":"擁有珍珠之淚"}
+scoreboard objectives add shadow_invisible dummy {"text":"昏暗隱形"}
 #### stats ############################################################
 scoreboard objectives add information dummy {"text":"遊戲資訊","color":"gold","italic":true}
 scoreboard objectives add health health {"text":"血量"}
@@ -369,6 +373,8 @@ scoreboard players set @e[tag=main] fish_rush 0
 scoreboard players set @e[tag=assist] fish_rush 1
 scoreboard players set @e[tag=main] pearl_tear 0
 scoreboard players set @e[tag=assist] pearl_tear 1
+scoreboard players set @e[tag=main] shadow_invisible 0
+scoreboard players set @e[tag=assist] shadow_invisible 1
 #### battleroyale ####################################################
 scoreboard players set @e[tag=main] BR_move 0
 scoreboard players set @e[tag=main] BR_stage 0

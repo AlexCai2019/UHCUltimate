@@ -8,7 +8,7 @@
 #########################################################
 
 tag @a remove gold_head_normal
-execute at @s run setblock ~-3 151 ~7 air
+execute at @e[tag=lottery] run setblock ~ ~1 ~ air
 execute if entity @e[tag=sec,nbt={Age:-1}] run function uhc:start_countdown/second
 
 #setting check

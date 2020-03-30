@@ -8,7 +8,7 @@
 #########################################################
 
 #book0
-tellraw @s {"text":"***********************************************************","color":"green","bold":"false"}
+tellraw @s {"text":"***********************************************************","color":"green","bold":false}
 #map size
 tellraw @s {"text":"","extra":[{"text":"地圖大小","color":"gold"},{"text":" | ","color":"white"},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"map_size"},"color":"yellow"},{"text":"格","color":"yellow"}]}
 #random team number
@@ -146,6 +146,7 @@ execute if score 00000000-0000-0000-0000-000000000001 fish_bucket matches 0 run 
 #nerf arrow
 execute if score 00000000-0000-0000-0000-000000000001 nerf_arrow matches 1 run tellraw @s {"text":"","extra":[{"text":"弓弩削弱","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
 execute if score 00000000-0000-0000-0000-000000000001 nerf_arrow matches 0 run tellraw @s {"text":"","extra":[{"text":"弓弩削弱","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
+#nerf crossbow
 execute if score 00000000-0000-0000-0000-000000000001 nerf_crossbow matches 1 run tellraw @s {"text":"","extra":[{"text":"貫穿懲罰","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
 execute if score 00000000-0000-0000-0000-000000000001 nerf_crossbow matches 0 run tellraw @s {"text":"","extra":[{"text":"貫穿懲罰","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
 #random chest
@@ -157,8 +158,11 @@ execute if score 00000000-0000-0000-0000-000000000001 fish_rush matches 0 run te
 #pearl_tear
 execute if score 00000000-0000-0000-0000-000000000001 pearl_tear matches 1 run tellraw @s {"text":"","extra":[{"text":"碧藍之淚","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
 execute if score 00000000-0000-0000-0000-000000000001 pearl_tear matches 0 run tellraw @s {"text":"","extra":[{"text":"碧藍之淚","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
+#shadow-invisible
+execute if score 00000000-0000-0000-0000-000000000001 shadow_invisible matches 1 run tellraw @s {"text":"","extra":[{"text":"隱身黑暗","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
+execute if score 00000000-0000-0000-0000-000000000001 shadow_invisible matches 0 run tellraw @s {"text":"","extra":[{"text":"隱身黑暗","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
 
-tellraw @s {"text":"***********************************************************","color":"green","bold":"false"}
+tellraw @s {"text":"***********************************************************","color":"green","bold":false}
 
 scoreboard players reset @a view_settings
 scoreboard players enable @a view_settings

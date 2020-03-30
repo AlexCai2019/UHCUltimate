@@ -25,6 +25,9 @@ execute if score @s nerf_arrow matches 1 as @e[type=#uhc:arrow,tag=!arrow] run f
 #battle royale hint
 execute if score @s BR_stage matches 1..8 run function uhc:gameloop/event/battle_royale/self_check_2
 
+#shawdow-invisible
+execute if score @s shadow_invisible matches 1 run function uhc:apply/shadow_invisible
+
 #timer
 execute at @s unless entity @e[tag=min] run function uhc:gameloop/check_event
 
