@@ -41,10 +41,15 @@ execute as @e[tag=bee1] at @s run tag @a[tag=!touch_bee,distance=..1.5] add touc
 execute as @e[tag=bee1] at @s run tag @a[tag=touch_bee,distance=1.5..] remove touch_bee
 
 #nether easter egg
-execute at @e[tag=nether] if entity @a[distance=..2] unless entity @e[tag=piglin] run summon zombie_pigman ~ ~ ~ {Tags:[piglin],IsBaby:1b,Silent:1b,NoAI:1b,NoGravity:1b,Invulnerable:1b}
-execute at @e[tag=nether] if entity @a[distance=..2] run setblock ~ ~1 ~ dark_oak_wall_sign[facing=south]{Color:"white",Text4:'{"text":""}',Text3:'{"text":"(Maybe) Coming Soon"}',Text2:'{"text":"-- Nether Trip --"}',Text1:'{"text":"《UHC: Evolve》"}'}
-execute at @e[tag=nether] unless entity @a[distance=..2] run tp @e[tag=piglin] ~ -1000 ~
-execute at @e[tag=nether] unless entity @a[distance=..2] run setblock ~ ~1 ~ air replace
+#execute at @e[tag=nether] if entity @a[distance=..2] unless entity @e[tag=piglin] run summon zombie_pigman ~ ~ ~ {Tags:[piglin],IsBaby:1b,Silent:1b,NoAI:1b,NoGravity:1b,Invulnerable:1b}
+#execute at @e[tag=nether] if entity @a[distance=..2] run setblock ~ ~1 ~ dark_oak_wall_sign[facing=south]{Color:"white",Text4:'{"text":""}',Text3:'{"text":"(Maybe) Coming Soon"}',Text2:'{"text":"-- Nether Trip --"}',Text1:'{"text":"《UHC: Evolve》"}'}
+#execute at @e[tag=nether] unless entity @a[distance=..2] run tp @e[tag=piglin] ~ -1000 ~
+#execute at @e[tag=nether] unless entity @a[distance=..2] run setblock ~ ~1 ~ air replace
+
+#initial supply
+execute unless entity @a[tag=set_supply] at @s if data block ~ 2 ~ Items run data modify block ~3 ~ ~7 Items set from block ~ 2 ~ Items
+execute unless entity @a[tag=set_supply] at @s unless data block ~ 2 ~ Items run data remove block ~3 ~ ~7 Items
+execute at @s unless block ~3 ~ ~7 light_blue_shulker_box run setblock ~3 ~ ~7 light_blue_shulker_box
 
 #signs
 execute if entity @a[scores={lottery=1}] as @e[tag=lottery] at @s run function uhc:lobby/lottery/init

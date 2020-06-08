@@ -119,6 +119,8 @@ scoreboard objectives remove fish_rush
 scoreboard objectives remove pearl_tear
 scoreboard objectives remove pearl_craft
 scoreboard objectives remove pearl_own
+scoreboard objectives remove init_supply
+scoreboard objectives remove set_supply
 scoreboard objectives remove information
 scoreboard objectives remove health
 scoreboard objectives remove death
@@ -251,6 +253,8 @@ execute at @e[tag=chest] run setblock ~ ~ ~ air replace
 #player reset
 effect clear @a
 clear @a
+xp set @a 0 points
+xp set @a 0 levels
 
 #delete entity
 kill @e[tag=book]

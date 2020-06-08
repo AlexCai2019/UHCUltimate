@@ -8,6 +8,7 @@
 #########################################################
 
 #non-used number: 12~15, 30, 34, 70, 100~102, 120~
+#nether-used number: 1000~1001, 1005, 1021~1023, 1031~1034
 
 #play sound
 execute as @a[scores={book=1..}] at @s run playsound entity.experience_orb.pickup voice @s ~ ~ ~ 0.7
@@ -166,6 +167,11 @@ execute if entity @a[scores={book=84}] run function uhc:lobby/settings/pearl_tea
 
 #book = 70, shadow-invisible
 execute if entity @a[scores={book=70}] run function uhc:lobby/settings/shadow
+
+#book = 1031~1034, initial supply
+execute if entity @a[scores={book=1031}] run function uhc:lobby/settings/init_supply
+execute if entity @a[scores={book=1032..1034}] run function uhc:lobby/settings/init_supply_set
+
 
 #### reset ########################################################################################################################################
 

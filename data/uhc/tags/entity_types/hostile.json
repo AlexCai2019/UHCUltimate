@@ -11,11 +11,13 @@
   	"minecraft:enderman",
   	"minecraft:endermite",
   	"minecraft:ghast",
-  	"minecraft:guardian",
+    "minecraft:guardian",
+    "minecraft:hoglin",
   	"minecraft:husk",
   	"minecraft:illusioner",
     "minecraft:magma_cube",
     "minecraft:phantom",
+    "minecraft:piglin",
   	"minecraft:pillager",
     "minecraft:ravager",
   	"minecraft:silverfish",
@@ -29,8 +31,9 @@
     "minecraft:vindicator",
     "minecraft:witch",
     "minecraft:wither_skeleton",
+    "minecraft:zoglin",
     "minecraft:zombie",
-    "minecraft:zombie_pigman",
+    "minecraft:zombified_piglin",
     "minecraft:zombie_villager"
   ]
 }

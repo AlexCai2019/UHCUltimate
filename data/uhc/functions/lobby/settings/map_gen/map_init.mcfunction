@@ -7,7 +7,7 @@
 # func    : Teleport player to the first two chunks.
 #########################################################
 
-tellraw @a {"text":"UHCP >>> ","color":"gray","extra":[{"text":"開始讀取地圖...","color":"gold"}]}
+tellraw @a {"text":"UHCE >>> ","color":"gray","extra":[{"text":"開始讀取地圖...","color":"gold"}]}
 
 bossbar set uhc:read_progress visible true
 execute if score @s width_chunk matches 15 run bossbar set uhc:read_progress max 17

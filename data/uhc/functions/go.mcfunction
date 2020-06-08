@@ -14,6 +14,9 @@ xp set @a 0 points
 xp set @a 0 levels
 advancement revoke @a everything
 
+#initial supply
+execute if score @s init_supply matches 1 at @s as @a[team=!spec] run loot give @s mine ~ 2 ~ diamond_pickaxe{Init:1b}
+
 #give effect
 effect give @a instant_health 1 9 true
 effect give @a[team=!spec] resistance 40 9 true

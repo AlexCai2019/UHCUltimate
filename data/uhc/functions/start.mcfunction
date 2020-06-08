@@ -20,6 +20,8 @@ gamerule disableElytraMovementCheck true
 gamerule spectatorsGenerateChunks false
 gamerule spawnRadius 0
 gamerule disableRaids true
+gamerule doPatrolSpawning false
+gamerule doTraderSpawning false
 gamerule doInsomnia false
 defaultgamemode survival
 weather clear 1
@@ -31,25 +33,27 @@ fill ~-1 0 ~-1 ~2 3 ~3 bedrock hollow
 fill ~ 1 ~2 ~1 1 ~2 end_portal
 
 #armor_stand settings
-execute align xz run summon area_effect_cloud ~0.5 1 ~0.5 {Tags:[main,book,lobby,carry],CustomName:"{\"text\":\"§a✔\"}",Duration:2147483647,Particle:"block air",UUIDLeast:1,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[assist,book,carry],CustomName:"{\"text\":\"§4✘\"}",Duration:2147483647,Particle:"block air",UUIDLeast:2,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~ {Tags:[sub1,mode,m1],CustomName:"{\"text\":\"§c漸縮\"}",Duration:2147483647,Particle:"block air",UUIDLeast:3,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~ {Tags:[mode,m2],CustomName:"{\"text\":\"§c競技場\"}",Duration:2147483647,Particle:"block air",UUIDLeast:4,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~ {Tags:[mode,m3,carry],CustomName:"{\"text\":\"§c隨機縮圈\"}",Duration:2147483647,Particle:"block air",UUIDLeast:11,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~1 {Tags:[sub2,pause,p1,carry],CustomName:"{\"text\":\"§6永晝\"}",Duration:2147483647,Particle:"block air",UUIDLeast:5,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~1 {Tags:[pause,p2,carry],CustomName:"{\"text\":\"§6永夜\"}",Duration:2147483647,Particle:"block air",UUIDLeast:6,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~1 {Tags:[sub3],Duration:2147483647,Particle:"block air",UUIDLeast:7,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~1 ~2 {Tags:[load],Duration:2147483647,Particle:"block air",UUIDLeast:8,UUIDMost:0,Rotation:[180.0f,0.0f]}
-execute at @e[tag=main] run summon area_effect_cloud ~ 255 ~ {Tags:[center],Duration:2147483647,Particle:"block air",UUIDLeast:9,UUIDMost:0}
-execute at @e[tag=main] run summon armor_stand ~ 255 ~ {Tags:[move],Invisible:1,Invulnerable:1,Small:1,NoGravity:1,UUIDLeast:12,UUIDMost:0} 
-execute at @e[tag=main] run summon armor_stand ~ ~ ~ {Tags:[show,lobby],CustomName:"{\"text\":\"UHC: \",\"color\":\"red\",\"bold\":true,\"extra\":[{\"text\":\"Evolve\",\"color\":\"gold\",\"italic\":true,\"bold\":false}]}",CustomNameVisible:1,NoGravity:1,Marker:0,Invisible:1,Invulnerable:1,Small:1,UUIDLeast:10,UUIDMost:0,DisabledSlots:2096896,ShowArms:1,ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"jelly99709"}}],HandItems:[{id:"trident",Count:1b,tag:{ench:[{id:16,lvl:1}]}},{id:"trident",Count:1b,tag:{ench:[{id:16,lvl:1}]}}],Pose:{LeftArm:[330f,90f,0f],RightArm:[330f,270f,0f]}}
-#execute at @e[tag=main] run summon armor_stand ~ ~1 ~ {Tags:[show,lobby],CustomName:"{\"text\":\"UHC: \",\"color\":\"red\",\"bold\":true,\"extra\":[{\"text\":\"Evolve\",\"color\":\"gold\",\"italic\":true,\"bold\":false}]}",CustomNameVisible:1,NoGravity:1,Marker:0,Invisible:1,Invulnerable:1,Small:1,UUIDLeast:10,UUIDMost:0,DisabledSlots:2096896}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w1,carry],CustomName:"{\"text\":\"§8晴朗\"}",Duration:2147483647,Particle:"block air",UUIDLeast:13,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w2,carry],CustomName:"{\"text\":\"§8下雨\"}",Duration:2147483647,Particle:"block air",UUIDLeast:14,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w3,carry],CustomName:"{\"text\":\"§8雷暴\"}",Duration:2147483647,Particle:"block air",UUIDLeast:15,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[gh,g1,carry],CustomName:"{\"text\":\"§5標準\"}",Duration:2147483647,Particle:"block air",UUIDLeast:16,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[gh,g2,carry],CustomName:"{\"text\":\"§5快速\"}",Duration:2147483647,Particle:"block air",UUIDLeast:17,UUIDMost:0}
-execute at @e[tag=main] run summon area_effect_cloud ~ 151 ~ {Tags:[set],Duration:2147483647,Particle:"block air",UUIDLeast:18,UUIDMost:0}
+execute align xz run summon area_effect_cloud ~0.5 1 ~0.5 {Tags:[main,book,lobby,carry],CustomName:"{\"text\":\"§a✔\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,1]}
+execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[assist,book,carry],CustomName:"{\"text\":\"§4✘\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,2]}
+execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~ {Tags:[sub1,mode,m1],CustomName:"{\"text\":\"§c漸縮\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,3]}
+execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~ {Tags:[mode,m2],CustomName:"{\"text\":\"§c競技場\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,4]}
+execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~ {Tags:[mode,m3,carry],CustomName:"{\"text\":\"§c隨機縮圈\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,11]}
+execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~1 {Tags:[sub2,pause,p1,carry],CustomName:"{\"text\":\"§6永晝\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,5]}
+execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~1 {Tags:[pause,p2,carry],CustomName:"{\"text\":\"§6永夜\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,6]}
+execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~1 {Tags:[sub3],Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,7]}
+execute at @e[tag=main] run summon area_effect_cloud ~ ~1 ~2 {Tags:[load],Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,8],Rotation:[180.0f,0.0f]}
+execute at @e[tag=main] run summon area_effect_cloud ~ 255 ~ {Tags:[center],Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,9]}
+execute at @e[tag=main] run summon armor_stand ~ 255 ~ {Tags:[move],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b,UUID:[I;0,0,0,12]} 
+execute at @e[tag=main] run summon armor_stand ~ ~ ~ {Tags:[show,lobby],CustomName:"{\"text\":\"UHC: \",\"color\":\"red\",\"bold\":true,\"extra\":[{\"text\":\"Evolve\",\"color\":\"gold\",\"italic\":true,\"bold\":false}]}",CustomNameVisible:1b,NoGravity:1b,Marker:0b,Invisible:1b,Invulnerable:1b,Small:1b,UUID:[I;0,0,0,10],DisabledSlots:2096896,ShowArms:1b,ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"jelly99709"}}],HandItems:[{id:"trident",Count:1b,tag:{ench:[{id:16,lvl:1}]}},{id:"trident",Count:1b,tag:{ench:[{id:16,lvl:1}]}}],Pose:{LeftArm:[330f,90f,0f],RightArm:[330f,270f,0f]}}
+execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w1,carry],CustomName:"{\"text\":\"§8晴朗\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,13]}
+execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w2,carry],CustomName:"{\"text\":\"§8下雨\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,14]}
+execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w3,carry],CustomName:"{\"text\":\"§8雷暴\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,15]}
+execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[gh,g1,carry],CustomName:"{\"text\":\"§5標準\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,16]}
+execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[gh,g2,carry],CustomName:"{\"text\":\"§5快速\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,17]}
+execute at @e[tag=main] run summon area_effect_cloud ~ 151 ~ {Tags:[set],Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,18]}
+
+#set initial supplies
+execute at @e[tag=main] run setblock ~ ~1 ~ light_blue_shulker_box replace
 
 #set world center
 execute at @e[tag=main] run tp @e[tag=lobby] ~-0.5 150 ~-0.5
@@ -63,9 +67,10 @@ execute at @e[tag=main] run forceload add ~ ~
 #execute at @e[tag=main] run fill ~-8 ~4 ~-8 ~7 ~4 ~7 air replace
 execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:lobby_v5",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
 execute at @e[tag=main] run setblock ~ ~1 ~ redstone_block replace
+execute at @e[tag=main] run setblock ~3 ~1 ~7 oak_wall_sign[facing=north]{Color:"black",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"初始物資"}',Text1:'{"text":""}'}
 
 #easter egg
-execute at @e[tag=main] run summon area_effect_cloud ~7.5 ~ ~-7.5 {Tags:[nether],Duration:2147483647,Particle:"block air",UUIDLeast:19,UUIDMost:0}
+#execute at @e[tag=main] run summon area_effect_cloud ~7.5 ~ ~-7.5 {Tags:[nether],Duration:2147483647,Particle:"block air",UUIDLeast:19,UUIDMost:0}
 
 #scoreboard creat
 #### state #########################################################
@@ -168,6 +173,8 @@ scoreboard objectives add pearl_tear dummy {"text":"珍珠之淚"}
 scoreboard objectives add pearl_craft minecraft.crafted:minecraft.heart_of_the_sea {"text":"合成珍珠之淚"}
 scoreboard objectives add pearl_own dummy {"text":"擁有珍珠之淚"}
 scoreboard objectives add shadow_invisible dummy {"text":"昏暗隱形"}
+scoreboard objectives add init_supply dummy {"text":"起始物資"}
+scoreboard objectives add set_supply dummy {"text":"設定起始物資"}
 #### stats ############################################################
 scoreboard objectives add information dummy {"text":"遊戲資訊","color":"gold","italic":true}
 scoreboard objectives add health health {"text":"血量"}
@@ -375,6 +382,9 @@ scoreboard players set @e[tag=main] pearl_tear 0
 scoreboard players set @e[tag=assist] pearl_tear 1
 scoreboard players set @e[tag=main] shadow_invisible 0
 scoreboard players set @e[tag=assist] shadow_invisible 1
+scoreboard players set @e[tag=main] init_supply 1
+scoreboard players set @e[tag=assist] init_supply 0
+scoreboard players set @e[tag=main] set_supply 0
 #### battleroyale ####################################################
 scoreboard players set @e[tag=main] BR_move 0
 scoreboard players set @e[tag=main] BR_stage 0

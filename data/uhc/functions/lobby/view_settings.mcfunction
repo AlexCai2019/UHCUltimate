@@ -161,6 +161,9 @@ execute if score 00000000-0000-0000-0000-000000000001 pearl_tear matches 0 run t
 #shadow-invisible
 execute if score 00000000-0000-0000-0000-000000000001 shadow_invisible matches 1 run tellraw @s {"text":"","extra":[{"text":"隱身黑暗","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
 execute if score 00000000-0000-0000-0000-000000000001 shadow_invisible matches 0 run tellraw @s {"text":"","extra":[{"text":"隱身黑暗","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
+#initial supplies
+execute if score 00000000-0000-0000-0000-000000000001 init_supply matches 1 run tellraw @s {"text":"","extra":[{"text":"初始物資","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
+execute if score 00000000-0000-0000-0000-000000000001 init_supply matches 0 run tellraw @s {"text":"","extra":[{"text":"初始物資","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
 
 tellraw @s {"text":"***********************************************************","color":"green","bold":false}
 
