@@ -7,18 +7,18 @@
 # func    : Set collisionRule false
 #########################################################
 
-team modify red collisionRule pushOtherTeams
-team modify blue collisionRule pushOtherTeams
-team modify green collisionRule pushOtherTeams
-team modify yellow collisionRule pushOtherTeams
-team modify purple collisionRule pushOtherTeams
-team modify gray collisionRule pushOtherTeams
-team modify red_dark collisionRule pushOtherTeams
-team modify blue_dark collisionRule pushOtherTeams
-team modify green_dark collisionRule pushOtherTeams
-team modify gold collisionRule pushOtherTeams
-team modify pink collisionRule pushOtherTeams
-team modify gray_dark collisionRule pushOtherTeams
-team modify aqua collisionRule pushOtherTeams
-team modify aqua_dark collisionRule pushOtherTeams
-team modify betrayer collisionRule pushOtherTeams
+team modify red collisionRule pushOwnTeam
+team modify blue collisionRule pushOwnTeam
+team modify green collisionRule pushOwnTeam
+team modify yellow collisionRule pushOwnTeam
+team modify purple collisionRule pushOwnTeam
+team modify gray collisionRule pushOwnTeam
+team modify red_dark collisionRule pushOwnTeam
+team modify blue_dark collisionRule pushOwnTeam
+team modify green_dark collisionRule pushOwnTeam
+team modify gold collisionRule pushOwnTeam
+team modify pink collisionRule pushOwnTeam
+team modify gray_dark collisionRule pushOwnTeam
+team modify aqua collisionRule pushOwnTeam
+team modify aqua_dark collisionRule pushOwnTeam
+team modify betrayer collisionRule pushOwnTeam
