@@ -79,7 +79,7 @@ execute if score @s sky_limit matches 2 run function uhc:gameloop/event/sky_pena
 execute if score @s ground_limit matches 2 run function uhc:gameloop/event/ground_penalty
 
 #branch mined penalty.
-execute if score @s branch_mine matches 1 as @a[scores={stone_penalty=100}] run function uhc:apply/branch_penalty_effect
+execute if score @s branch_mine matches 1 as @a[scores={stone_penalty=100..}] run function uhc:apply/branch_penalty_effect
 execute as @e[type=item,nbt={Item:{id:"minecraft:tropical_fish_spawn_egg"}}] at @s run function uhc:apply/branch_bomb
 
 #random silverfish.

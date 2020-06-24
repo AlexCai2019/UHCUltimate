@@ -119,6 +119,7 @@ scoreboard objectives remove fish_rush
 scoreboard objectives remove pearl_tear
 scoreboard objectives remove pearl_craft
 scoreboard objectives remove pearl_own
+scoreboard objectives remove shadow_invisible
 scoreboard objectives remove init_supply
 scoreboard objectives remove set_supply
 scoreboard objectives remove information
@@ -152,6 +153,7 @@ scoreboard objectives remove V
 scoreboard objectives remove VII
 scoreboard objectives remove X
 scoreboard objectives remove XIII
+scoreboard objectives remove C
 scoreboard objectives remove sky_notifier
 scoreboard objectives remove gnd_notifier
 scoreboard objectives remove nether_notifier

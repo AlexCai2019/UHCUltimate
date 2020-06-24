@@ -208,6 +208,7 @@ scoreboard objectives add V dummy {"text":"常數5"}
 scoreboard objectives add VII dummy {"text":"常數7"}
 scoreboard objectives add X dummy {"text":"常數10"}
 scoreboard objectives add XIII dummy {"text":"常數13"}
+scoreboard objectives add C dummy {"text":"常數100"}
 scoreboard objectives add sky_notifier dummy {"text":"制空提醒"}
 scoreboard objectives add gnd_notifier dummy {"text":"遁地提醒"}
 scoreboard objectives add nether_notifier dummy {"text":"地獄提醒"}
@@ -382,8 +383,8 @@ scoreboard players set @e[tag=main] pearl_tear 0
 scoreboard players set @e[tag=assist] pearl_tear 1
 scoreboard players set @e[tag=main] shadow_invisible 0
 scoreboard players set @e[tag=assist] shadow_invisible 1
-scoreboard players set @e[tag=main] init_supply 1
-scoreboard players set @e[tag=assist] init_supply 0
+scoreboard players set @e[tag=main] init_supply 0
+scoreboard players set @e[tag=assist] init_supply 1
 scoreboard players set @e[tag=main] set_supply 0
 #### battleroyale ####################################################
 scoreboard players set @e[tag=main] BR_move 0
@@ -396,6 +397,7 @@ scoreboard players set const5 V 5
 scoreboard players set const7 VII 7
 scoreboard players set const10 X 10
 scoreboard players set const13 XIII 13
+scoreboard players set const100 C 100
 scoreboard players set negative_I n_I -1
 #### lottery ########################################################
 scoreboard players set @e[tag=lottery] lottery_count 0

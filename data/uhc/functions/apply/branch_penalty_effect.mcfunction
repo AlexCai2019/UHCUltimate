@@ -20,4 +20,5 @@ execute if score 00000000-0000-0000-0000-000000000001 branch_bomb matches 1 if s
 execute if score 00000000-0000-0000-0000-000000000001 branch_bomb matches 1 if score @s branch_bomb_num = 00000000-0000-0000-0000-000000000001 branch_bomb_num run tag @s add mine_bomb
 execute as @a at @s run playsound minecraft:block.anvil.land ambient @s ~ ~ ~
 
-scoreboard players set @s stone_penalty 0
+#scoreboard players set @s stone_penalty 0
+scoreboard players operation @s stone_penalty -= const100 C

@@ -29,7 +29,7 @@ execute if score @s sky_limit matches 2 run function uhc:gameloop/event/sky_pena
 execute if score @s monster_clean matches 2 as @e[type=#uhc:hostile] at @s run tp @s ~ -999999 ~
 
 #branch mined penalty
-execute if score @s branch_mine matches 1 as @a[scores={stone_penalty=100}] run function uhc:apply/branch_penalty_effect
+execute if score @s branch_mine matches 1 as @a[scores={stone_penalty=100..}] run function uhc:apply/branch_penalty_effect
 
 #fish rush
 #execute if score @s fish_rush matches 1 as @a[nbt={SelectedItem:{id:"minecraft:fishing_rod"}}] unless data entity @s SelectedItem.tag.FishRush run data modify entity @s SelectedItem.tag merge value {FishRush:1}
