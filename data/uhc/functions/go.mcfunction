@@ -126,7 +126,8 @@ execute if score 00000000-0000-0000-0000-000000000006 day_mode matches 1 run sco
 
 #book settings about scoreboard --- branch_mine
 scoreboard players set @a stone_penalty 100
-scoreboard players operation @a stone_penalty -= @s branch_limit 
+scoreboard players operation @a stone_penalty -= @s branch_limit
+scoreboard players set @a stone_penalty_d 0
 
 #book settings about scoreboard --- random apple
 #scoreboard players set @a leaf 0
@@ -158,6 +159,9 @@ scoreboard players set @a temp_kill 0
 scoreboard players set @a temp_stone 0
 scoreboard players set @a temp_diamond 0
 scoreboard players set @a temp_gold 0
+scoreboard players set @a temp_stone_d 0
+scoreboard players set @a temp_diamond_d 0
+scoreboard players set @a temp_gold_d 0
 scoreboard players set @a temp_apple 0
 scoreboard players set @a temp_hurt 0
 scoreboard players set @a gold_head 0
@@ -170,21 +174,21 @@ scoreboard players set @a tropicalfish 0
 scoreboard players set @a pearl_craft 0
 
 #judge system
-execute as @a[team=solo] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,solo],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=red] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,r],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=blue] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,b],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=green] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,gr],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=yellow] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,y],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=purple] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,pr],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=gray] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,gy],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=red_dark] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,rd],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=blue_dark] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,bd],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=green_dark] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,grd],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=gold] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,yd],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=pink] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,pk],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=gray_dark] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,gyd],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=aqua] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,aq],Duration:2147483647,Particle:"block air"}
-execute if entity @a[team=aqua_dark] at 00000000-0000-0000-0000-000000000005 run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,aqd],Duration:2147483647,Particle:"block air"}
+execute as @a[team=solo] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,solo]}
+execute if entity @a[team=red] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,r]}
+execute if entity @a[team=blue] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,b]}
+execute if entity @a[team=green] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,gr]}
+execute if entity @a[team=yellow] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,y]}
+execute if entity @a[team=purple] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,pr]}
+execute if entity @a[team=gray] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,gy]}
+execute if entity @a[team=red_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,rd]}
+execute if entity @a[team=blue_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,bd]}
+execute if entity @a[team=green_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,grd]}
+execute if entity @a[team=gold] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,yd]}
+execute if entity @a[team=pink] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,pk]}
+execute if entity @a[team=gray_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,gyd]}
+execute if entity @a[team=aqua] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,aq]}
+execute if entity @a[team=aqua_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,aqd]}
 
 #center position recorder
 execute store result score @s posX run data get entity 00000000-0000-0000-0000-000000000009 Pos[0]

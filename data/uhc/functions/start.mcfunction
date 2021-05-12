@@ -23,6 +23,7 @@ gamerule disableRaids true
 gamerule doPatrolSpawning false
 gamerule doTraderSpawning false
 gamerule doInsomnia false
+gamerule playersSleepingPercentage 150
 defaultgamemode survival
 weather clear 1
 difficulty hard
@@ -33,24 +34,24 @@ fill ~-1 0 ~-1 ~2 3 ~3 bedrock hollow
 fill ~ 1 ~2 ~1 1 ~2 end_portal
 
 #armor_stand settings
-execute align xz run summon area_effect_cloud ~0.5 1 ~0.5 {Tags:[main,book,lobby,carry],CustomName:"{\"text\":\"§a✔\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,1]}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[assist,book,carry],CustomName:"{\"text\":\"§4✘\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,2]}
-execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~ {Tags:[sub1,mode,m1],CustomName:"{\"text\":\"§c漸縮\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,3]}
-execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~ {Tags:[mode,m2],CustomName:"{\"text\":\"§c競技場\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,4]}
-execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~ {Tags:[mode,m3,carry],CustomName:"{\"text\":\"§c隨機縮圈\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,11]}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~1 {Tags:[sub2,pause,p1,carry],CustomName:"{\"text\":\"§6永晝\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,5]}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~1 {Tags:[pause,p2,carry],CustomName:"{\"text\":\"§6永夜\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,6]}
-execute at @e[tag=main] run summon area_effect_cloud ~1 ~ ~1 {Tags:[sub3],Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,7]}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~1 ~2 {Tags:[load],Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,8],Rotation:[180.0f,0.0f]}
-execute at @e[tag=main] run summon area_effect_cloud ~ 255 ~ {Tags:[center],Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,9]}
+execute align xz run summon marker ~0.5 1 ~0.5 {Tags:[main,book,lobby,carry],CustomName:"{\"text\":\"§a✔\"}",UUID:[I;0,0,0,1]}
+execute at @e[tag=main] run summon marker ~ ~ ~ {Tags:[assist,book,carry],CustomName:"{\"text\":\"§4✘\"}",UUID:[I;0,0,0,2]}
+execute at @e[tag=main] run summon marker ~1 ~ ~ {Tags:[sub1,mode,m1],CustomName:"{\"text\":\"§c漸縮\"}",UUID:[I;0,0,0,3]}
+execute at @e[tag=main] run summon marker ~1 ~ ~ {Tags:[mode,m2],CustomName:"{\"text\":\"§c競技場\"}",UUID:[I;0,0,0,4]}
+execute at @e[tag=main] run summon marker ~1 ~ ~ {Tags:[mode,m3,carry],CustomName:"{\"text\":\"§c隨機縮圈\"}",UUID:[I;0,0,0,11]}
+execute at @e[tag=main] run summon marker ~ ~ ~1 {Tags:[sub2,pause,p1,carry],CustomName:"{\"text\":\"§6永晝\"}",UUID:[I;0,0,0,5]}
+execute at @e[tag=main] run summon marker ~ ~ ~1 {Tags:[pause,p2,carry],CustomName:"{\"text\":\"§6永夜\"}",UUID:[I;0,0,0,6]}
+execute at @e[tag=main] run summon marker ~1 ~ ~1 {Tags:[sub3],UUID:[I;0,0,0,7]}
+execute at @e[tag=main] run summon marker ~ ~1 ~2 {Tags:[load],UUID:[I;0,0,0,8],Rotation:[180.0f,0.0f]}
+execute at @e[tag=main] run summon marker ~ 255 ~ {Tags:[center],UUID:[I;0,0,0,9]}
 execute at @e[tag=main] run summon armor_stand ~ 255 ~ {Tags:[move],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b,UUID:[I;0,0,0,12]} 
 execute at @e[tag=main] run summon armor_stand ~ ~ ~ {Tags:[show,lobby],CustomName:"{\"text\":\"UHC: \",\"color\":\"red\",\"bold\":true,\"extra\":[{\"text\":\"Evolve\",\"color\":\"gold\",\"italic\":true,\"bold\":false}]}",CustomNameVisible:1b,NoGravity:1b,Marker:0b,Invisible:1b,Invulnerable:1b,Small:1b,UUID:[I;0,0,0,10],DisabledSlots:2096896,ShowArms:1b,ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"jelly99709"}}],HandItems:[{id:"trident",Count:1b,tag:{ench:[{id:16,lvl:1}]}},{id:"trident",Count:1b,tag:{ench:[{id:16,lvl:1}]}}],Pose:{LeftArm:[330f,90f,0f],RightArm:[330f,270f,0f]}}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w1,carry],CustomName:"{\"text\":\"§8晴朗\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,13]}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w2,carry],CustomName:"{\"text\":\"§8下雨\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,14]}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[weather,w3,carry],CustomName:"{\"text\":\"§8雷暴\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,15]}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[gh,g1,carry],CustomName:"{\"text\":\"§5標準\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,16]}
-execute at @e[tag=main] run summon area_effect_cloud ~ ~ ~ {Tags:[gh,g2,carry],CustomName:"{\"text\":\"§5快速\"}",Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,17]}
-execute at @e[tag=main] run summon area_effect_cloud ~ 151 ~ {Tags:[set],Duration:2147483647,Particle:"block air",UUID:[I;0,0,0,18]}
+execute at @e[tag=main] run summon marker ~ ~ ~ {Tags:[weather,w1,carry],CustomName:"{\"text\":\"§8晴朗\"}",UUID:[I;0,0,0,13]}
+execute at @e[tag=main] run summon marker ~ ~ ~ {Tags:[weather,w2,carry],CustomName:"{\"text\":\"§8下雨\"}",UUID:[I;0,0,0,14]}
+execute at @e[tag=main] run summon marker ~ ~ ~ {Tags:[weather,w3,carry],CustomName:"{\"text\":\"§8雷暴\"}",UUID:[I;0,0,0,15]}
+execute at @e[tag=main] run summon marker ~ ~ ~ {Tags:[gh,g1,carry],CustomName:"{\"text\":\"§5標準\"}",UUID:[I;0,0,0,16]}
+execute at @e[tag=main] run summon marker ~ ~ ~ {Tags:[gh,g2,carry],CustomName:"{\"text\":\"§5快速\"}",UUID:[I;0,0,0,17]}
+execute at @e[tag=main] run summon marker ~ 151 ~ {Tags:[set],UUID:[I;0,0,0,18]}
 
 #set initial supplies
 execute at @e[tag=main] run setblock ~ ~1 ~ light_blue_shulker_box replace
@@ -184,6 +185,9 @@ scoreboard objectives add temp_kill playerKillCount {"text":"殺人數量"}
 scoreboard objectives add temp_stone minecraft.mined:minecraft.stone {"text":"挖掘石頭"}
 scoreboard objectives add temp_diamond minecraft.mined:minecraft.diamond_ore {"text":"挖掘鑽石"}
 scoreboard objectives add temp_gold minecraft.mined:minecraft.gold_ore {"text":"挖掘黃金"}
+scoreboard objectives add temp_stone_d minecraft.mined:minecraft.deepslate {"text":"挖掘深板岩"}
+scoreboard objectives add temp_diamond_d minecraft.mined:minecraft.deepslate_diamond_ore {"text":"挖掘深板岩鑽石"}
+scoreboard objectives add temp_gold_d minecraft.mined:minecraft.deepslate_gold_ore {"text":"挖掘深板岩黃金"}
 scoreboard objectives add temp_apple minecraft.used:minecraft.golden_apple {"text":"使用金蘋果"}
 scoreboard objectives add temp_hurt minecraft.custom:minecraft.damage_taken {"text":"受到傷害"}
 scoreboard objectives add temp_absorb minecraft.custom:minecraft.damage_absorbed {"text":"吸收傷害"}
@@ -214,6 +218,7 @@ scoreboard objectives add gnd_notifier dummy {"text":"遁地提醒"}
 scoreboard objectives add nether_notifier dummy {"text":"地獄提醒"}
 scoreboard objectives add betray_notifier dummy {"text":"背叛提醒"}
 scoreboard objectives add stone_penalty minecraft.mined:minecraft.stone {"text":"石頭懲罰"}
+scoreboard objectives add stone_penalty_d minecraft.mined:minecraft.deepslate {"text":"石頭懲罰-深板岩"}
 #### battle royale border ####################################################
 scoreboard objectives add BR_move dummy {"text":"中心移動狀態"}
 scoreboard objectives add BR_xdiff dummy {"text":"X距離差"}

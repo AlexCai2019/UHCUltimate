@@ -99,11 +99,11 @@
   					{
   						"function": "minecraft:set_name",
   						"entity": "this",
-  						"name": {"text":"金頭顱 - 死亡特典","color":"dark_purple"}
+  						"name": {"text":"金頭顱 - 死亡特典","color":"dark_purple","italic":false}
   					},
   					{
   						"function": "minecraft:set_lore",
-  						"lore":[{"text":"點擊右鍵使用，回復8點血量並獲得2分鐘吸收一效果","italic":true,"color":"white"}]
+  						"lore":[{"text":"點擊右鍵使用，回復8點血量並獲得2分鐘吸收一效果","italic":false,"color":"white"}]
   					},
   					{
   						"function": "minecraft:set_nbt",

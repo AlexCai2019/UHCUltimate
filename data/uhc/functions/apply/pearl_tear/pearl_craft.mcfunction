@@ -42,5 +42,5 @@ execute if entity @s[team=betrayer] run recipe take @a[team=betrayer] uhc:pearl_
 scoreboard players remove @s pearl_craft 1
 
 clear @s heart_of_the_sea 1
-give @s heart_of_the_sea{display:{Name:"{\"text\":\"碧藍之淚\",\"color\":\"aqua\",\"italic\":true}",Lore:["{\"text\":\"持有者死亡時，全體隊友回復6點血量。每隊限使用一次\"}"]},Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}]}
+give @s heart_of_the_sea{display:{Name:"{\"text\":\"碧藍之淚\",\"color\":\"aqua\",\"italic\":true}",Lore:["{\"text\":\"持有者死亡時，全體隊友三秒內回復10點血量。每隊限使用一次\"}"]},Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}]}
 tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"selector":"@s"},{"text":" 合成","color":"white"},{"text":"碧藍之淚","color":"aqua","Italic":true}]}

@@ -22,6 +22,7 @@ gamerule spawnRadius 10
 gamerule doLimitedCrafting false
 gamerule naturalRegeneration true
 gamerule disableRaids false
+gamerule playersSleepingPercentage 100
 weather thunder 1
 worldborder set 2999998
 time set day
@@ -128,8 +129,11 @@ scoreboard objectives remove death
 scoreboard objectives remove temp_kill
 scoreboard objectives remove temp_stone
 scoreboard objectives remove temp_gold
+scoreboard objectives remove temp_stone_d
+scoreboard objectives remove temp_gold_d
 scoreboard objectives remove temp_apple
 scoreboard objectives remove temp_diamond
+scoreboard objectives remove temp_diamond_d
 scoreboard objectives remove temp_hurt
 scoreboard objectives remove temp_absorb
 scoreboard objectives remove final_kill
@@ -143,6 +147,7 @@ scoreboard objectives remove posX
 scoreboard objectives remove posY
 scoreboard objectives remove posZ
 scoreboard objectives remove stone_penalty
+scoreboard objectives remove stone_penalty_d
 #scoreboard objectives remove silver
 #scoreboard objectives remove leaf
 #scoreboard objectives remove shear
