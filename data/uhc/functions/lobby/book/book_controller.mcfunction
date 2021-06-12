@@ -87,6 +87,9 @@ execute if entity @a[scores={book=35..40}] run function uhc:lobby/settings/potio
 #book = 41, cut clean
 execute if entity @a[scores={book=41}] run function uhc:lobby/settings/cut_clean
 
+#book = 34, exchange
+execute if entity @a[scores={book=34}] run function uhc:lobby/settings/exchange
+
 #book = 42, advancement announce
 execute if entity @a[scores={book=42}] run function uhc:lobby/settings/adv
 

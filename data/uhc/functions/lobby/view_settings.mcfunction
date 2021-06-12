@@ -79,6 +79,9 @@ execute if score 00000000-0000-0000-0000-000000000001 notch_apple matches 0 run 
 #cut clean
 execute if score 00000000-0000-0000-0000-000000000001 cut_clean matches 1 run tellraw @s {"text":"","extra":[{"text":"物品免燒","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
 execute if score 00000000-0000-0000-0000-000000000001 cut_clean matches 0 run tellraw @s {"text":"","extra":[{"text":"物品免燒","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
+#exchange
+execute if score 00000000-0000-0000-0000-000000000001 exchange matches 1 run tellraw @s {"text":"","extra":[{"text":"礦物交換","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
+execute if score 00000000-0000-0000-0000-000000000001 exchange matches 0 run tellraw @s {"text":"","extra":[{"text":"礦物交換","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}
 
 #book3
 tellraw @s {"text":"-------------------------------","color":"aqua"}

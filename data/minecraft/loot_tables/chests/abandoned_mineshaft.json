@@ -300,7 +300,7 @@
             },
             {
               "function": "minecraft:set_lore",
-              "lore": [{"text":"持有者死亡時，全體隊友回復6點血量。每隊限使用一次"}]
+              "lore": [{"text":"持有者死亡時，全體隊友三秒內回復10點血量。每隊限使用一次"}]
             }
           ],
           "conditions": [

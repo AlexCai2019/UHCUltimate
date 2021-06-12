@@ -74,6 +74,8 @@ scoreboard objectives remove stew_get
 scoreboard objectives remove potion_brew
 scoreboard objectives remove notch_apple
 scoreboard objectives remove cut_clean
+scoreboard objectives remove exchange
+scoreboard objectives remove exchange_time
 scoreboard objectives remove advance_announce
 scoreboard objectives remove border_on
 scoreboard objectives remove border_mode
@@ -214,6 +216,7 @@ tag @a remove pearl_tear
 tag @a remove pearl_craft
 tag @a remove pearl_used
 tag @a remove touch_bee
+tag @a remove summon
 #tag @a remove knocked_down
 #tag @a remove relife
 
@@ -288,3 +291,4 @@ kill @e[type=item]
 kill @e[tag=bee]
 kill @e[tag=nether]
 kill @e[tag=piglin]
+kill @e[tag=exchange]

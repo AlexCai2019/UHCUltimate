@@ -48,7 +48,8 @@ execute if score @s allow_diamond matches 0 run clear @a #uhc:diamond
 execute if score @s nether_open matches ..0 run function uhc:gameloop/event/nether_penalty
 
 #stew_take.
-execute if score @s stew_get matches 0 run clear @a suspicious_stew
+execute if score @s stew_get matches 0 as @a[nbt={Inventory:[{id:"minecraft:suspicious_stew"}]}] run function uhc:apply/sus_stew
+#execute if score @s stew_get matches 0 run clear @a suspicious_stew
 
 #potion_brew.
 execute if score @s potion_brew matches 0 run clear @a #uhc:brew
@@ -67,6 +68,9 @@ execute if score @s notch_apple matches 0 as @a[nbt={Inventory:[{id:"minecraft:e
 
 #cut clean.
 execute if score @s cut_clean matches 1 run function uhc:apply/cut_clean
+
+#exchange
+execute if score @s exchange matches 1 run function uhc:apply/exchange
 
 #monster clean.
 execute if score @s monster_clean matches 2 as @e[type=#uhc:hostile] at @s run tp @s ~ -999999 ~

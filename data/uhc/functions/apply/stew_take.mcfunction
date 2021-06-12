@@ -3,7 +3,7 @@
 # Name    : stew_take.mcfunction 
 # Made by : jelly99709 
 # Path    : /apply/
-# Loop    : No.
+# Loop    : Yes.
 # func    : Take off stew recipe.
 ###################################################
 

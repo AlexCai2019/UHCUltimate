@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
+        "minecraft:axolotl",
         "minecraft:bat",
         "minecraft:bee",
         "minecraft:cat",
@@ -10,6 +11,7 @@
         "minecraft:dolphin",
         "minecraft:donkey",
         "minecraft:fox",
+        "minecraft:goat",
         "minecraft:horse",
         "minecraft:iron_golem",
         "minecraft:llama",

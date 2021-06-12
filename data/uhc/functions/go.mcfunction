@@ -39,6 +39,8 @@ gamerule doMobSpawning true
 gamerule doWeatherCycle true
 gamerule doDaylightCycle true
 gamerule disableRaids false
+gamerule doPatrolSpawning true
+gamerule doTraderSpawning true
 gamerule doInsomnia true
 gamerule doLimitedCrafting true
 time set day
@@ -98,7 +100,7 @@ execute if score @s slow_fall matches 1 run function uhc:apply/spread_1
 #function uhc:apply/spread_1
 
 #start sound
-execute if score @s slow_fall matches 0 as @a at @s run playsound minecraft:entity.ender_dragon.growl ambient @s ~ ~ ~ 0.5
+execute if score @s slow_fall matches 1 as @a at @s run playsound minecraft:entity.ender_dragon.growl ambient @s ~ ~ ~ 0.5
 
 #clear lobby
 execute at @s run fill ~-8 150 ~-8 ~7 160 ~7 air
@@ -110,7 +112,7 @@ kill @e[tag=lottery]
 execute as @e[tag=bee] at @s run tp @s ~ -100 ~
 kill @e[tag=nether]
 execute as @e[tag=piglin] at @s run tp @s ~ -100 ~
-#kill @e[type=#uhc:hostile_normal]
+kill @e[type=#uhc:hostile_normal]
 
 #clear room setting ambiguity
 execute at 00000000-0000-0000-0000-000000000002 run setblock ~ 125 ~ air replace
@@ -172,6 +174,8 @@ scoreboard players set @a salmon 0
 scoreboard players set @a pufferfish 0
 scoreboard players set @a tropicalfish 0
 scoreboard players set @a pearl_craft 0
+
+scoreboard players set @a exchange 0
 
 #judge system
 execute as @a[team=solo] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,solo]}

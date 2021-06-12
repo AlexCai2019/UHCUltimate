@@ -20,13 +20,17 @@ execute unless entity @e[tag=win] as @a[scores={warn=1..},gamemode=survival] run
 execute if score @s slow_fall matches 0 if score @s timer_min matches 0 as @a at @s if block ~ ~-1 ~ barrier run tp @s ~ ~-1 ~
 
 #stew_take
-execute if score @s stew_get matches 0 run clear @a suspicious_stew
+execute if score @s stew_get matches 0 as @a[nbt={Inventory:[{id:"minecraft:suspicious_stew"}]}] run function uhc:apply/sus_stew
+#execute if score @s stew_get matches 0 run clear @a suspicious_stew
 
 #nether
 execute if score @s nether_open matches ..0 run function uhc:gameloop/event/nether_penalty
 
 #cut clean
 execute if score @s cut_clean matches 1 run function uhc:apply/cut_clean
+
+#exchange
+execute if score @s exchange matches 1 run function uhc:apply/exchange
 
 #branch_bomb
 execute as @e[type=item,nbt={Item:{id:"minecraft:tropical_fish_spawn_egg"}}] at @s run function uhc:apply/branch_bomb

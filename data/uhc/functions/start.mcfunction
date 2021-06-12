@@ -66,9 +66,9 @@ execute at @e[tag=main] run forceload add ~ ~
 #construct lobby
 #execute at @e[tag=main] run fill ~-9 ~-1 ~-9 ~8 ~4 ~8 barrier hollow
 #execute at @e[tag=main] run fill ~-8 ~4 ~-8 ~7 ~4 ~7 air replace
-execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:lobby_v5",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
+execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:lobby_v6",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
 execute at @e[tag=main] run setblock ~ ~1 ~ redstone_block replace
-execute at @e[tag=main] run setblock ~3 ~1 ~7 oak_wall_sign[facing=north]{Color:"black",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"初始物資"}',Text1:'{"text":""}'}
+execute at @e[tag=main] run setblock ~3 ~1 ~7 oak_wall_sign[facing=north]{GlowingText:1b,Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"初始物資"}',Text1:'{"text":""}'}
 
 #easter egg
 #execute at @e[tag=main] run summon area_effect_cloud ~7.5 ~ ~-7.5 {Tags:[nether],Duration:2147483647,Particle:"block air",UUIDLeast:19,UUIDMost:0}
@@ -124,6 +124,8 @@ scoreboard objectives add potion_brew dummy {"text":"釀造藥水"}
 #scoreboard objectives add potion_turtle dummy {"text":"龜仙藥水"}
 scoreboard objectives add notch_apple dummy {"text":"附魔金蘋果"}
 scoreboard objectives add cut_clean dummy {"text":"物品免燒"}
+scoreboard objectives add exchange dummy {"text":"礦物交換"}
+scoreboard objectives add exchange_time dummy {"text":"礦物交換冷卻"}
 scoreboard objectives add advance_announce dummy {"text":"成就通知"}
 #### book3 ##########################################################
 scoreboard objectives add border_on dummy {"text":"啟動邊界模式"}
@@ -311,6 +313,8 @@ scoreboard players set @e[tag=main] notch_apple 0
 scoreboard players set @e[tag=assist] notch_apple 1
 scoreboard players set @e[tag=main] cut_clean 0
 scoreboard players set @e[tag=assist] cut_clean 1
+scoreboard players set @e[tag=main] exchange 0
+scoreboard players set @e[tag=assist] exchange 1
 scoreboard players set @e[tag=main] advance_announce 1
 scoreboard players set @e[tag=assist] advance_announce 0
 #### book3 ##########################################################
@@ -369,10 +373,10 @@ scoreboard players set @e[tag=main] rand_silverfish 0
 scoreboard players set @e[tag=assist] rand_silverfish 1
 scoreboard players set @e[tag=main] rand_apple 0
 scoreboard players set @e[tag=assist] rand_apple 1
-scoreboard players set @e[tag=main] saddle 1
-scoreboard players set @e[tag=assist] saddle 0
-scoreboard players set @e[tag=main] fish_bucket 1
-scoreboard players set @e[tag=assist] fish_bucket 0
+scoreboard players set @e[tag=main] saddle 0
+scoreboard players set @e[tag=assist] saddle 1
+scoreboard players set @e[tag=main] fish_bucket 0
+scoreboard players set @e[tag=assist] fish_bucket 1
 scoreboard players set @e[tag=main] nerf_arrow 1
 scoreboard players set @e[tag=assist] nerf_arrow 0
 #scoreboard players set @e[tag=main] auto_crossbow 0

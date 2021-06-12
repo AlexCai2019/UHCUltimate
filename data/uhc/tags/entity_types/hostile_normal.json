@@ -5,9 +5,7 @@
   	"minecraft:blaze",
   	"minecraft:cave_spider",
   	"minecraft:creeper",
-  	"minecraft:drowned",
   	"minecraft:enderman",
-  	"minecraft:endermite",
   	"minecraft:ghast",
     "minecraft:guardian",
     "minecraft:hoglin",
@@ -16,15 +14,11 @@
     "minecraft:phantom",
   	"minecraft:silverfish",
     "minecraft:skeleton",
-    "minecraft:skeleton_horse",
     "minecraft:slime",
     "minecraft:spider",
     "minecraft:stray",
     "minecraft:witch",
     "minecraft:wither_skeleton",
-    "minecraft:zoglin",
-    "minecraft:zombie",
-    "minecraft:zombified_piglin",
-    "minecraft:zombie_villager"
+    "minecraft:zombie"
   ]
 }
