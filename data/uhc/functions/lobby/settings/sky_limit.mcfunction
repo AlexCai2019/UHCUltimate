@@ -16,8 +16,8 @@ execute if entity @a[scores={book=75}] run scoreboard players add @s sky_height 
 scoreboard players set @e[tag=book,scores={sky_limit=2..}] sky_limit 0
 scoreboard players set @s[scores={sky_time=101..}] sky_time 0
 scoreboard players set @s[scores={sky_time=..-1}] sky_time 100
-scoreboard players set @s[scores={sky_height=131..}] sky_height 60
-scoreboard players set @s[scores={sky_height=..59}] sky_height 130
+scoreboard players set @s[scores={sky_height=301..}] sky_height -30
+scoreboard players set @s[scores={sky_height=..-31}] sky_height 300
 
 execute if entity @a[scores={book=71}] if score @s sky_limit matches 1 run tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定","color":"aqua"},{"text":" | ","color":"white"},{"text":"限制制空","color":"gold"},{"text":" | ","color":"white"},{"text":"開啟","color":"green"}]}
 execute if entity @a[scores={book=71}] if score @s sky_limit matches 0 run tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定","color":"aqua"},{"text":" | ","color":"white"},{"text":"限制制空","color":"gold"},{"text":" | ","color":"white"},{"text":"關閉","color":"red"}]}

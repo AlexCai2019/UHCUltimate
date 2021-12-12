@@ -2,7 +2,8 @@
   "type": "minecraft:entity",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
@@ -13,7 +14,8 @@
                 "min": 0.0,
                 "max": 2.0,
                 "type": "minecraft:uniform"
-              }
+              },
+              "add": false
             },
             {
               "function": "minecraft:looting_enchant",
@@ -28,7 +30,8 @@
       ]
     },
     {
-      "rolls": 1,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
@@ -45,8 +48,8 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.1,
-          "looting_multiplier": 0.01
+          "chance": 0.22,
+          "looting_multiplier": 0.02
         }
       ]
     }

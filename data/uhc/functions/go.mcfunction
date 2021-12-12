@@ -15,7 +15,7 @@ xp set @a 0 levels
 advancement revoke @a everything
 
 #initial supply
-execute if score @s init_supply matches 1 at @s as @a[team=!spec] run loot give @s mine ~ 2 ~ diamond_pickaxe{Init:1b}
+execute if score @s init_supply matches 1 at @s as @a[team=!spec] run loot give @s mine ~ -62 ~ diamond_pickaxe{Init:1b}
 
 #give effect
 effect give @a instant_health 1 9 true
@@ -107,12 +107,12 @@ execute at @s run fill ~-8 150 ~-8 ~7 160 ~7 air
 execute if score @s betray matches 0 at @s run fill ~-9 149 ~-9 ~8 160 ~8 air
 tp @s 00000000-0000-0000-0000-000000000002
 kill @e[tag=show]
-kill @e[type=item]
 kill @e[tag=lottery]
-execute as @e[tag=bee] at @s run tp @s ~ -100 ~
+execute as @e[tag=bee] at @s run tp @s ~ -200 ~
 kill @e[tag=nether]
-execute as @e[tag=piglin] at @s run tp @s ~ -100 ~
+execute as @e[tag=piglin] at @s run tp @s ~ -200 ~
 kill @e[type=#uhc:hostile_normal]
+kill @e[type=item]
 
 #clear room setting ambiguity
 execute at 00000000-0000-0000-0000-000000000002 run setblock ~ 125 ~ air replace
@@ -152,6 +152,10 @@ scoreboard players operation @s gnd_notifier = @s ground_time
 scoreboard players operation @s gnd_notifier -= const5 V
 scoreboard players operation @s sky_notifier = @s sky_time
 scoreboard players operation @s sky_notifier -= const5 V
+scoreboard players operation @s gnd_notifier2 = @s ground_time
+scoreboard players operation @s gnd_notifier2 -= const10 X
+scoreboard players operation @s sky_notifier2 = @s sky_time
+scoreboard players operation @s sky_notifier2 -= const10 X
 scoreboard players operation @s betray_notifier = @s betray_time
 scoreboard players operation @s betray_notifier -= const3 III
 

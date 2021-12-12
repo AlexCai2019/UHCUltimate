@@ -163,6 +163,8 @@ scoreboard objectives remove XIII
 scoreboard objectives remove C
 scoreboard objectives remove sky_notifier
 scoreboard objectives remove gnd_notifier
+scoreboard objectives remove sky_notifier2
+scoreboard objectives remove gnd_notifier2
 scoreboard objectives remove nether_notifier
 scoreboard objectives remove betray_notifier
 scoreboard objectives remove BR_move

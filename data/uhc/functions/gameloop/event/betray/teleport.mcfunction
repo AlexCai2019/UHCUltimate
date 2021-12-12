@@ -32,7 +32,7 @@ execute unless entity @a[team=gray_dark,gamemode=survival] run kill @e[tag=ref,t
 execute unless entity @a[team=aqua,gamemode=survival] run kill @e[tag=ref,tag=aq]
 execute unless entity @a[team=aqua_dark,gamemode=survival] run kill @e[tag=ref,tag=aqd]
 
-execute if entity @a[tag=betrayer,gamemode=survival] run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,bty],Duration:2147483647,Particle:"block air"}
+execute if entity @a[tag=betrayer,gamemode=survival] run summon marker ~ ~ ~ {Tags:[carry,ref,bty]}
 
 title @a[tag=betrayer,gamemode=survival] title {"text":"整裝時間: 3分鐘"}
 title @a[tag=betrayer,gamemode=survival] subtitle {"text":""}
