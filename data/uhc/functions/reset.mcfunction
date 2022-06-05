@@ -23,6 +23,7 @@ gamerule doLimitedCrafting false
 gamerule naturalRegeneration true
 gamerule disableRaids false
 gamerule playersSleepingPercentage 100
+gamerule doWardenSpawning true
 weather thunder 1
 worldborder set 2999998
 time set day
@@ -123,6 +124,7 @@ scoreboard objectives remove pearl_tear
 scoreboard objectives remove pearl_craft
 scoreboard objectives remove pearl_own
 scoreboard objectives remove shadow_invisible
+scoreboard objectives remove warden_spawn
 scoreboard objectives remove init_supply
 scoreboard objectives remove set_supply
 scoreboard objectives remove information
@@ -163,6 +165,8 @@ scoreboard objectives remove XIII
 scoreboard objectives remove C
 scoreboard objectives remove sky_notifier
 scoreboard objectives remove gnd_notifier
+scoreboard objectives remove sky_notifier2
+scoreboard objectives remove gnd_notifier2
 scoreboard objectives remove nether_notifier
 scoreboard objectives remove betray_notifier
 scoreboard objectives remove BR_move

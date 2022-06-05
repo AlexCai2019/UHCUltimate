@@ -41,7 +41,8 @@
       ]
     },
     {
-      "rolls":1,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "conditions":[
         {
           "condition":"minecraft:entity_properties",
@@ -65,7 +66,8 @@
       ]
     },
     {
-      "rolls":1,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "conditions":[
         {
           "condition":"minecraft:entity_properties",

@@ -18,6 +18,7 @@ execute if score @s width_chunk matches 79 run bossbar set uhc:read_progress max
 bossbar set uhc:read_progress value 0
 bossbar set uhc:read_progress players @a
 
+execute at @p[tag=read_map,predicate=uhc:riding] run kill @e[type=#uhc:rideable,distance=..1.2]
 execute at @s run tp @p[tag=read_map] ~ 128 ~
 execute as @p[tag=read_map] at @s run tp @s ~16 128 ~
 scoreboard players add @s Xchunk 1

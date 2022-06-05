@@ -47,8 +47,8 @@ execute as @e[tag=bee1] at @s run tag @a[tag=touch_bee,distance=1.5..] remove to
 #execute at @e[tag=nether] unless entity @a[distance=..2] run setblock ~ ~1 ~ air replace
 
 #initial supply
-execute unless entity @a[tag=set_supply] at @s if data block ~ 2 ~ Items run data modify block ~3 ~ ~7 Items set from block ~ 2 ~ Items
-execute unless entity @a[tag=set_supply] at @s unless data block ~ 2 ~ Items run data remove block ~3 ~ ~7 Items
+execute unless entity @a[tag=set_supply] at @s if data block ~ -62 ~ Items run data modify block ~3 ~ ~7 Items set from block ~ -62 ~ Items
+execute unless entity @a[tag=set_supply] at @s unless data block ~ -62 ~ Items run data remove block ~3 ~ ~7 Items
 execute at @s unless block ~3 ~ ~7 light_blue_shulker_box run setblock ~3 ~ ~7 light_blue_shulker_box
 
 #signs

@@ -24,8 +24,8 @@ scoreboard players operation temp border_start += @s BR_cool_time
 scoreboard players operation temp border_start += @s BR_cool_time
 scoreboard players operation temp border_start += @s BR_shrink_time
 scoreboard players operation temp border_start += @s BR_shrink_time
-execute if score 00000000-0000-0000-0000-00000000000b border_mode matches 1 if entity @s[scores={border_on=1}] if score temp border_start <= temp betray_tp run function uhc:start_countdown/betray_br_violation_1
-execute if score 00000000-0000-0000-0000-00000000000b border_mode matches 0 if entity @s[scores={border_on=1}] if score @s border_start < @s betray_time run function uhc:start_countdown/betray_br_violation_0
+execute if score 00000000-0000-0000-0000-00000000000b border_mode matches 1 if entity @s[scores={border_on=1,betray=1}] if score temp border_start <= temp betray_tp run function uhc:start_countdown/betray_br_violation_1
+execute if score 00000000-0000-0000-0000-00000000000b border_mode matches 0 if entity @s[scores={border_on=1,betray=1}] if score @s border_start < @s betray_time run function uhc:start_countdown/betray_br_violation_0
 
 execute if score @s slow_fall matches 0 if score @s timer_sec matches 1 run effect give @a levitation 1 60 true
 execute if score @s slow_fall matches 0 if score @s timer_sec matches 1 as @a at @s run playsound minecraft:entity.firework_rocket.launch block @s ~ ~ ~ 0.75 0.2

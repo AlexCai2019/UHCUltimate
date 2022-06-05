@@ -52,10 +52,12 @@ execute if score @s[scores={glowing=1}] timer_min >= @s glow_time run function u
 execute if score @s[scores={weather_fix=1}] timer_min >= @s weather_time run function uhc:gameloop/event/weather
 
 #sky limit
+execute if score @s[scores={sky_limit=1}] timer_min >= @s sky_notifier2 run function uhc:gameloop/event/notifier/sky2
 execute if score @s[scores={sky_limit=1}] timer_min >= @s sky_notifier run function uhc:gameloop/event/notifier/sky
 execute if score @s[scores={sky_limit=1}] timer_min >= @s sky_time run function uhc:gameloop/event/sky
 
 #ground limit
+execute if score @s[scores={ground_limit=1}] timer_min >= @s gnd_notifier2 run function uhc:gameloop/event/notifier/ground2
 execute if score @s[scores={ground_limit=1}] timer_min >= @s gnd_notifier run function uhc:gameloop/event/notifier/ground
 execute if score @s[scores={ground_limit=1}] timer_min >= @s ground_time run function uhc:gameloop/event/ground
 

@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
+        "minecraft:allay",
         "minecraft:axolotl",
         "minecraft:bat",
         "minecraft:bee",
@@ -11,6 +12,7 @@
         "minecraft:dolphin",
         "minecraft:donkey",
         "minecraft:fox",
+        "minecraft:frog",
         "minecraft:goat",
         "minecraft:horse",
         "minecraft:iron_golem",
@@ -57,8 +59,10 @@
         "minecraft:spider",
         "minecraft:stray",
         "minecraft:strider",
+        "minecraft:tadpole",
         "minecraft:vex",
         "minecraft:vindicator",
+        "minecraft:warden",
         "minecraft:witch",
         "minecraft:wither_skeleton",
         "minecraft:zoglin",

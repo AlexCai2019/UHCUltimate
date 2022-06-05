@@ -7,6 +7,9 @@
 # func    : To spread players for arena mode.
 ###################################################
 
+#kill vehicle
+execute at @a[predicate=uhc:riding] run kill @e[type=#uhc:rideable,distance=..1.2]
+
 execute at @s run tp @a[nbt=!{Dimension:0}] ~ 120 ~ 
 
 execute at @s[scores={border_end=16}] in overworld run spreadplayers ~ ~ 0 7 true @a[team=!solo]

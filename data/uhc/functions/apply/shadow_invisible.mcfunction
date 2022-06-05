@@ -13,6 +13,6 @@ effect give @a[predicate=uhc:shadow] invisibility 999999 0 true
 effect give @e[type=#uhc:mob,predicate=uhc:shadow] invisibility 999999 0 true
 
 #clear
-#execute unless entity @s[scores={invisible=1,timer=..9}] run tellraw @a[gamemode=survival,predicate=!uhc:shadow,predicate=uhc:invisible_effect] {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"你已現形!","color":"red"}]}
-execute unless entity @s[scores={invisible=1,timer=..9}] run effect clear @a[predicate=!uhc:shadow] invisibility
+#execute unless entity @s[scores={invisible=1,timer_min=..9}] run tellraw @a[gamemode=survival,predicate=!uhc:shadow,predicate=uhc:invisible_effect] {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"你已現形!","color":"red"}]}
+execute unless entity @s[scores={invisible=1,timer_min=..9}] run effect clear @a[predicate=!uhc:shadow] invisibility
 effect clear @e[type=#uhc:mob,predicate=!uhc:shadow] invisibility

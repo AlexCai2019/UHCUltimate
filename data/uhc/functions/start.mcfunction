@@ -30,11 +30,11 @@ difficulty hard
 time set day
 
 #command region settings
-fill ~-1 0 ~-1 ~2 3 ~3 bedrock hollow
-fill ~ 1 ~2 ~1 1 ~2 end_portal
+fill ~-1 -64 ~-1 ~2 -61 ~3 bedrock hollow
+fill ~ -63 ~2 ~1 -63 ~2 end_portal
 
 #armor_stand settings
-execute align xz run summon marker ~0.5 1 ~0.5 {Tags:[main,book,lobby,carry],CustomName:"{\"text\":\"§a✔\"}",UUID:[I;0,0,0,1]}
+execute align xz run summon marker ~0.5 -63 ~0.5 {Tags:[main,book,lobby,carry],CustomName:"{\"text\":\"§a✔\"}",UUID:[I;0,0,0,1]}
 execute at @e[tag=main] run summon marker ~ ~ ~ {Tags:[assist,book,carry],CustomName:"{\"text\":\"§4✘\"}",UUID:[I;0,0,0,2]}
 execute at @e[tag=main] run summon marker ~1 ~ ~ {Tags:[sub1,mode,m1],CustomName:"{\"text\":\"§c漸縮\"}",UUID:[I;0,0,0,3]}
 execute at @e[tag=main] run summon marker ~1 ~ ~ {Tags:[mode,m2],CustomName:"{\"text\":\"§c競技場\"}",UUID:[I;0,0,0,4]}
@@ -43,8 +43,8 @@ execute at @e[tag=main] run summon marker ~ ~ ~1 {Tags:[sub2,pause,p1,carry],Cus
 execute at @e[tag=main] run summon marker ~ ~ ~1 {Tags:[pause,p2,carry],CustomName:"{\"text\":\"§6永夜\"}",UUID:[I;0,0,0,6]}
 execute at @e[tag=main] run summon marker ~1 ~ ~1 {Tags:[sub3],UUID:[I;0,0,0,7]}
 execute at @e[tag=main] run summon marker ~ ~1 ~2 {Tags:[load],UUID:[I;0,0,0,8],Rotation:[180.0f,0.0f]}
-execute at @e[tag=main] run summon marker ~ 255 ~ {Tags:[center],UUID:[I;0,0,0,9]}
-execute at @e[tag=main] run summon armor_stand ~ 255 ~ {Tags:[move],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b,UUID:[I;0,0,0,12]} 
+execute at @e[tag=main] run summon marker ~ 319 ~ {Tags:[center],UUID:[I;0,0,0,9]}
+execute at @e[tag=main] run summon armor_stand ~ 319 ~ {Tags:[move],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b,UUID:[I;0,0,0,12]} 
 execute at @e[tag=main] run summon armor_stand ~ ~ ~ {Tags:[show,lobby],CustomName:"{\"text\":\"UHC: \",\"color\":\"red\",\"bold\":true,\"extra\":[{\"text\":\"Evolve\",\"color\":\"gold\",\"italic\":true,\"bold\":false}]}",CustomNameVisible:1b,NoGravity:1b,Marker:0b,Invisible:1b,Invulnerable:1b,Small:1b,UUID:[I;0,0,0,10],DisabledSlots:2096896,ShowArms:1b,ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"jelly99709"}}],HandItems:[{id:"trident",Count:1b,tag:{ench:[{id:16,lvl:1}]}},{id:"trident",Count:1b,tag:{ench:[{id:16,lvl:1}]}}],Pose:{LeftArm:[330f,90f,0f],RightArm:[330f,270f,0f]}}
 execute at @e[tag=main] run summon marker ~ ~ ~ {Tags:[weather,w1,carry],CustomName:"{\"text\":\"§8晴朗\"}",UUID:[I;0,0,0,13]}
 execute at @e[tag=main] run summon marker ~ ~ ~ {Tags:[weather,w2,carry],CustomName:"{\"text\":\"§8下雨\"}",UUID:[I;0,0,0,14]}
@@ -176,6 +176,7 @@ scoreboard objectives add pearl_tear dummy {"text":"珍珠之淚"}
 scoreboard objectives add pearl_craft minecraft.crafted:minecraft.heart_of_the_sea {"text":"合成珍珠之淚"}
 scoreboard objectives add pearl_own dummy {"text":"擁有珍珠之淚"}
 scoreboard objectives add shadow_invisible dummy {"text":"昏暗隱形"}
+scoreboard objectives add warden_spawn dummy {"text":"伏守生成"}
 scoreboard objectives add init_supply dummy {"text":"起始物資"}
 scoreboard objectives add set_supply dummy {"text":"設定起始物資"}
 #### stats ############################################################
@@ -217,6 +218,8 @@ scoreboard objectives add XIII dummy {"text":"常數13"}
 scoreboard objectives add C dummy {"text":"常數100"}
 scoreboard objectives add sky_notifier dummy {"text":"制空提醒"}
 scoreboard objectives add gnd_notifier dummy {"text":"遁地提醒"}
+scoreboard objectives add sky_notifier2 dummy {"text":"制空提醒2"}
+scoreboard objectives add gnd_notifier2 dummy {"text":"遁地提醒2"}
 scoreboard objectives add nether_notifier dummy {"text":"地獄提醒"}
 scoreboard objectives add betray_notifier dummy {"text":"背叛提醒"}
 scoreboard objectives add stone_penalty minecraft.mined:minecraft.stone {"text":"石頭懲罰"}
@@ -392,6 +395,8 @@ scoreboard players set @e[tag=main] pearl_tear 0
 scoreboard players set @e[tag=assist] pearl_tear 1
 scoreboard players set @e[tag=main] shadow_invisible 0
 scoreboard players set @e[tag=assist] shadow_invisible 1
+scoreboard players set @e[tag=main] warden_spawn 1
+scoreboard players set @e[tag=assist] warden_spawn 0
 scoreboard players set @e[tag=main] init_supply 0
 scoreboard players set @e[tag=assist] init_supply 1
 scoreboard players set @e[tag=main] set_supply 0

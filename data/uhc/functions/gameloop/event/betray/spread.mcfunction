@@ -7,6 +7,9 @@
 # func    : Select betrayers.
 #########################################################
 
+#kill vehicle
+execute at @a[predicate=uhc:riding] run kill @e[type=#uhc:rideable,distance=..1.2]
+
 effect give @a[team=betrayer] resistance 15 9 true
 execute at @e[tag=center] run spreadplayers ~ ~ 0 56 true @a[team=betrayer]
 

@@ -15,8 +15,8 @@ execute if entity @a[scores={book=1032}] if entity @s[scores={init_supply=1}] ru
 execute if entity @a[scores={book=1032}] if entity @s[scores={init_supply=1}] run tag @a[scores={book=1032}] add set_supply
 
 #save settings
-execute if entity @a[scores={book=1033}] if entity @s[scores={init_supply=1}] at @s if data block ~3 ~ ~7 Items run data modify block ~ 2 ~ Items set from block ~3 ~ ~7 Items
-execute if entity @a[scores={book=1033}] if entity @s[scores={init_supply=1}] at @s unless data block ~3 ~ ~7 Items run data remove block ~ 2 ~ Items
+execute if entity @a[scores={book=1033}] if entity @s[scores={init_supply=1}] at @s if data block ~3 ~ ~7 Items run data modify block ~ -62 ~ Items set from block ~3 ~ ~7 Items
+execute if entity @a[scores={book=1033}] if entity @s[scores={init_supply=1}] at @s unless data block ~3 ~ ~7 Items run data remove block ~ -62 ~ Items
 execute if entity @a[scores={book=1033}] if entity @s[scores={init_supply=1}] run tellraw @a[gamemode=creative] {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定已儲存","color":"green"}]}
 
 #cancel

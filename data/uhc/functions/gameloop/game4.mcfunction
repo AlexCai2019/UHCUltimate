@@ -8,6 +8,7 @@
 ###################################################
 
 #win judge
+execute if score @s[scores={betray=1}] timer_min < @s betray_tp unless entity @a[gamemode=survival,tag=!betrayer] unless entity @a[tag=win] run function uhc:win
 execute if score 剩餘隊伍 information matches 1 unless entity @a[tag=win] run function uhc:win
 
 #spec permission

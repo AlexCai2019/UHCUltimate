@@ -19,7 +19,7 @@ execute store result score @s posZ run data get entity @s Pos[2] 10000
 execute if score 00000000-0000-0000-0000-000000000001 map_size matches 496 at @s run spreadplayers ~ ~ 1 64 false 00000000-0000-0000-0000-000000000009
 execute if score 00000000-0000-0000-0000-000000000001 map_size matches 752 at @s run spreadplayers ~ ~ 1 96 false 00000000-0000-0000-0000-000000000009
 execute if score 00000000-0000-0000-0000-000000000001 map_size matches 1008 at @s run spreadplayers ~ ~ 1 128 false 00000000-0000-0000-0000-000000000009
-execute as 00000000-0000-0000-0000-000000000009 at @s run tp @s ~ 255 ~
+execute as 00000000-0000-0000-0000-000000000009 at @s run tp @s ~ 319 ~
 
 #check validation: new position must be at least 20 blocks aways from old position in both x, y coordinate
 execute as 00000000-0000-0000-0000-000000000009 run function uhc:gameloop/event/battle_royale/check_valid

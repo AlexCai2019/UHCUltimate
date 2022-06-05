@@ -166,6 +166,20 @@
                     "type": "item",
                     "name": "minecraft:structure_void",
                     "weight": 2
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:snowball",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 10,
+                                "max": 16
+                            }
+                        }
+                    ],
+                    "weight": 10
                 }
             ]
         }

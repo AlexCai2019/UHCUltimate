@@ -7,6 +7,9 @@
 # func    : Announce and teleport betrayers.
 #########################################################
 
+#kill vehicle
+execute at @a[predicate=uhc:riding,tag=betrayer] run kill @e[type=#uhc:rideable,distance=..1.2]
+
 tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"timer_min"},"color":"red"},{"text":"分鐘","color":"red"},{"text":" | ","color":"white"},{"text":"背叛者小隊","color":"gold"},{"text":" | ","color":"white"},{"text":"集合","color":"red"}]}
 tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"背叛者名冊: "},{"selector":"@a[tag=betrayer]"}]}
 execute as @a at @s run playsound minecraft:entity.firework_rocket.launch ambient @s ~ ~ ~
@@ -32,7 +35,7 @@ execute unless entity @a[team=gray_dark,gamemode=survival] run kill @e[tag=ref,t
 execute unless entity @a[team=aqua,gamemode=survival] run kill @e[tag=ref,tag=aq]
 execute unless entity @a[team=aqua_dark,gamemode=survival] run kill @e[tag=ref,tag=aqd]
 
-execute if entity @a[tag=betrayer,gamemode=survival] run summon area_effect_cloud ~ ~ ~ {Tags:[carry,ref,bty],Duration:2147483647,Particle:"block air"}
+execute if entity @a[tag=betrayer,gamemode=survival] run summon marker ~ ~ ~ {Tags:[carry,ref,bty]}
 
 title @a[tag=betrayer,gamemode=survival] title {"text":"整裝時間: 3分鐘"}
 title @a[tag=betrayer,gamemode=survival] subtitle {"text":""}
