@@ -19,4 +19,4 @@ execute at @s[scores={map_size=1008}] run spreadplayers ~ ~ 64 488 false @e[tag=
 execute at @s[scores={map_size=1264}] run spreadplayers ~ ~ 64 616 false @e[tag=chest]
 execute at @s[scores={map_size=1520}] run spreadplayers ~ ~ 64 744 false @e[tag=chest]
 
-execute at @e[tag=chest] run setblock ~ ~ ~ chest{Lock:"§ghsjdgf",LootTable:"uhc:random_chest"} replace
+execute at @e[tag=chest] run setblock ~ ~ ~ chest{Lock: "§ghsjdgf", LootTable: "uhc:random_chest"} replace

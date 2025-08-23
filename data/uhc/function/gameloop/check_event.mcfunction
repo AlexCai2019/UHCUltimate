@@ -9,7 +9,7 @@
 
 #timer
 scoreboard players add @s timer_min 1
-summon area_effect_cloud ~ ~ ~ {Tags:[min],Age:-1200,Particle:"block air"}
+summon area_effect_cloud ~ ~ ~ {Tags: [min], Age:-1200, Particle: "block air"}
 
 #first day invisibility protection cancel
 execute if score @s[scores={invisible=1}] timer_min matches 10.. run function uhc:gameloop/event/invisible_close
@@ -25,16 +25,16 @@ execute if score @s[scores={betray=1}] timer_min >= @s betray_notifier if score 
 execute if score @s[scores={betray=1}] timer_min >= @s betray_tp run function uhc:gameloop/event/betray/teleport
 
 #border mode --- shrink
-execute if score @s[scores={border_on=1}] timer_min >= @s border_start if entity @e[tag=m1,scores={border_mode=1}] run function uhc:gameloop/event/shrink_start
+execute if score @s[scores={border_on=1}] timer_min >= @s border_start if entity @e[tag=m1, scores={border_mode=1}] run function uhc:gameloop/event/shrink_start
 
 #border mode --- shrink end
-execute if score @s[scores={border_on=2}] timer_min >= @s border_move if entity @e[tag=m1,scores={border_mode=1}] run function uhc:gameloop/event/shrink_end
+execute if score @s[scores={border_on=2}] timer_min >= @s border_move if entity @e[tag=m1, scores={border_mode=1}] run function uhc:gameloop/event/shrink_end
 
 #border mode --- arena
-execute if score @s[scores={border_on=1}] timer_min >= @s border_start if entity @e[tag=m2,scores={border_mode=1}] run function uhc:gameloop/event/arena 
+execute if score @s[scores={border_on=1}] timer_min >= @s border_start if entity @e[tag=m2, scores={border_mode=1}] run function uhc:gameloop/event/arena 
 
 #border mode --- battle royale
-execute if score @s[scores={border_on=1}] timer_min >= @s border_start if entity @e[tag=m3,scores={border_mode=1}] run function uhc:gameloop/event/battle_royale/br_controller
+execute if score @s[scores={border_on=1}] timer_min >= @s border_start if entity @e[tag=m3, scores={border_mode=1}] run function uhc:gameloop/event/battle_royale/br_controller
 
 #time stop
 execute if score @s[scores={day_stop=1}] timer_min >= @s day_time run function uhc:gameloop/event/day
@@ -65,4 +65,4 @@ execute if score @s[scores={ground_limit=1}] timer_min >= @s ground_time run fun
 execute if score @s[scores={room=1}] timer_min >= @s room_time run function uhc:gameloop/event/room_setup
 
 #show_trace
-#execute if score @s show_trace matches 1 at @a[gamemode=survival] run summon area_effect_cloud ~ ~ ~ {Duration:1200,Particle:""}
+#execute if score @s show_trace matches 1 at @a[gamemode=survival] run summon area_effect_cloud ~ ~ ~ {Duration: 1200, Particle: ""}

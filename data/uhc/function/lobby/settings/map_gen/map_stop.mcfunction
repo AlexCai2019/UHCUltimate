@@ -7,7 +7,7 @@
 # func    : End pre_reading map process.
 #########################################################
 
-tellraw @a {"text":"UHCE >>> ","color":"gray","extra":[{"text":"地圖讀取完畢!!","color":"gold"}]}
+tellraw @a {text: "UHCE >>> ", color: "gray", "extra": [{text: "地圖讀取完畢!!", color: "gold"}]}
 
 scoreboard players set @e[tag=main] Xchunk 0
 scoreboard players set @e[tag=main] Zchunk 0

@@ -7,8 +7,8 @@
 # func    : summon random chest markers.
 #########################################################
 
-summon area_effect_cloud ~ ~ ~ {Tags:[chest],Duration:100,particle:"block air"}
-summon area_effect_cloud ~ ~ ~ {Tags:[chest],Duration:100,particle:"block air"}
-summon area_effect_cloud ~ ~ ~ {Tags:[chest],Duration:100,particle:"block air"}
-summon area_effect_cloud ~ ~ ~ {Tags:[chest],Duration:100,particle:"block air"}
-summon area_effect_cloud ~ ~ ~ {Tags:[chest],Duration:100,particle:"block air"}
+summon area_effect_cloud ~ ~ ~ {Tags: [chest], Duration: 100, particle: "block air"}
+summon area_effect_cloud ~ ~ ~ {Tags: [chest], Duration: 100, particle: "block air"}
+summon area_effect_cloud ~ ~ ~ {Tags: [chest], Duration: 100, particle: "block air"}
+summon area_effect_cloud ~ ~ ~ {Tags: [chest], Duration: 100, particle: "block air"}
+summon area_effect_cloud ~ ~ ~ {Tags: [chest], Duration: 100, particle: "block air"}

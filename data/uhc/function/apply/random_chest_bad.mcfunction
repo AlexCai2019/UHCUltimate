@@ -7,5 +7,5 @@
 # func    : summon creeper
 #########################################################
 
-summon creeper ~ ~ ~ {Fuse:15,ignited:1,CustomName:"{\"text\":\"隨機物資箱\"}",CustomNameVisible:false}
+summon creeper ~ ~ ~ {Fuse: 15, ignited: 1, CustomName: "{\"text\":\"隨機物資箱\"}", CustomNameVisible: false}
 kill @s

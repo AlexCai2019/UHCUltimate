@@ -9,7 +9,7 @@
 
 #notifier
 execute at @a run playsound minecraft:entity.firework_rocket.launch ambient @a ~ ~ ~
-tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"timer_min"},"color":"red"},{"text":"分鐘","color":"red"},{"text":" | ","color":"white"},{"text":"隨機縮圈模式","color":"gold"},{"text":" | ","color":"white"},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"BR_cool_time"},"color":"red"},{"text":"分鐘後收縮","color":"red"}]}
+tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "timer_min"}, color: "red"}, {text: "分鐘", color: "red"}, {text: " | ", color: "white"}, {text: "隨機縮圈模式", color: "gold"}, {text: " | ", color: "white"}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "BR_cool_time"}, color: "red"}, {text: "分鐘後收縮", color: "red"}]}
 
 #get original x, z coordinate
 execute store result score @s posX run data get entity @s Pos[0] 10000

@@ -10,7 +10,7 @@
 gamemode spectator @s
 team join spec @s[team=!]
 #effect give @s night_vision 999999 0 true
-tellraw @s {"text":"UHCE >>> ","color":"gray","extra":[{"text":"遊戲已經開始，","color":"white"},{"text":"以觀眾身份進行遊戲","color":"dark_aqua"}]}
+tellraw @s {text: "UHCE >>> ", color: "gray", "extra": [{text: "遊戲已經開始，", color: "white"}, {text: "以觀眾身份進行遊戲", color: "dark_aqua"}]}
 tag @s add game_start
 execute if entity @e[tag=silverfish] run tag @s add silverfish
 execute if entity @e[tag=lucky_leaves] run tag @s add lucky_leaves

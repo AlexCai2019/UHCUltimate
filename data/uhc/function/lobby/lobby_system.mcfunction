@@ -36,13 +36,13 @@ execute as 00000000-0000-0000-0000-00000000000a at @s run tp @s ~ ~ ~ ~4 ~
 execute at @s run particle minecraft:portal ~ ~ ~ .5 .25 .5 .5 1 force
 
 #bee
-execute as @e[tag=bee1] at @s run tellraw @a[tag=!touch_bee,distance=..1.5] {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"蜜蜂嗡嗡!","color":"yellow"}]}
-execute as @e[tag=bee1] at @s run tag @a[tag=!touch_bee,distance=..1.5] add touch_bee
-execute as @e[tag=bee1] at @s run tag @a[tag=touch_bee,distance=1.5..] remove touch_bee
+execute as @e[tag=bee1] at @s run tellraw @a[tag=!touch_bee, distance=..1.5] {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {text: "蜜蜂嗡嗡!", color: "yellow"}]}
+execute as @e[tag=bee1] at @s run tag @a[tag=!touch_bee, distance=..1.5] add touch_bee
+execute as @e[tag=bee1] at @s run tag @a[tag=touch_bee, distance=1.5..] remove touch_bee
 
 #nether easter egg
-#execute at @e[tag=nether] if entity @a[distance=..2] unless entity @e[tag=piglin] run summon zombie_pigman ~ ~ ~ {Tags:[piglin],IsBaby:1b,Silent:1b,NoAI:1b,NoGravity:1b,Invulnerable:1b}
-#execute at @e[tag=nether] if entity @a[distance=..2] run setblock ~ ~1 ~ dark_oak_wall_sign[facing=south]{Color:"white",Text4:'{"text":""}',Text3:'{"text":"(Maybe) Coming Soon"}',Text2:'{"text":"-- Nether Trip --"}',Text1:'{"text":"《UHC: Evolve》"}'}
+#execute at @e[tag=nether] if entity @a[distance=..2] unless entity @e[tag=piglin] run summon zombie_pigman ~ ~ ~ {Tags: [piglin], IsBaby: 1b, Silent: 1b, NoAI: 1b, NoGravity: 1b, Invulnerable: 1b}
+#execute at @e[tag=nether] if entity @a[distance=..2] run setblock ~ ~1 ~ dark_oak_wall_sign[facing=south]{Color: "white", Text4:'{text: ""}', Text3:'{text: "(Maybe) Coming Soon"}', Text2:'{text: "-- Nether Trip --"}', Text1:'{text: "《UHC: Evolve》"}'}
 #execute at @e[tag=nether] unless entity @a[distance=..2] run tp @e[tag=piglin] ~ -1000 ~
 #execute at @e[tag=nether] unless entity @a[distance=..2] run setblock ~ ~1 ~ air replace
 
@@ -56,8 +56,8 @@ execute if entity @a[scores={lottery=1}] as @e[tag=lottery] at @s run function u
 execute as @a[scores={view_settings=1}] run function uhc:lobby/view_settings
 
 #choose team controller
-execute if entity @a[scores={choose_team=1},team=!solo] run team join solo @a[scores={choose_team=1},team=!solo]
-execute if entity @a[scores={choose_team=2},team=!spec] run team join spec @a[scores={choose_team=2},team=!spec]
+execute if entity @a[scores={choose_team=1}, team=!solo] run team join solo @a[scores={choose_team=1}, team=!solo]
+execute if entity @a[scores={choose_team=2}, team=!spec] run team join spec @a[scores={choose_team=2}, team=!spec]
 execute if entity @s[scores={team_permission=1}] if entity @a[scores={choose_team=3..}] run function uhc:lobby/settings/self_team
 execute if entity @s[scores={team_permission=1}] as @a[scores={choose_team=1..}] at @s run playsound entity.experience_orb.pickup voice @s ~ ~ ~
 execute as @a[scores={choose_team=1..2}] run playsound entity.experience_orb.pickup voice @s ~ ~ ~

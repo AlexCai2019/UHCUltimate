@@ -39,4 +39,4 @@ execute if entity @s[team=aqua] run tag @a[team=aqua] add pearl_used
 execute if entity @s[team=aqua_dark] run tag @a[team=aqua_dark] add pearl_used
 execute if entity @s[team=betrayer] run tag @a[team=betrayer] add pearl_used
 
-tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"selector":"@s"},{"text":" 使用","color":"white"},{"text":"碧藍之淚","color":"aqua","Italic":true}]}
+tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {"selector": "@s"}, {text: " 使用", color: "white"}, {text: "碧藍之淚", color: "aqua", italic: true}]}

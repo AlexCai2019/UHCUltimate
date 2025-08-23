@@ -22,7 +22,7 @@ execute if entity @a[scores={book=1..2}] run function uhc:lobby/settings/team_nu
 execute if entity @a[scores={book=3}] run scoreboard players set @s random_team_stop 0
 
 #book = 10, clear team
-execute if entity @a[scores={book=10}] run team join solo @a[tag=player,team=!spec]
+execute if entity @a[scores={book=10}] run team join solo @a[tag=player, team=!spec]
 
 #book = 4, team permission
 execute if entity @a[scores={book=4}] run function uhc:lobby/settings/team_permission
@@ -37,7 +37,7 @@ execute if entity @a[scores={book=27}] run function uhc:lobby/settings/slow_fall
 execute if entity @a[scores={book=6..7}] run function uhc:lobby/settings/map_size
 
 #book = 8, pre-read map
-execute if entity @a[scores={book=8}] unless entity @a[tag=read_map] at @e[tag=sub2] run setblock ~ ~ ~ repeating_command_block{Command:"execute as 00000000-0000-0000-0000-000000000001 run function uhc:lobby/settings/read_map",auto:1,TrackOutput:0b} replace
+execute if entity @a[scores={book=8}] unless entity @a[tag=read_map] at @e[tag=sub2] run setblock ~ ~ ~ repeating_command_block{Command: "execute as 00000000-0000-0000-0000-000000000001 run function uhc:lobby/settings/read_map", auto: 1, TrackOutput: 0b} replace
 execute unless entity @a[tag=read_map] run tag @p[scores={book=8}] add read_map
 
 #book = 9, stop pre-read map
@@ -47,8 +47,8 @@ execute if entity @a[scores={book=9}] if entity @a[tag=read_map] run tag @s add 
 #execute if entity @a[scores={book=10}] run function uhc:reset
 
 #book = 11, game start
-execute if entity @a[scores={book=11}] at @e[tag=sub3] run setblock ~ ~ ~ repeating_command_block{Command:"execute as 00000000-0000-0000-0000-000000000001 run function uhc:start_countdown/start_countdown",auto:1b,TrackOutput:0b} replace
-execute if entity @a[scores={book=11}] at @e[tag=sub3] unless entity @e[tag=sec] run summon area_effect_cloud ~ ~ ~ {Tags:[sec],Age:-21,Particle:"block air"}
+execute if entity @a[scores={book=11}] at @e[tag=sub3] run setblock ~ ~ ~ repeating_command_block{Command: "execute as 00000000-0000-0000-0000-000000000001 run function uhc:start_countdown/start_countdown", auto: 1b, TrackOutput: 0b} replace
+execute if entity @a[scores={book=11}] at @e[tag=sub3] unless entity @e[tag=sec] run summon area_effect_cloud ~ ~ ~ {Tags: [sec], Age:-21, Particle: "block air"}
 execute if entity @a[scores={book=11}] as @a run ride @s dismount
 
 #### second book (book1) ##########################################################################################################################

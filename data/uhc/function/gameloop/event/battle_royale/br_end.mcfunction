@@ -9,7 +9,7 @@
 
 #notifier
 execute at @a run playsound minecraft:entity.firework_rocket.launch ambient @a ~ ~ ~
-tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"timer_min"},"color":"red"},{"text":"分鐘","color":"red"},{"text":" | ","color":"white"},{"text":"隨機縮圈模式","color":"gold"},{"text":" | ","color":"white"},{"text":"收縮完成","color":"aqua"}]}
+tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "timer_min"}, color: "red"}, {text: "分鐘", color: "red"}, {text: " | ", color: "white"}, {text: "隨機縮圈模式", color: "gold"}, {text: " | ", color: "white"}, {text: "收縮完成", color: "aqua"}]}
 
 #scoreboard
 scoreboard players set 00000000-0000-0000-0000-000000000001 border_on 2

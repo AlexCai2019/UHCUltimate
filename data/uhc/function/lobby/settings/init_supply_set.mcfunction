@@ -9,18 +9,18 @@
 
 #start setting
 execute if entity @a[scores={book=1032}] if entity @s[scores={init_supply=1}] at @s run tp @a[scores={book=1032}] ~3.5 ~ ~6 ~ ~
-execute if entity @a[scores={book=1032}] if entity @s[scores={init_supply=1}] run tellraw @a[gamemode=creative] {"text":"","extra":[{"text":"\nUHCE >>> ","color":"gray"},{"text":"初始物資於界伏盒內設置完成後，請","color":"white"},{"text":"點此儲存","color":"aqua","hoverEvent":{"action":"show_text","value":"點此儲存初始物資設置"},"clickEvent":{"action":"run_command","value":"/trigger book set 1033"}},{"text":"或","color":"white"},{"text":"取消","color":"red","hoverEvent":{"action":"show_text","value":"點此取消本次變更"},"clickEvent":{"action":"run_command","value":"/trigger book set 1034"}}]}
-execute if entity @a[scores={book=1032}] if entity @s[scores={init_supply=1}] run setblock ~4 ~1 ~7 minecraft:birch_wall_sign[facing=north]{front_text:{has_glowing_text:1b,color:"green",messages:['{"clickEvent":{"action":"run_command","value":"trigger book set 1033"},"text":""}','{"text":"儲存設定"}','{"text":""}','{"text":""}']},is_waxed:1b}
-execute if entity @a[scores={book=1032}] if entity @s[scores={init_supply=1}] run setblock ~2 ~1 ~7 minecraft:birch_wall_sign[facing=north]{front_text:{has_glowing_text:1b,color:"red",messages:['{"clickEvent":{"action":"run_command","value":"trigger book set 1034"},"text":""}','{"text":"取消變更"}','{"text":""}','{"text":""}']},is_waxed:1b}
+execute if entity @a[scores={book=1032}] if entity @s[scores={init_supply=1}] run tellraw @a[gamemode=creative] {text: "", "extra": [{text: "\nUHCE >>> ", color: "gray"}, {text: "初始物資於界伏盒內設置完成後，請", color: "white"}, {text: "點此儲存", color: "aqua", "hoverEvent": {"action": "show_text", "value": "點此儲存初始物資設置"}, "clickEvent": {"action": "run_command", "value": "/trigger book set 1033"}}, {text: "或", color: "white"}, {text: "取消", color: "red", "hoverEvent": {"action": "show_text", "value": "點此取消本次變更"}, "clickEvent": {"action": "run_command", "value": "/trigger book set 1034"}}]}
+execute if entity @a[scores={book=1032}] if entity @s[scores={init_supply=1}] run setblock ~4 ~1 ~7 minecraft:birch_wall_sign[facing=north]{front_text: {has_glowing_text: 1b, color: "green", messages: ['{"clickEvent": {"action": "run_command", "value": "trigger book set 1033"}, text: ""}','{text: "儲存設定"}','{text: ""}','{text: ""}']}, is_waxed: 1b}
+execute if entity @a[scores={book=1032}] if entity @s[scores={init_supply=1}] run setblock ~2 ~1 ~7 minecraft:birch_wall_sign[facing=north]{front_text: {has_glowing_text: 1b, color: "red", messages: ['{"clickEvent": {"action": "run_command", "value": "trigger book set 1034"}, text: ""}','{text: "取消變更"}','{text: ""}','{text: ""}']}, is_waxed: 1b}
 execute if entity @a[scores={book=1032}] if entity @s[scores={init_supply=1}] run tag @a[scores={book=1032}] add set_supply
 
 #save settings
 execute if entity @a[scores={book=1033}] if entity @s[scores={init_supply=1}] at @s if data block ~3 ~ ~7 Items run data modify block ~ -62 ~ Items set from block ~3 ~ ~7 Items
 execute if entity @a[scores={book=1033}] if entity @s[scores={init_supply=1}] at @s unless data block ~3 ~ ~7 Items run data remove block ~ -62 ~ Items
-execute if entity @a[scores={book=1033}] if entity @s[scores={init_supply=1}] run tellraw @a[gamemode=creative] {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"設定已儲存","color":"green"}]}
+execute if entity @a[scores={book=1033}] if entity @s[scores={init_supply=1}] run tellraw @a[gamemode=creative] {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {text: "設定已儲存", color: "green"}]}
 
 #cancel
-execute if entity @a[scores={book=1034}] run tellraw @a[gamemode=creative] {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"text":"已取消變更","color":"red"}]}
+execute if entity @a[scores={book=1034}] run tellraw @a[gamemode=creative] {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {text: "已取消變更", color: "red"}]}
 
 #end settings
 execute if entity @a[scores={book=1033..1034}] run tag @a remove set_supply

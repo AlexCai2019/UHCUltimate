@@ -8,11 +8,11 @@
 #########################################################
 
 #summon villager
-execute as @a[predicate=uhc:sneak_on_copper,tag=!summon] run function uhc:apply/exchange_check
+execute as @a[predicate=uhc:sneak_on_copper, tag=!summon] run function uhc:apply/exchange_check
 tag @a[predicate=!uhc:sneak_on_copper] remove summon
 
 #kill villager
-execute as @e[tag=exchange,scores={exchange=..0}] at @s run tp @s ~ -100 ~
+execute as @e[tag=exchange, scores={exchange=..0}] at @s run tp @s ~ -100 ~
 
 #cool down
 scoreboard players remove @a[scores={exchange=0..}] exchange 1

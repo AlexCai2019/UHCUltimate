@@ -8,7 +8,7 @@
 ###################################################
 
 #win judge
-execute if score @s[scores={betray=1}] timer_min < @s betray_tp unless entity @a[gamemode=survival,tag=!betrayer] unless entity @a[tag=win] run function uhc:win
+execute if score @s[scores={betray=1}] timer_min < @s betray_tp unless entity @a[gamemode=survival, tag=!betrayer] unless entity @a[tag=win] run function uhc:win
 execute if score 剩餘隊伍 information matches 1 unless entity @a[tag=win] run function uhc:win
 
 #spec permission
@@ -21,7 +21,7 @@ execute store result score 邊界大小 information run worldborder get
 execute if score @s glowing matches 2 run effect give @a glowing infinite 0 true
 
 #nerf arrow
-execute if score @s nerf_arrow matches 1 as @e[type=#uhc:arrow,tag=!arrow] run function uhc:apply/nerf_arrow
+execute if score @s nerf_arrow matches 1 as @e[type=#uhc:arrow, tag=!arrow] run function uhc:apply/nerf_arrow
 
 #battle royale hint
 execute if score @s BR_stage matches 1..8 run function uhc:gameloop/event/battle_royale/self_check_2
@@ -33,7 +33,7 @@ execute if score @s shadow_invisible matches 1 run function uhc:apply/shadow_inv
 execute at @s unless entity @e[tag=min] run function uhc:gameloop/check_event
 
 #chunk loader
-#execute unless entity @a[gamemode=!spectator,nbt={Dimension:0}] run function uhc:gameloop/chunk_loader
+#execute unless entity @a[gamemode=!spectator, nbt={Dimension: 0}] run function uhc:gameloop/chunk_loader
 
 #fish bucket craft correction
-execute as @a[scores={tropicalfish=1..}] if entity @s[nbt={Inventory:[{id:"minecraft:bucket"}]}] run function uhc:apply/fish/tropicalfish
+execute as @a[scores={tropicalfish=1..}] if entity @s[nbt={Inventory: [{id: "minecraft:bucket"}]}] run function uhc:apply/fish/tropicalfish

@@ -15,11 +15,11 @@ xp set @a 0 levels
 advancement revoke @a everything
 
 #kill vehicle
-#execute at @a[predicate=uhc:riding] run kill @e[type=#uhc:rideable,distance=..1.2]
+#execute at @a[predicate=uhc:riding] run kill @e[type=#uhc:rideable, distance=..1.2]
 execute as @a run ride @s dismount
 
 #initial supply
-execute if score @s init_supply matches 1 at @s as @a[team=!spec] run loot give @s mine ~ -62 ~ diamond_pickaxe{Init:1b}
+execute if score @s init_supply matches 1 at @s as @a[team=!spec] run loot give @s mine ~ -62 ~ diamond_pickaxe{Init: 1b}
 
 #give effect
 effect give @a instant_health 1 9 true
@@ -81,7 +81,7 @@ execute if score @s stew_get matches 0 run function uhc:apply/stew_take
 execute if score @s hide_name matches 1 run function uhc:apply/name_visible_false
 
 #book settings --- room
-#execute at @e[tag=assist,scores={room=0}] run setblock ~ 126 ~ redstone_block replace
+#execute at @e[tag=assist, scores={room=0}] run setblock ~ 126 ~ redstone_block replace
 
 #book settings --- reverse_craft
 #execute if score @s reverse_craft matches 0 run function uhc:apply/golden_craft
@@ -189,21 +189,21 @@ scoreboard players set @a pearl_craft 0
 scoreboard players set @a exchange 0
 
 #judge system
-execute as @a[team=solo] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,solo]}
-execute if entity @a[team=red] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,r]}
-execute if entity @a[team=blue] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,b]}
-execute if entity @a[team=green] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,gr]}
-execute if entity @a[team=yellow] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,y]}
-execute if entity @a[team=purple] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,pr]}
-execute if entity @a[team=gray] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,gy]}
-execute if entity @a[team=red_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,rd]}
-execute if entity @a[team=blue_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,bd]}
-execute if entity @a[team=green_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,grd]}
-execute if entity @a[team=gold] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,yd]}
-execute if entity @a[team=pink] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,pk]}
-execute if entity @a[team=gray_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,gyd]}
-execute if entity @a[team=aqua] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,aq]}
-execute if entity @a[team=aqua_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags:[carry,ref,aqd]}
+execute as @a[team=solo] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, solo]}
+execute if entity @a[team=red] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, r]}
+execute if entity @a[team=blue] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, b]}
+execute if entity @a[team=green] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, gr]}
+execute if entity @a[team=yellow] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, y]}
+execute if entity @a[team=purple] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, pr]}
+execute if entity @a[team=gray] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, gy]}
+execute if entity @a[team=red_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, rd]}
+execute if entity @a[team=blue_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, bd]}
+execute if entity @a[team=green_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, grd]}
+execute if entity @a[team=gold] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, yd]}
+execute if entity @a[team=pink] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, pk]}
+execute if entity @a[team=gray_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, gyd]}
+execute if entity @a[team=aqua] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, aq]}
+execute if entity @a[team=aqua_dark] at 00000000-0000-0000-0000-000000000005 run summon marker ~ ~ ~ {Tags: [carry, ref, aqd]}
 
 #center position recorder
 execute store result score @s posX run data get entity 00000000-0000-0000-0000-000000000009 Pos[0]
@@ -219,8 +219,8 @@ execute if score @s random_chest matches 1 run function uhc:apply/random_chest
 scoreboard players set @s state 2
 
 #information
-execute store result score 剩餘人數 information run execute if entity @a[team=!spec,gamemode=survival]
+execute store result score 剩餘人數 information run execute if entity @a[team=!spec, gamemode=survival]
 
 #start timing
-#execute at @e[tag=assist] run summon area_effect_cloud ~ ~ ~ {Tags:[min],Age:-1201,Particle:"block air"}
+#execute at @e[tag=assist] run summon area_effect_cloud ~ ~ ~ {Tags: [min], Age:-1201, Particle: "block air"}
 function uhc:gameloop/check_event
