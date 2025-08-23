@@ -9,7 +9,7 @@
 
 scoreboard players add @s border_on 1
 
-execute as @a at @s run playsound minecraft:entity.firework_rocket.launch ambient @s ~ ~ ~
+execute as @a at @s run playsound minecraft:entity.firework_rocket.launch master @s ~ ~ ~
 tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "timer_min"}, color: "red"}, {text: "分鐘", color: "red"}, {text: " | ", color: "white"}, {text: "競技場模式", color: "gold"}, {text: " | ", color: "white"}, {text: "準備傳送", color: "red"}]}
 
 scoreboard players set @s timer_sec 31

@@ -7,8 +7,8 @@
 # func    : Force stop lottery
 #########################################################
 
-schedule function uhc:lobby/lottery/fast 10d
-schedule function uhc:lobby/lottery/middle 10d
-schedule function uhc:lobby/lottery/slow 10d
+schedule clear uhc:lobby/lottery/fast/root
+schedule clear uhc:lobby/lottery/middle/root
+schedule clear uhc:lobby/lottery/slow/root
 
 function uhc:lobby/lottery/end

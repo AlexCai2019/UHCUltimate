@@ -29,14 +29,14 @@ scoreboard players enable @a choose_team
 execute unless entity @a[team=solo] run scoreboard players set @s random_team_stop 1
 
 #info display
-execute store result score 人數 information run execute if entity @a[team=!spec]
+execute store result score 人數 information if entity @a[team=!spec]
 
 #show
-execute as 00000000-0000-0000-0000-00000000000a at @s run tp @s ~ ~ ~ ~4 ~ 
-execute at @s run particle minecraft:portal ~ ~ ~ .5 .25 .5 .5 1 force
+execute as 00000000-0000-0000-0000-00000000000a at @s run rotate @s ~4 ~ 
+execute at @s run particle portal ~ ~ ~ .5 .25 .5 .5 1 force
 
 #bee
-execute as @e[tag=bee1] at @s run tellraw @a[tag=!touch_bee, distance=..1.5] {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {text: "蜜蜂嗡嗡!", color: "yellow"}]}
+execute as @e[tag=bee1] at @s run tellraw @a[tag=!touch_bee, distance=..1.5] [{text: "UHCU >>> ", color: "gray"}, {text: "蜜蜂嗡嗡!", color: "yellow"}]
 execute as @e[tag=bee1] at @s run tag @a[tag=!touch_bee, distance=..1.5] add touch_bee
 execute as @e[tag=bee1] at @s run tag @a[tag=touch_bee, distance=1.5..] remove touch_bee
 
@@ -47,12 +47,12 @@ execute as @e[tag=bee1] at @s run tag @a[tag=touch_bee, distance=1.5..] remove t
 #execute at @e[tag=nether] unless entity @a[distance=..2] run setblock ~ ~1 ~ air replace
 
 #initial supply
-execute unless entity @a[tag=set_supply] at @s if data block ~ -62 ~ Items run data modify block ~3 ~ ~7 Items set from block ~ -62 ~ Items
-execute unless entity @a[tag=set_supply] at @s unless data block ~ -62 ~ Items run data remove block ~3 ~ ~7 Items
+execute unless entity @a[tag=set_supply] at @s if data storage uhc:data root.init_items run data modify block ~3 ~ ~7 Items set from storage uhc:data root.init_items
+execute unless entity @a[tag=set_supply] at @s unless data storage uhc:data root.init_items run data remove block ~3 ~ ~7 Items
 execute at @s unless block ~3 ~ ~7 light_blue_shulker_box run setblock ~3 ~ ~7 light_blue_shulker_box
 
 #signs
-execute if entity @a[scores={lottery=1}] as @e[tag=lottery] at @s run function uhc:lobby/lottery/init
+execute if entity @a[scores={lottery=1}] as @e[type=armor_stand, tag=lottery] at @s run function uhc:lobby/lottery/init
 execute as @a[scores={view_settings=1}] run function uhc:lobby/view_settings
 
 #choose team controller

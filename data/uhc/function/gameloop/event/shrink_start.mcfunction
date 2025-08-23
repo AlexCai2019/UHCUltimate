@@ -9,7 +9,7 @@
 
 scoreboard players add @s border_on 1
 
-execute as @a at @s run playsound minecraft:entity.firework_rocket.launch ambient @s ~ ~ ~
+execute as @a at @s run playsound minecraft:entity.firework_rocket.launch master @s ~ ~ ~
 tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "timer_min"}, color: "red"}, {text: "分鐘", color: "red"}, {text: " | ", color: "white"}, {text: "邊界收縮", color: "gold"}, {text: " | ", color: "white"}, {text: "啟動", color: "red"}]}
 
 execute if entity @s[scores={border_end=16, border_move=20}] run worldborder set 16 1200

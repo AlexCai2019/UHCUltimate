@@ -8,6 +8,6 @@
 ###################################################
 
 scoreboard players operation @s warn /= const10 X
-tellraw @a[gamemode=spectator] {text: "UHCE >>> ", color: "gray", "bold": false, "extra": [{"selector": "@s"}, {text: " 受到 ", color: "white"}, {score: {name: "@s", objective: "warn"}, color: "gold"}, {text: " 點傷害!!", color: "white"}]}
+tellraw @a[gamemode=spectator] {text: "UHCE >>> ", color: "gray", bold: false, "extra": [{"selector": "@s"}, {text: " 受到 ", color: "white"}, {score: {name: "@s", objective: "warn"}, color: "gold"}, {text: " 點傷害!!", color: "white"}]}
 execute unless entity @s[team=solo] run teammsg 正在受傷!!!
 scoreboard players set @s warn 0

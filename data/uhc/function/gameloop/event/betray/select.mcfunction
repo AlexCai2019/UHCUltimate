@@ -8,7 +8,7 @@
 #########################################################
 
 tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "timer_min"}, color: "red"}, {text: "分鐘", color: "red"}, {text: " | ", color: "white"}, {text: "背叛者小隊", color: "gold"}, {text: " | ", color: "white"}, {text: "啟動", color: "red"}]}
-execute as @a at @s run playsound minecraft:entity.firework_rocket.launch ambient @s ~ ~ ~
+execute as @a at @s run playsound minecraft:entity.firework_rocket.launch master @s ~ ~ ~
 
 execute if score @s betray_num > 剩餘隊伍 information run function uhc:gameloop/event/betray/pre_select1
 execute if score @s betray_num <= 剩餘隊伍 information run function uhc:gameloop/event/betray/pre_select2

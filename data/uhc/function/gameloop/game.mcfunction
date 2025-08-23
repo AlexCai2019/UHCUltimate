@@ -11,7 +11,7 @@
 execute unless entity @e[tag=win] as @a[scores={warn=1..}, gamemode=survival] run function uhc:gameloop/damage
 
 #action bar information.
-execute as @a run title @s actionbar {text: "", color: "light_purple", "bold": true, "extra": [{text: "中心座標: ("}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "posX"}}, {text: ", "}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "posZ"}}, {text: ")  擊殺數: "}, {score: {name: "@s", objective: "temp_kill"}}, {text: "  挖掘石頭數: "}, {score: {name: "@s", objective: "temp_stone"}}]}
+execute as @a run title @s actionbar {text: "", color: "light_purple", bold: true, "extra": [{text: "中心座標: ("}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "posX"}}, {text: ", "}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "posZ"}}, {text: ")  擊殺數: "}, {score: {name: "@s", objective: "temp_kill"}}, {text: "  挖掘石頭數: "}, {score: {name: "@s", objective: "temp_stone"}}]}
 
 #Y position.
 execute as @a[gamemode=survival] store result score @s posY run data get entity @s Pos[1]

@@ -19,7 +19,7 @@ advancement revoke @a everything
 execute as @a run ride @s dismount
 
 #initial supply
-execute if score @s init_supply matches 1 at @s as @a[team=!spec] run loot give @s mine ~ -62 ~ diamond_pickaxe{Init: 1b}
+execute if score @s init_supply matches 1 at @s as @a[team=!spec] run function uhc:apply/init_items
 
 #give effect
 effect give @a instant_health 1 9 true
@@ -107,7 +107,7 @@ execute if score @s slow_fall matches 1 run function uhc:apply/spread_1
 #function uhc:apply/spread_1
 
 #start sound
-execute if score @s slow_fall matches 1 as @a at @s run playsound minecraft:entity.ender_dragon.growl ambient @s ~ ~ ~ 0.5
+execute if score @s slow_fall matches 1 as @a at @s run playsound minecraft:entity.ender_dragon.growl master @s ~ ~ ~ 0.5
 
 #clear lobby
 execute at @s run fill ~-8 150 ~-8 ~7 160 ~7 air

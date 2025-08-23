@@ -8,7 +8,7 @@
 ###################################################
 
 #action bar information
-execute as @a run title @s actionbar {text: "", color: "light_purple", "bold": true, "extra": [{text: "中心座標: ("}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "posX"}}, {text: ", "}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "posZ"}}, {text: ")  擊殺數: "}, {score: {name: "@s", objective: "temp_kill"}}, {text: "  挖掘石頭數: "}, {score: {name: "@s", objective: "temp_stone"}}]}
+execute as @a run title @s actionbar {text: "", color: "light_purple", bold: true, "extra": [{text: "中心座標: ("}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "posX"}}, {text: ", "}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "posZ"}}, {text: ")  擊殺數: "}, {score: {name: "@s", objective: "temp_kill"}}, {text: "  挖掘石頭數: "}, {score: {name: "@s", objective: "temp_stone"}}]}
 
 #join game
 execute as @a[tag=!game_start] run function uhc:gameloop/join_game

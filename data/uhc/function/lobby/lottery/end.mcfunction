@@ -7,7 +7,5 @@
 # func    : Lottery end
 #########################################################
 
-schedule function uhc:lobby/lottery/end_sound 15t
-scoreboard players set @e[tag=lottery] lottery_count 0
-
-execute if entity @e[tag=lottery, predicate=uhc:easter_bee] run schedule function uhc:lobby/lottery/easter_bee 15t
+schedule function uhc:lobby/lottery/end_sound 15
+scoreboard players set @e[type=armor_stand, tag=lottery] lottery_count 0

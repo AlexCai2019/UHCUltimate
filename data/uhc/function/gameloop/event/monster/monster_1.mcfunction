@@ -13,7 +13,7 @@ scoreboard players add @s monster_clean 1
 scoreboard players set @s rand_silverfish 0
 tag @a remove silverfish
 
-execute as @a at @s run playsound minecraft:entity.firework_rocket.launch ambient @s ~ ~ ~
+execute as @a at @s run playsound minecraft:entity.firework_rocket.launch master @s ~ ~ ~
 tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "timer_min"}, color: "red"}, {text: "分鐘", color: "red"}, {text: " | ", color: "white"}, {text: "怪物", color: "gold"}, {text: " | ", color: "white"}, {text: "清除", color: "red"}]}
 
 execute as @e[type=ender_dragon] at @s run tp @s ~ -999999 ~

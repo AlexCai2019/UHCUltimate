@@ -8,5 +8,5 @@
 #########################################################
 
 scoreboard players reset @a lottery
-data merge block ~ ~1 ~ {front_text: {has_glowing_text: 1b, color: "white", messages: ['{text: ""}','{text: "請稍後片刻..."}','{text: ""}','{text: ""}']}}
-function uhc:lobby/lottery/fast
+data modify block ~ ~1 ~ front_text.messages set value ["", "請稍後片刻...", "", ""]
+function uhc:lobby/lottery/fast/root

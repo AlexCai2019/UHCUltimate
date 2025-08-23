@@ -8,7 +8,7 @@
 #########################################################
 
 #notifier
-execute at @a run playsound minecraft:entity.firework_rocket.launch ambient @a ~ ~ ~
+execute at @a run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~
 tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "timer_min"}, color: "red"}, {text: "分鐘", color: "red"}, {text: " | ", color: "white"}, {text: "隨機縮圈模式", color: "gold"}, {text: " | ", color: "white"}, {text: "第二階段啟動", color: "red"}]}
 
 #x, z diff calculate
