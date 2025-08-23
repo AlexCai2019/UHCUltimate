@@ -37,7 +37,7 @@ execute if entity @a[scores={book=27}] run function uhc:lobby/settings/slow_fall
 execute if entity @a[scores={book=6..7}] run function uhc:lobby/settings/map_size
 
 #book = 8, pre-read map
-execute if entity @a[scores={book=8}] unless entity @a[tag=read_map] at @e[tag=sub2] run setblock ~ ~ ~ repeating_command_block{Command: "execute as 00000000-0000-0000-0000-000000000001 run function uhc:lobby/settings/read_map", auto: 1, TrackOutput: 0b} replace
+execute if entity @a[scores={book=8}] unless entity @a[tag=read_map] at @e[tag=sub2] run setblock ~ ~ ~ repeating_command_block{Command: "execute as 00000000-0000-0000-0000-000000000001 run function uhc:lobby/settings/read_map", auto: true, TrackOutput: 0b} replace
 execute unless entity @a[tag=read_map] run tag @p[scores={book=8}] add read_map
 
 #book = 9, stop pre-read map

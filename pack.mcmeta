@@ -6,13 +6,14 @@
 		[
 			"",
 			{
-				"text": "UHC:",
+				"text": "UHC: ",
 				"color": "yellow",
 				"bold": true
 			},
 			{
 				"text": " Ultimate",
 				"color": "light_purple"
+				"italic": true
 			},
 			" by Alex Cai"
 		]

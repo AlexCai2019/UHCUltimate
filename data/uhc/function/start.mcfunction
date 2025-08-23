@@ -35,45 +35,45 @@ fill ~-1 -64 ~-1 ~2 -61 ~3 bedrock hollow
 fill ~ -63 ~2 ~1 -63 ~2 end_portal
 
 #armor_stand settings
-execute align xz run summon marker ~0.5 -63 ~0.5 {Tags: [main, book, lobby, carry], CustomName: "{\"text\":\"§a✔\"}", UUID: [I; 0, 0, 0, 1]}
-execute at @e[tag=main] run summon marker ~ ~ ~ {Tags: [assist, book, carry], CustomName: "{\"text\":\"§4✘\"}", UUID: [I; 0, 0, 0, 2]}
-execute at @e[tag=main] run summon marker ~1 ~ ~ {Tags: [sub1, mode, m1], CustomName: "{\"text\":\"§c漸縮\"}", UUID: [I; 0, 0, 0, 3]}
-execute at @e[tag=main] run summon marker ~1 ~ ~ {Tags: [mode, m2], CustomName: "{\"text\":\"§c競技場\"}", UUID: [I; 0, 0, 0, 4]}
-execute at @e[tag=main] run summon marker ~1 ~ ~ {Tags: [mode, m3, carry], CustomName: "{\"text\":\"§c隨機縮圈\"}", UUID: [I; 0, 0, 0, 11]}
-execute at @e[tag=main] run summon marker ~ ~ ~1 {Tags: [sub2, pause, p1, carry], CustomName: "{\"text\":\"§6永晝\"}", UUID: [I; 0, 0, 0, 5]}
-execute at @e[tag=main] run summon marker ~ ~ ~1 {Tags: [pause, p2, carry], CustomName: "{\"text\":\"§6永夜\"}", UUID: [I; 0, 0, 0, 6]}
-execute at @e[tag=main] run summon marker ~1 ~ ~1 {Tags: [sub3], UUID: [I; 0, 0, 0, 7]}
-execute at @e[tag=main] run summon marker ~ ~1 ~2 {Tags: [load], UUID: [I; 0, 0, 0, 8], Rotation: [180.0f, 0.0f]}
-execute at @e[tag=main] run summon marker ~ 319 ~ {Tags: [center], UUID: [I; 0, 0, 0, 9]}
-execute at @e[tag=main] run summon armor_stand ~ 319 ~ {Tags: [move], Invisible: 1b, Invulnerable: 1b, Small: 1b, NoGravity: 1b, UUID: [I; 0, 0, 0, 12]} 
-execute at @e[tag=main] run summon armor_stand ~ ~ ~ {Tags: [show, lobby], CustomName: "{\"text\":\"UHC: \",\"color\":\"red\",\"bold\": true,\"extra\": [{\"text\":\"Evolve\",\"color\":\"gold\",\"italic\": true,\"bold\": false}]}", CustomNameVisible: 1b, NoGravity: 1b, Marker: 0b, Invisible: 1b, Invulnerable: 1b, Small: 1b, UUID: [I; 0, 0, 0, 10], DisabledSlots: 2096896, ShowArms: 1b, ArmorItems: [{}, {}, {}, {id: "minecraft:player_head", Count: 1b, tag: {SkullOwner: "jelly99709"}}], HandItems: [{id: "trident", Count: 1b, tag: {ench: [{id: 16, lvl: 1}]}}, {id: "trident", Count: 1b, tag: {ench: [{id: 16, lvl: 1}]}}], Pose: {LeftArm: [330f, 90f, 0f], RightArm: [330f, 270f, 0f]}}
-execute at @e[tag=main] run summon marker ~ ~ ~ {Tags: [weather, w1, carry], CustomName: "{\"text\":\"§8晴朗\"}", UUID: [I; 0, 0, 0, 13]}
-execute at @e[tag=main] run summon marker ~ ~ ~ {Tags: [weather, w2, carry], CustomName: "{\"text\":\"§8下雨\"}", UUID: [I; 0, 0, 0, 14]}
-execute at @e[tag=main] run summon marker ~ ~ ~ {Tags: [weather, w3, carry], CustomName: "{\"text\":\"§8雷暴\"}", UUID: [I; 0, 0, 0, 15]}
-execute at @e[tag=main] run summon marker ~ ~ ~ {Tags: [gh, g1, carry], CustomName: "{\"text\":\"§5標準\"}", UUID: [I; 0, 0, 0, 16]}
-execute at @e[tag=main] run summon marker ~ ~ ~ {Tags: [gh, g2, carry], CustomName: "{\"text\":\"§5快速\"}", UUID: [I; 0, 0, 0, 17]}
-execute at @e[tag=main] run summon marker ~ 151 ~ {Tags: [set], UUID: [I; 0, 0, 0, 18]}
+execute align xz run summon marker ~0.5 -63 ~0.5 {Tags: ["main", "book", "lobby", "carry"], CustomName: {text: "✔", color: "green"}, UUID: [I; 0, 0, 0, 1]}
+execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["assist", "book", "carry"], CustomName: {text: "✘", color: "dark_red"}, UUID: [I; 0, 0, 0, 2]}
+execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["sub1", "mode", "m1"], CustomName: {text: "漸縮", color: "red"}, UUID: [I; 0, 0, 0, 3]}
+execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["mode", "m2"], CustomName: {text: "競技場", color: "red"}, UUID: [I; 0, 0, 0, 4]}
+execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["mode", "m3", "carry"], CustomName: {text: "隨機縮圈", color: "red"}, UUID: [I; 0, 0, 0, 11]}
+execute at 0-0-0-0-1 run summon marker ~ ~ ~1 {Tags: ["sub2", "pause", "p1", "carry"], CustomName: {text: "永晝", color: "gold"}, UUID: [I; 0, 0, 0, 5]}
+execute at 0-0-0-0-1 run summon marker ~ ~ ~1 {Tags: ["pause", "p2", "carry"], CustomName: {text: "永夜", color: "gold"}, UUID: [I; 0, 0, 0, 6]}
+execute at 0-0-0-0-1 run summon marker ~1 ~ ~1 {Tags: ["sub3"], UUID: [I; 0, 0, 0, 7]}
+execute at 0-0-0-0-1 run summon marker ~ ~1 ~2 {Tags: ["load"], UUID: [I; 0, 0, 0, 8], Rotation: [180.0f, 0.0f]}
+execute at 0-0-0-0-1 run summon marker ~ 319 ~ {Tags: ["center"], UUID: [I; 0, 0, 0, 9]}
+execute at 0-0-0-0-1 run summon armor_stand ~ 319 ~ {Tags: ["move"], Invisible: true, Invulnerable: true, Small: true, NoGravity: true, UUID: [I; 0, 0, 0, 12]} 
+execute at 0-0-0-0-1 run summon armor_stand ~ ~ ~ {Tags: ["show", "lobby"], CustomName: ["", {text: "UHC: ", color: "yellow", bold: true}, {text: "Ultimate", color: "light_purple", italic: true}], CustomNameVisible: true, NoGravity: true, Marker: false, Invisible: true, Invulnerable: true, Small: true, UUID: [I; 0, 0, 0, 10], DisabledSlots: 2096896, ShowArms: true, equipment: {head: {id: "player_head", components: {profile: {name: "jelly99709"}}}, mainhand: {id: "trident", components: {enchantment_glint_override: true}}, offhand: {id: "trident", components: {enchantment_glint_override: true}}}, Pose: {LeftArm: [330f, 90f, 0f], RightArm: [330f, 270f, 0f]}}
+execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["weather", "w1", "carry"], CustomName: {text: "晴朗", color: "dark_gray"}, UUID: [I; 0, 0, 0, 13]}
+execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["weather", "w2", "carry"], CustomName: {text: "下雨", color: "dark_gray"}, UUID: [I; 0, 0, 0, 14]}
+execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["weather", "w3", "carry"], CustomName: {text: "雷暴", color: "dark_gray"}, UUID: [I; 0, 0, 0, 15]}
+execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["gh", "g1", "carry"], CustomName: {text: "標準", color: "dark_purple"}, UUID: [I; 0, 0, 0, 16]}
+execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["gh", "g2", "carry"], CustomName: {text: "快速", color: "dark_purple"}, UUID: [I; 0, 0, 0, 17]}
+execute at 0-0-0-0-1 run summon marker ~ 151 ~ {Tags: ["set"], UUID: [I; 0, 0, 0, 18]}
 
 #set initial supplies
-execute at @e[tag=main] run setblock ~ ~1 ~ light_blue_shulker_box replace
+execute at 0-0-0-0-1 run setblock ~ ~1 ~ light_blue_shulker_box replace
 
 #set world center
-execute at @e[tag=main] run tp @e[tag=lobby] ~-0.5 150 ~-0.5
-execute at @e[tag=main] run setworldspawn ~ 150 ~
-execute at @e[tag=main] run worldborder center ~-0.5 ~-0.5
+execute at 0-0-0-0-1 run tp @e[tag=lobby] ~-0.5 150 ~-0.5
+execute at 0-0-0-0-1 run setworldspawn ~ 150 ~
+execute at 0-0-0-0-1 run worldborder center ~-0.5 ~-0.5
 worldborder set 496
-execute at @e[tag=main] run forceload add ~ ~
+execute at 0-0-0-0-1 run forceload add ~ ~
 
 #construct lobby
-#execute at @e[tag=main] run fill ~-9 ~-1 ~-9 ~8 ~4 ~8 barrier hollow
-#execute at @e[tag=main] run fill ~-8 ~4 ~-8 ~7 ~4 ~7 air replace
-#execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode: "LOAD", name: "uhc:lobby_v6", powered: 0, posX:-9, posY:-1, posZ:-9, sizeX: 18, sizeY: 8, sizeZ: 6, ignoreEntities: 0, showboundingbox: 0} replace
-#execute at @e[tag=main] run setblock ~ ~1 ~ redstone_block replace
-execute at @e[tag=main] run place template uhc:lobby_v7 ~-9 ~-1 ~-9
-execute at @e[tag=main] run setblock ~3 ~1 ~7 oak_wall_sign[facing=north]{front_text: {has_glowing_text: 1b, color: "white", messages: ['{text: ""}','{text: "初始物資"}','{text: ""}','{text: ""}']}, is_waxed: 1b}
+#execute at 0-0-0-0-1 run fill ~-9 ~-1 ~-9 ~8 ~4 ~8 barrier hollow
+#execute at 0-0-0-0-1 run fill ~-8 ~4 ~-8 ~7 ~4 ~7 air replace
+#execute at 0-0-0-0-1 run setblock ~ ~ ~ structure_block{mode: "LOAD", name: "uhc:lobby_v6", powered: 0, posX:-9, posY:-1, posZ:-9, sizeX: 18, sizeY: 8, sizeZ: 6, ignoreEntities: 0, showboundingbox: 0} replace
+#execute at 0-0-0-0-1 run setblock ~ ~1 ~ redstone_block replace
+execute at 0-0-0-0-1 run place template uhc:lobby_v7 ~-9 ~-1 ~-9
+execute at 0-0-0-0-1 run setblock ~3 ~1 ~7 oak_wall_sign[facing=north]{front_text: {has_glowing_text: true, color: "white", messages: ["", {text: "初始物資"}, "", ""]}, is_waxed: true}
 
 #easter egg
-#execute at @e[tag=main] run summon area_effect_cloud ~7.5 ~ ~-7.5 {Tags: [nether], Duration: 2147483647, Particle: "block air", UUIDLeast: 19, UUIDMost: 0}
+#execute at 0-0-0-0-1 run summon area_effect_cloud ~7.5 ~ ~-7.5 {Tags: [nether], Duration: 2147483647, Particle: "block air", UUIDLeast: 19, UUIDMost: 0}
 
 #scoreboard creat
 #### state #########################################################
@@ -175,7 +175,7 @@ scoreboard objectives add random_chest dummy {text: "隨機物資箱"}
 scoreboard objectives add chest_num dummy {text: "物資箱數量"}
 scoreboard objectives add fish_rush dummy {text: "釣魚狂熱"}
 scoreboard objectives add pearl_tear dummy {text: "珍珠之淚"}
-scoreboard objectives add pearl_craft minecraft.crafted:minecraft.heart_of_the_sea {text: "合成珍珠之淚"}
+scoreboard objectives add pearl_craft crafted:heart_of_the_sea {text: "合成珍珠之淚"}
 scoreboard objectives add pearl_own dummy {text: "擁有珍珠之淚"}
 scoreboard objectives add shadow_invisible dummy {text: "昏暗隱形"}
 scoreboard objectives add warden_spawn dummy {text: "伏守生成"}
@@ -187,12 +187,12 @@ scoreboard objectives add health health {text: "血量"}
 scoreboard objectives add death deathCount {text: "死亡"}
 #####
 scoreboard objectives add temp_kill playerKillCount {text: "殺人數量"}
-scoreboard objectives add temp_stone minecraft.mined:minecraft.stone {text: "挖掘石頭"}
-scoreboard objectives add temp_diamond minecraft.mined:minecraft.diamond_ore {text: "挖掘鑽石"}
-scoreboard objectives add temp_gold minecraft.mined:minecraft.gold_ore {text: "挖掘黃金"}
-scoreboard objectives add temp_stone_d minecraft.mined:minecraft.deepslate {text: "挖掘深板岩"}
-scoreboard objectives add temp_diamond_d minecraft.mined:minecraft.deepslate_diamond_ore {text: "挖掘深板岩鑽石"}
-scoreboard objectives add temp_gold_d minecraft.mined:minecraft.deepslate_gold_ore {text: "挖掘深板岩黃金"}
+scoreboard objectives add temp_stone mined:stone {text: "挖掘石頭"}
+scoreboard objectives add temp_diamond mined:diamond_ore {text: "挖掘鑽石"}
+scoreboard objectives add temp_gold mined:gold_ore {text: "挖掘黃金"}
+scoreboard objectives add temp_stone_d mined:deepslate {text: "挖掘深板岩"}
+scoreboard objectives add temp_diamond_d mined:deepslate_diamond_ore {text: "挖掘深板岩鑽石"}
+scoreboard objectives add temp_gold_d mined:deepslate_gold_ore {text: "挖掘深板岩黃金"}
 scoreboard objectives add temp_apple minecraft.used:minecraft.golden_apple {text: "使用金蘋果"}
 scoreboard objectives add temp_hurt minecraft.custom:minecraft.damage_taken {text: "受到傷害"}
 scoreboard objectives add temp_absorb minecraft.custom:minecraft.damage_absorbed {text: "吸收傷害"}
@@ -224,8 +224,8 @@ scoreboard objectives add sky_notifier2 dummy {text: "制空提醒2"}
 scoreboard objectives add gnd_notifier2 dummy {text: "遁地提醒2"}
 scoreboard objectives add nether_notifier dummy {text: "地獄提醒"}
 scoreboard objectives add betray_notifier dummy {text: "背叛提醒"}
-scoreboard objectives add stone_penalty minecraft.mined:minecraft.stone {text: "石頭懲罰"}
-scoreboard objectives add stone_penalty_d minecraft.mined:minecraft.deepslate {text: "石頭懲罰-深板岩"}
+scoreboard objectives add stone_penalty mined:stone {text: "石頭懲罰"}
+scoreboard objectives add stone_penalty_d mined:deepslate {text: "石頭懲罰-深板岩"}
 #### battle royale border ####################################################
 scoreboard objectives add BR_move dummy {text: "中心移動狀態"}
 scoreboard objectives add BR_xdiff dummy {text: "X距離差"}
@@ -250,162 +250,159 @@ scoreboard objectives add view_settings trigger {text: "檢視設定"}
 #scoreboard objectives add rescure_time dummy {text: "救援秒"}
 
 #scoreboard initialize
-scoreboard players set @e[tag=main] underclock 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 underclock 0
 #### book0 ##########################################################
-scoreboard players set @e[tag=main] random_team_stop 1
-scoreboard players set @e[tag=main] random_team_num 7
-scoreboard players set @e[tag=main] rteam_start 0
-scoreboard players set @e[tag=main] team_permission 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 random_team_stop 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 random_team_num 7
+scoreboard players set 00000000-0000-0000-0000-000000000001 team_permission 0
 scoreboard players set @e[tag=assist] team_permission 1
-scoreboard players set @e[tag=main] spec_permission 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 spec_permission 1
 scoreboard players set @e[tag=assist] spec_permission 0
-scoreboard players set @e[tag=main] map_size 496
+scoreboard players set 00000000-0000-0000-0000-000000000001 map_size 496
 #### read map process ###############################################
-scoreboard players set @e[tag=main] XVI 16
-scoreboard players set @e[tag=main] II 2
-scoreboard players set @e[tag=main] width_chunk 15
-scoreboard players set @e[tag=main] Xchunk 0
-scoreboard players set @e[tag=main] Zchunk 0
-scoreboard players set @e[tag=main] corner 1
-scoreboard players set @e[tag=main] inv_corner -1
-scoreboard players set @e[tag=main] read_map_state 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 width_chunk 15
+scoreboard players set 00000000-0000-0000-0000-000000000001 Xchunk 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 Zchunk 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 corner 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 inv_corner -1
+scoreboard players set 00000000-0000-0000-0000-000000000001 read_map_state 0
 #### timer ##########################################################
-scoreboard players set @e[tag=main] timer0_25 5
-scoreboard players set @e[tag=main] timer_sec 11
-scoreboard players set @e[tag=main] timer_min -1
+scoreboard players set 00000000-0000-0000-0000-000000000001 timer0_25 5
+scoreboard players set 00000000-0000-0000-0000-000000000001 timer_sec 11
+scoreboard players set 00000000-0000-0000-0000-000000000001 timer_min -1
 #### book1 ##########################################################
-scoreboard players set @e[tag=main] diff 3
-scoreboard players set @e[tag=main] slow_fall 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 diff 3
+scoreboard players set 00000000-0000-0000-0000-000000000001 slow_fall 1
 scoreboard players set @e[tag=assist] slow_fall 0
-scoreboard players set @e[tag=main] tab_health 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 tab_health 1
 scoreboard players set @e[tag=assist] tab_health 0
-scoreboard players set @e[tag=main] friend_fire 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 friend_fire 1
 scoreboard players set @e[tag=assist] friend_fire 0
-scoreboard players set @e[tag=main] friend_push 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 friend_push 1
 scoreboard players set @e[tag=assist] friend_push 0
-scoreboard players set @e[tag=main] name_health 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 name_health 1
 scoreboard players set @e[tag=assist] name_health 0
-scoreboard players set @e[tag=main] gold_head 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 gold_head 1
 scoreboard players set @e[tag=assist] gold_head 0
 scoreboard players set @e[tag=g1] gh_mode 1
 scoreboard players set @e[tag=g2] gh_mode 0
-scoreboard players set @e[tag=main] night_vision 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 night_vision 0
 scoreboard players set @e[tag=assist] night_vision 1
-scoreboard players set @e[tag=main] allow_diamond 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 allow_diamond 1
 scoreboard players set @e[tag=assist] allow_diamond 0
-scoreboard players set @e[tag=main] invisible 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 invisible 0
 scoreboard players set @e[tag=assist] invisible 1
 #### book2 ##########################################################
-scoreboard players set @e[tag=main] nether_open 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 nether_open 0
 scoreboard players set @e[tag=assist] nether_open 1
-scoreboard players set @e[tag=main] nether_time 80
-scoreboard players set @e[tag=main] betray 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 nether_time 80
+scoreboard players set 00000000-0000-0000-0000-000000000001 betray 0
 scoreboard players set @e[tag=assist] betray 1
-scoreboard players set @e[tag=main] betray_time 50
-scoreboard players set @e[tag=main] betray_tp 60
-scoreboard players set @e[tag=main] betray_num 3
-scoreboard players set @e[tag=main] stew_get 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 betray_time 50
+scoreboard players set 00000000-0000-0000-0000-000000000001 betray_tp 60
+scoreboard players set 00000000-0000-0000-0000-000000000001 betray_num 3
+scoreboard players set 00000000-0000-0000-0000-000000000001 stew_get 0
 scoreboard players set @e[tag=assist] stew_get 1
-scoreboard players set @e[tag=main] potion_brew 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 potion_brew 0
 scoreboard players set @e[tag=assist] potion_brew 1
-#scoreboard players set @e[tag=main] potion_regen 0
+#scoreboard players set 00000000-0000-0000-0000-000000000001 potion_regen 0
 #scoreboard players set @e[tag=assist] potion_regen 1
-#scoreboard players set @e[tag=main] potion_reinforce 0
+#scoreboard players set 00000000-0000-0000-0000-000000000001 potion_reinforce 0
 #scoreboard players set @e[tag=assist] potion_reinforce 1
-#scoreboard players set @e[tag=main] potion_turtle 0
+#scoreboard players set 00000000-0000-0000-0000-000000000001 potion_turtle 0
 #scoreboard players set @e[tag=assist] potion_turtle 1
-scoreboard players set @e[tag=main] notch_apple 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 notch_apple 0
 scoreboard players set @e[tag=assist] notch_apple 1
-scoreboard players set @e[tag=main] cut_clean 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 cut_clean 0
 scoreboard players set @e[tag=assist] cut_clean 1
-scoreboard players set @e[tag=main] exchange 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 exchange 0
 scoreboard players set @e[tag=assist] exchange 1
-scoreboard players set @e[tag=main] advance_announce 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 advance_announce 1
 scoreboard players set @e[tag=assist] advance_announce 0
 #### book3 ##########################################################
-scoreboard players set @e[tag=main] border_on 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 border_on 1
 scoreboard players set @e[tag=assist] border_on 0
 scoreboard players set @e[tag=m1] border_mode 0
 scoreboard players set @e[tag=m2] border_mode 2
 scoreboard players set @e[tag=m3] border_mode 1
-scoreboard players set @e[tag=main] border_start 70
-scoreboard players set @e[tag=main] border_move 30
-scoreboard players set @e[tag=main] border_end 16
-scoreboard players set @e[tag=main] BR_cool_time 2
-scoreboard players set @e[tag=main] BR_shrink_time 5
-scoreboard players set @e[tag=main] day_stop 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 border_start 70
+scoreboard players set 00000000-0000-0000-0000-000000000001 border_move 30
+scoreboard players set 00000000-0000-0000-0000-000000000001 border_end 16
+scoreboard players set 00000000-0000-0000-0000-000000000001 BR_cool_time 2
+scoreboard players set 00000000-0000-0000-0000-000000000001 BR_shrink_time 5
+scoreboard players set 00000000-0000-0000-0000-000000000001 day_stop 1
 scoreboard players set @e[tag=assist] day_stop 0
 scoreboard players set @e[tag=p1] day_mode 1
 scoreboard players set @e[tag=p2] day_mode 0
-scoreboard players set @e[tag=main] day_time 80
-scoreboard players set @e[tag=main] monster_clean 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 day_time 80
+scoreboard players set 00000000-0000-0000-0000-000000000001 monster_clean 1
 scoreboard players set @e[tag=assist] monster_clean 0
-scoreboard players set @e[tag=main] monster_time 80 
-scoreboard players set @e[tag=main] hide_name 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 monster_time 80 
+scoreboard players set 00000000-0000-0000-0000-000000000001 hide_name 1
 scoreboard players set @e[tag=assits] hide_name 0
-scoreboard players set @e[tag=main] hide_time 20
-scoreboard players set @e[tag=main] glowing 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 hide_time 20
+scoreboard players set 00000000-0000-0000-0000-000000000001 glowing 1
 scoreboard players set @e[tag=assist] glowing 0
-scoreboard players set @e[tag=main] glow_time 80
+scoreboard players set 00000000-0000-0000-0000-000000000001 glow_time 80
 #### book4 ##########################################################
-scoreboard players set @e[tag=main] weather_fix 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 weather_fix 1
 scoreboard players set @e[tag=assist] weather_fix 0
 scoreboard players set @e[tag=w1] weather_mode 1
 scoreboard players set @e[tag=w2] weather_mode 0
 scoreboard players set @e[tag=w3] weather_mode 2
-scoreboard players set @e[tag=main] weather_time 80
-scoreboard players set @e[tag=main] sky_limit 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 weather_time 80
+scoreboard players set 00000000-0000-0000-0000-000000000001 sky_limit 1
 scoreboard players set @e[tag=assist] sky_limit 0
-scoreboard players set @e[tag=main] sky_time 80
-scoreboard players set @e[tag=main] sky_height 75
-scoreboard players set @e[tag=main] ground_limit 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 sky_time 80
+scoreboard players set 00000000-0000-0000-0000-000000000001 sky_height 75
+scoreboard players set 00000000-0000-0000-0000-000000000001 ground_limit 1
 scoreboard players set @e[tag=assist] ground_limit 0
-scoreboard players set @e[tag=main] ground_time 80
-scoreboard players set @e[tag=main] ground_height 55
-scoreboard players set @e[tag=main] room 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 ground_time 80
+scoreboard players set 00000000-0000-0000-0000-000000000001 ground_height 55
+scoreboard players set 00000000-0000-0000-0000-000000000001 room 0
 scoreboard players set @e[tag=assist] room 1
-scoreboard players set @e[tag=main] room_time 100
+scoreboard players set 00000000-0000-0000-0000-000000000001 room_time 100
 #### book5 ##########################################################
-scoreboard players set @e[tag=main] branch_mine 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 branch_mine 1
 scoreboard players set @e[tag=assist] branch_mine 0
-scoreboard players set @e[tag=main] branch_limit 800
-scoreboard players set @e[tag=main] branch_position 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 branch_limit 800
+scoreboard players set 00000000-0000-0000-0000-000000000001 branch_position 0
 scoreboard players set @e[tag=assist] branch_position 1
-scoreboard players set @e[tag=main] branch_bomb 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 branch_bomb 0
 scoreboard players set @e[tag=assist] branch_bomb 1
-scoreboard players set @e[tag=main] branch_bomb_num 3
-scoreboard players set @e[tag=main] rand_silverfish 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 branch_bomb_num 3
+scoreboard players set 00000000-0000-0000-0000-000000000001 rand_silverfish 0
 scoreboard players set @e[tag=assist] rand_silverfish 1
-scoreboard players set @e[tag=main] rand_apple 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 rand_apple 0
 scoreboard players set @e[tag=assist] rand_apple 1
-scoreboard players set @e[tag=main] saddle 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 saddle 0
 scoreboard players set @e[tag=assist] saddle 1
-scoreboard players set @e[tag=main] fish_bucket 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 fish_bucket 0
 scoreboard players set @e[tag=assist] fish_bucket 1
-scoreboard players set @e[tag=main] nerf_arrow 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 nerf_arrow 1
 scoreboard players set @e[tag=assist] nerf_arrow 0
-#scoreboard players set @e[tag=main] auto_crossbow 0
+#scoreboard players set 00000000-0000-0000-0000-000000000001 auto_crossbow 0
 #scoreboard players set @e[tag=assist] auto_crossbow 1
-scoreboard players set @e[tag=main] nerf_crossbow 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 nerf_crossbow 1
 scoreboard players set @e[tag=assist] nerf_crossbow 0
-scoreboard players set @e[tag=main] random_chest 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 random_chest 0
 scoreboard players set @e[tag=assist] random_chest 1
-scoreboard players set @e[tag=main] chest_num 20
-scoreboard players set @e[tag=main] fish_rush 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 chest_num 20
+scoreboard players set 00000000-0000-0000-0000-000000000001 fish_rush 0
 scoreboard players set @e[tag=assist] fish_rush 1
-scoreboard players set @e[tag=main] pearl_tear 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 pearl_tear 0
 scoreboard players set @e[tag=assist] pearl_tear 1
-scoreboard players set @e[tag=main] shadow_invisible 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 shadow_invisible 0
 scoreboard players set @e[tag=assist] shadow_invisible 1
-scoreboard players set @e[tag=main] warden_spawn 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 warden_spawn 1
 scoreboard players set @e[tag=assist] warden_spawn 0
-scoreboard players set @e[tag=main] init_supply 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 init_supply 0
 scoreboard players set @e[tag=assist] init_supply 1
-scoreboard players set @e[tag=main] set_supply 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 set_supply 0
 #### battleroyale ####################################################
-scoreboard players set @e[tag=main] BR_move 0
-scoreboard players set @e[tag=main] BR_stage 0
-scoreboard players set @e[tag=main] BR_factor 20
+scoreboard players set 00000000-0000-0000-0000-000000000001 BR_move 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 BR_stage 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 BR_factor 20
 #### constant ########################################################
 scoreboard players set const1 I 1
 scoreboard players set const3 III 3
@@ -418,7 +415,7 @@ scoreboard players set negative_I n_I -1
 #### lottery ########################################################
 scoreboard players set @e[tag=lottery] lottery_count 0
 #### rescure ########################################################
-#scoreboard players set @e[tag=main] rescure 0
+#scoreboard players set 00000000-0000-0000-0000-000000000001 rescure 0
 #scoreboard players set @e[tag=assist] rescure 1
 #scoreboard players set @a rescure_tick 0
 #scoreboard players set @a rescure_time 0
@@ -487,4 +484,4 @@ bossbar set uhc:danger_z visible false
 scoreboard objectives setdisplay sidebar information
 
 #next stage: lobby
-scoreboard players set @e[tag=main] state 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 state 1
