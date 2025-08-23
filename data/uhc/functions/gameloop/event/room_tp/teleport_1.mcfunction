@@ -27,6 +27,9 @@ execute at @e[tag=solo_tp] run setworldspawn ~ ~ ~
 execute at @e[tag=solo_tp] run worldborder center ~ ~
 worldborder set 18
 
+#vehicle
+execute as @a run ride @s dismount
+
 #teleport
 execute at @a[predicate=uhc:riding] run kill @e[type=#uhc:rideable,distance=..1.2]
 execute as @e[tag=solo_tp] at @s run function uhc:gameloop/event/room_tp/teleport_2

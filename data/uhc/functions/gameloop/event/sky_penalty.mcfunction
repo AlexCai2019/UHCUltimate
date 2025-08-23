@@ -19,5 +19,5 @@ tag @a[tag=sky,scores={sky_height=0..}] remove sky
 #title @a[tag=sky,nbt=!{ActiveEffects:[{Id:20b}]}] title {"text":"","extra":[{"text":"限制制空","color":"white"},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"sky_height"},"color":"dark_red","italic":true},{"text":"層","color":"white"}]}
 #effect give @a[tag=sky,nbt=!{ActiveEffects:[{Id:20b}]}] wither 999999 0 true
 title @a[tag=sky,predicate=!uhc:wither_effect] title {"text":"","extra":[{"text":"限制制空","color":"white"},{"score":{"name":"00000000-0000-0000-0000-000000000001","objective":"sky_height"},"color":"dark_red","italic":true},{"text":"層","color":"white"}]}
-effect give @a[tag=sky,predicate=!uhc:wither_effect] wither 999999 0 true
+effect give @a[tag=sky,predicate=!uhc:wither_effect] wither infinite 0 true
 effect clear @a[tag=!sky,tag=!gnd,tag=!nether] wither

@@ -8,8 +8,8 @@
 ###################################################
 
 #night_vision
-execute if score @s night_vision matches 1.. run effect give @a[gamemode=!spectator] night_vision 999999 0 true
-effect give @a[gamemode=spectator] night_vision 999999 0 true
+execute if score @s night_vision matches 1.. run effect give @a[gamemode=!spectator] night_vision infinite 0 true
+effect give @a[gamemode=spectator] night_vision infinite 0 true
 
 #gold head
 execute as @a[scores={gold_head=1..}] at @s run function uhc:apply/gold_head

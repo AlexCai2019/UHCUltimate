@@ -8,7 +8,8 @@
 ###################################################
 
 #kill vehicle
-execute at @a[predicate=uhc:riding] run kill @e[type=#uhc:rideable,distance=..1.2]
+#execute at @a[predicate=uhc:riding] run kill @e[type=#uhc:rideable,distance=..1.2]
+execute as @a run ride @s dismount
 
 execute at @s run tp @a[nbt=!{Dimension:0}] ~ 120 ~ 
 

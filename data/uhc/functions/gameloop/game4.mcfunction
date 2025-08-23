@@ -12,13 +12,13 @@ execute if score @s[scores={betray=1}] timer_min < @s betray_tp unless entity @a
 execute if score 剩餘隊伍 information matches 1 unless entity @a[tag=win] run function uhc:win
 
 #spec permission
-execute if score @s spec_permission matches 0 run effect give @a[gamemode=spectator] blindness 10 0 true
+execute if score @s spec_permission matches 0 run effect give @a[gamemode=spectator] blindness infinite 0 true
 
 #information
 execute store result score 邊界大小 information run worldborder get
 
 #glow
-execute if score @s glowing matches 2 run effect give @a glowing 999999 0 true
+execute if score @s glowing matches 2 run effect give @a glowing infinite 0 true
 
 #nerf arrow
 execute if score @s nerf_arrow matches 1 as @e[type=#uhc:arrow,tag=!arrow] run function uhc:apply/nerf_arrow

@@ -15,3 +15,5 @@ tellraw @a {"text":"","extra":[{"text":"UHCE >>> ","color":"gray"},{"score":{"na
 scoreboard players set @s timer_sec 31
 execute at @e[tag=sub3] run summon area_effect_cloud ~ ~ ~ {Tags:[sec],Age:-21,Particle:"block air"}
 execute at @e[tag=sub3] run setblock ~ ~ ~ repeating_command_block{Command:"execute as 00000000-0000-0000-0000-000000000001 run function uhc:gameloop/event/arena_tp/count_down",auto:1,TrackOutput:0b} replace
+
+execute as @a run ride @s dismount

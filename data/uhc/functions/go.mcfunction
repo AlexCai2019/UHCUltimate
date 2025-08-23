@@ -15,7 +15,8 @@ xp set @a 0 levels
 advancement revoke @a everything
 
 #kill vehicle
-execute at @a[predicate=uhc:riding] run kill @e[type=#uhc:rideable,distance=..1.2]
+#execute at @a[predicate=uhc:riding] run kill @e[type=#uhc:rideable,distance=..1.2]
+execute as @a run ride @s dismount
 
 #initial supply
 execute if score @s init_supply matches 1 at @s as @a[team=!spec] run loot give @s mine ~ -62 ~ diamond_pickaxe{Init:1b}
@@ -24,8 +25,8 @@ execute if score @s init_supply matches 1 at @s as @a[team=!spec] run loot give 
 effect give @a instant_health 1 9 true
 effect give @a[team=!spec] resistance 40 9 true
 effect give @a[team=!spec] hunger 15 3 true
-effect give @a[team=spec] night_vision 999999 0 true
-execute if score @s spec_permission matches 0 run effect give @a[team=spec] blindness 999999 0 true
+effect give @a[team=spec] night_vision infinite 0 true
+execute if score @s spec_permission matches 0 run effect give @a[team=spec] blindness infinite 0 true
 #move to start_countdown
 #execute if score @s slow_fall matches 0 run effect give @a levitation 1 55 true
 execute if score @s slow_fall matches 0 run effect give @a slow_falling 30 0 true

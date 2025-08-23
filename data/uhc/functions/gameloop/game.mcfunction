@@ -38,8 +38,8 @@ execute as @a[scores={gold_head=1..}] at @s run function uhc:apply/gold_head
 execute as @a[scores={gh_craft=1..}] if entity @s[nbt={Inventory:[{id:"minecraft:creeper_head"}]}] at @s run function uhc:apply/gh_craft
 
 #night_vision.
-execute if score @s night_vision matches 1.. run effect give @a night_vision 999999 0 true
-effect give @a[gamemode=spectator] night_vision 999999 0 true
+execute if score @s night_vision matches 1.. run effect give @a night_vision infinite 0 true
+effect give @a[gamemode=spectator] night_vision infinite 0 true
 
 #diamond armor take
 execute if score @s allow_diamond matches 0 run clear @a #uhc:diamond
@@ -76,7 +76,7 @@ execute if score @s exchange matches 1 run function uhc:apply/exchange
 execute if score @s monster_clean matches 2 as @e[type=#uhc:hostile] at @s run tp @s ~ -999999 ~
 
 #glow.
-execute if score @s glowing matches 2 run effect give @a glowing 999999 0 true
+execute if score @s glowing matches 2 run effect give @a glowing infinite 0 true
 
 #height limit.
 execute if score @s sky_limit matches 2 run function uhc:gameloop/event/sky_penalty

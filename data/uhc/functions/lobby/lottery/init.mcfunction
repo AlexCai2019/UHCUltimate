@@ -8,5 +8,5 @@
 #########################################################
 
 scoreboard players reset @a lottery
-data merge block ~ ~1 ~ {Text1:"{\"text\":\"\"}",Text2:"{\"text\":\"請稍候片刻...\"}",Text3:"{\"text\":\"\"}"}
+data merge block ~ ~1 ~ {front_text:{has_glowing_text:1b,color:"white",messages:['{"text":""}','{"text":"請稍後片刻..."}','{"text":""}','{"text":""}']}}
 function uhc:lobby/lottery/fast

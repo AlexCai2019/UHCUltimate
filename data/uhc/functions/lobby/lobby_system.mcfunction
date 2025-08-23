@@ -14,9 +14,9 @@ execute as @a[team=] run function uhc:lobby/join_game
 function uhc:lobby/book/give_book
 
 #effect
-effect give @a saturation 999999 0 true
-effect give @a resistance 999999 9 true
-effect give @a weakness 999999 9 true
+effect give @a saturation infinite 0 true
+effect give @a resistance infinite 9 true
+effect give @a weakness infinite 9 true
 
 #kill item
 kill @e[type=item]

@@ -24,6 +24,7 @@ gamerule doPatrolSpawning false
 gamerule doTraderSpawning false
 gamerule doInsomnia false
 gamerule playersSleepingPercentage 150
+gamerule doVinesSpread false
 defaultgamemode survival
 weather clear 1
 difficulty hard
@@ -66,9 +67,10 @@ execute at @e[tag=main] run forceload add ~ ~
 #construct lobby
 #execute at @e[tag=main] run fill ~-9 ~-1 ~-9 ~8 ~4 ~8 barrier hollow
 #execute at @e[tag=main] run fill ~-8 ~4 ~-8 ~7 ~4 ~7 air replace
-execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:lobby_v6",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
-execute at @e[tag=main] run setblock ~ ~1 ~ redstone_block replace
-execute at @e[tag=main] run setblock ~3 ~1 ~7 oak_wall_sign[facing=north]{GlowingText:1b,Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"初始物資"}',Text1:'{"text":""}'}
+#execute at @e[tag=main] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"uhc:lobby_v6",powered:0,posX:-9,posY:-1,posZ:-9,sizeX:18,sizeY:8,sizeZ:6,ignoreEntities:0,showboundingbox:0} replace
+#execute at @e[tag=main] run setblock ~ ~1 ~ redstone_block replace
+execute at @e[tag=main] run place template uhc:lobby_v7 ~-9 ~-1 ~-9
+execute at @e[tag=main] run setblock ~3 ~1 ~7 oak_wall_sign[facing=north]{front_text:{has_glowing_text:1b,color:"white",messages:['{"text":""}','{"text":"初始物資"}','{"text":""}','{"text":""}']},is_waxed:1b}
 
 #easter egg
 #execute at @e[tag=main] run summon area_effect_cloud ~7.5 ~ ~-7.5 {Tags:[nether],Duration:2147483647,Particle:"block air",UUIDLeast:19,UUIDMost:0}
