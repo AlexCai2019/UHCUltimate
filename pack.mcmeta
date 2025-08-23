@@ -1,6 +1,20 @@
 {
-   "pack":{
-      "pack_format":15,
-      "description":"UHC: Evolve Datapack"
-   }
+	"pack":
+	{
+		"pack_format": 81,
+		"description":
+		[
+			"",
+			{
+				"text": "UHC:",
+				"color": "yellow",
+				"bold": true
+			},
+			{
+				"text": " Ultimate",
+				"color": "light_purple"
+			},
+			" by Alex Cai"
+		]
+	}
 }
