@@ -53,15 +53,10 @@ execute at @s unless block ~3 ~ ~7 light_blue_shulker_box run setblock ~3 ~ ~7 l
 
 #signs
 execute if entity @a[scores={lottery=1}] as @e[type=armor_stand, tag=lottery] at @s run function uhc:lobby/lottery/init
-execute as @a[scores={view_settings=1}] run function uhc:lobby/view_settings
+execute as @a[scores={view_settings=1}] run function uhc:lobby/view_settings/root
 
 #choose team controller
-execute if entity @a[scores={choose_team=1}, team=!solo] run team join solo @a[scores={choose_team=1}, team=!solo]
-execute if entity @a[scores={choose_team=2}, team=!spec] run team join spec @a[scores={choose_team=2}, team=!spec]
-execute if entity @s[scores={team_permission=1}] if entity @a[scores={choose_team=3..}] run function uhc:lobby/settings/self_team
-execute if entity @s[scores={team_permission=1}] as @a[scores={choose_team=1..}] at @s run playsound entity.experience_orb.pickup voice @s ~ ~ ~
-execute as @a[scores={choose_team=1..2}] run playsound entity.experience_orb.pickup voice @s ~ ~ ~
-execute if entity @a[scores={choose_team=1..}] run scoreboard players reset @a choose_team
+execute as @a[scores={choose_team=1..}] run function uhc:lobby/settings/self_team/root
 
 #random team
 execute if score @s random_team_stop matches 0 run function uhc:lobby/settings/random_team
