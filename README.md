@@ -1,6 +1,6 @@
-# UHCEvolve
-UHC Evolve - An ultra hardcore(UHC) pvp system for minecraft 1.20<br />
-The language is Traditional Chinese in minecraft. 
+# UHCUltimate
+UHC Ultimate - An ultra hardcore(UHC) pvp system for Minecraft 1.21.8<br/>
+The language is Traditional Chinese in Minecraft. 
 
-Datapack introduction web page on Bahamut (a game forum in Taiwan):<br />
-https://forum.gamer.com.tw/C.php?page=1&bsn=18673&snA=168664
+Forked from UHC Evolve by [@jelly99709](https://github.com/jelly99709). The origin datapack introduction web page on Bahamut (a game forum in Taiwan):<br/>
+https://forum.gamer.com.tw/C.php?bsn=18673&snA=168664
