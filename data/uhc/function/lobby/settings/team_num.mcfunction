@@ -8,8 +8,8 @@
 #########################################################
 
 # -1 or +1
-execute if entity @a[scores={book=1}] run scoreboard players remove #team_num random_team 1
-execute if entity @a[scores={book=2}] run scoreboard players add #team_num random_team 1
+execute if score @s book matches 1 run scoreboard players remove #team_num random_team 1
+execute if score @s book matches 2 run scoreboard players add #team_num random_team 1
 
 #make random_team be between 2~14
 execute if score #team_num random_team matches 15.. run scoreboard players set random_team random_team 2

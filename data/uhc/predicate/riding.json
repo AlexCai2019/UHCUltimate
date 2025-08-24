@@ -1,9 +1,8 @@
 {
-	"condition" : "minecraft:entity_properties",
-	"entity" : "this",
-	"predicate" : {
-		"vehicle" : {
-			"type" : "#uhc:rideable"
-		}
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate":
+	{
+		"vehicle": {}
 	}
 }

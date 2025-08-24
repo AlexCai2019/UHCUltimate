@@ -87,15 +87,8 @@ scoreboard objectives add choose_team trigger {text: "選隊"}
 scoreboard objectives add spec_permission dummy {text: "死亡觀察"}
 scoreboard objectives add map_size dummy {text: "地圖大小"}
 #### read map process ###############################################
-scoreboard objectives add width_chunk dummy {text: "邊長區塊數"}
-scoreboard objectives add inv_width_chunk dummy {text: "-邊長區塊數"}
-scoreboard objectives add Xchunk dummy {text: "跑圖X座標區塊單位"}
-scoreboard objectives add Zchunk dummy {text: "跑圖Z座標區塊單位"}
-scoreboard objectives add corner dummy {text: "跑圖轉彎點"}
-scoreboard objectives add inv_corner dummy {text: "-跑圖轉彎點"}
-scoreboard objectives add read_map_state dummy {text: "跑圖狀態"}
+scoreboard objectives add border dummy "邊界"
 #### timer ##########################################################
-scoreboard objectives add timer0_25 dummy {text: "4分之一秒計時器"}
 scoreboard objectives add timer_sec dummy {text: "秒計時器"}
 scoreboard objectives add timer_min dummy {text: "分計時器"}
 #### book1 ##########################################################
@@ -210,6 +203,7 @@ scoreboard objectives add posY dummy {text: "Y座標"}
 scoreboard objectives add posZ dummy {text: "Z座標"}
 #### other ####################################################################
 #scoreboard objectives add remain dummy {text: "剩餘隊伍"}
+scoreboard objectives add constant dummy "常數"
 scoreboard objectives add I dummy {text: "常數1"}
 scoreboard objectives add III dummy {text: "常數3"}
 scoreboard objectives add V dummy {text: "常數5"}
@@ -253,19 +247,16 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 underclock 0
 #### book0 ##########################################################
 scoreboard players set #team_num random_team 7
 scoreboard players set 00000000-0000-0000-0000-000000000001 team_permission 0
-scoreboard players set @e[tag=assist] team_permission 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 spec_permission 1
-scoreboard players set @e[tag=assist] spec_permission 0
-scoreboard players set 00000000-0000-0000-0000-000000000001 map_size 496
+scoreboard players set #map_size border 496
 #### read map process ###############################################
-scoreboard players set 00000000-0000-0000-0000-000000000001 width_chunk 15
-scoreboard players set 00000000-0000-0000-0000-000000000001 Xchunk 0
-scoreboard players set 00000000-0000-0000-0000-000000000001 Zchunk 0
-scoreboard players set 00000000-0000-0000-0000-000000000001 corner 1
-scoreboard players set 00000000-0000-0000-0000-000000000001 inv_corner -1
-scoreboard players set 00000000-0000-0000-0000-000000000001 read_map_state 0
+scoreboard players set #width_chunk border 15
+scoreboard players set #x_chunk border 0
+scoreboard players set #z_chunk border 0
+scoreboard players set #read_map_state border 0
+scoreboard players set #corner border 1
+scoreboard players set #inv_corner border -1
 #### timer ##########################################################
-scoreboard players set 00000000-0000-0000-0000-000000000001 timer0_25 5
 scoreboard players set 00000000-0000-0000-0000-000000000001 timer_sec 11
 scoreboard players set 00000000-0000-0000-0000-000000000001 timer_min -1
 #### book1 ##########################################################
@@ -402,14 +393,14 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 BR_move 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 BR_stage 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 BR_factor 20
 #### constant ########################################################
-scoreboard players set const1 I 1
-scoreboard players set const3 III 3
-scoreboard players set const5 V 5
-scoreboard players set const7 VII 7
-scoreboard players set const10 X 10
-scoreboard players set const13 XIII 13
-scoreboard players set const100 C 100
-scoreboard players set negative_I n_I -1
+scoreboard players set #-1 constant -1
+scoreboard players set #1 constant 1
+scoreboard players set #3 constant 3
+scoreboard players set #5 constant 5
+scoreboard players set #7 constant 7
+scoreboard players set #10 constant 10
+scoreboard players set #13 constant 13
+scoreboard players set #100 constant 100
 #### lottery ########################################################
 scoreboard players set @e[tag=lottery] lottery_count 0
 #### rescure ########################################################

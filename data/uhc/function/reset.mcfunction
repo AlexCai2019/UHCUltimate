@@ -41,15 +41,8 @@ scoreboard objectives remove book
 scoreboard objectives remove team_permission
 scoreboard objectives remove choose_team
 scoreboard objectives remove spec_permission
+scoreboard objectives remove border
 scoreboard objectives remove map_size
-scoreboard objectives remove width_chunk
-scoreboard objectives remove inv_width_chunk
-scoreboard objectives remove Xchunk
-scoreboard objectives remove Zchunk
-scoreboard objectives remove corner
-scoreboard objectives remove inv_corner
-scoreboard objectives remove read_map_state
-scoreboard objectives remove timer0_25
 scoreboard objectives remove timer_sec
 scoreboard objectives remove timer_min
 scoreboard objectives remove diff
@@ -155,6 +148,7 @@ scoreboard objectives remove stone_penalty_d
 #scoreboard objectives remove leaf
 #scoreboard objectives remove shear
 #scoreboard objectives remove uuid
+scoreboard objectives remove constant
 scoreboard objectives remove I
 scoreboard objectives remove III
 scoreboard objectives remove V

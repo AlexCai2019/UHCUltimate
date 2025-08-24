@@ -21,9 +21,9 @@ execute store result score @s posX run data get entity @s Pos[0] 10000
 execute store result score @s posZ run data get entity @s Pos[2] 10000
 
 #randomly choose new center
-execute if score 00000000-0000-0000-0000-000000000001 map_size matches 496 at @s run spreadplayers ~ ~ 1 48 false 00000000-0000-0000-0000-000000000009
-execute if score 00000000-0000-0000-0000-000000000001 map_size matches 752 at @s run spreadplayers ~ ~ 1 80 false 00000000-0000-0000-0000-000000000009
-execute if score 00000000-0000-0000-0000-000000000001 map_size matches 1008 at @s run spreadplayers ~ ~ 1 112 false 00000000-0000-0000-0000-000000000009
+execute if score #map_size border matches 496 at @s run spreadplayers ~ ~ 1 48 false 00000000-0000-0000-0000-000000000009
+execute if score #map_size border matches 752 at @s run spreadplayers ~ ~ 1 80 false 00000000-0000-0000-0000-000000000009
+execute if score #map_size border matches 1008 at @s run spreadplayers ~ ~ 1 112 false 00000000-0000-0000-0000-000000000009
 execute as 00000000-0000-0000-0000-000000000009 at @s run tp @s ~ 319 ~
 
 #check validation: new position must be at least 20 blocks aways from old position in both x, y coordinate

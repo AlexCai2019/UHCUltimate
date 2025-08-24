@@ -7,18 +7,14 @@
 # func    : Teleport player to the first two chunks.
 #########################################################
 
-tellraw @a {text: "UHCE >>> ", color: "gray", "extra": [{text: "開始讀取地圖...", color: "gold"}]}
+tellraw @a [{text: "UHCU >>> ", color: "gray"}, {text: "開始讀取地圖...", color: "gold"}]
 
 bossbar set uhc:read_progress visible true
-execute if score @s width_chunk matches 15 run bossbar set uhc:read_progress max 17
-execute if score @s width_chunk matches 31 run bossbar set uhc:read_progress max 33
-execute if score @s width_chunk matches 47 run bossbar set uhc:read_progress max 51
-execute if score @s width_chunk matches 63 run bossbar set uhc:read_progress max 65
-execute if score @s width_chunk matches 79 run bossbar set uhc:read_progress max 81
+execute store result bossbar uhc:read_progress max run scoreboard players get #width_chunk border
 bossbar set uhc:read_progress value 0
 bossbar set uhc:read_progress players @a
 
-execute at @p[tag=read_map, predicate=uhc:riding] run kill @e[type=#uhc:rideable, distance=..1.2]
+execute as @a[tag=read_map, predicate=uhc:riding] run ride @s dismount
 execute at @s run tp @p[tag=read_map] ~ 128 ~
 execute as @p[tag=read_map] at @s run tp @s ~16 128 ~
-scoreboard players add @s Xchunk 1
+scoreboard players add #x_chunk border 1

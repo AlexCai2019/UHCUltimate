@@ -8,23 +8,17 @@
 #########################################################
 
 #initial
-execute if entity @s[scores={read_map_state=0}] run function uhc:lobby/settings/map_gen/map_init
-scoreboard players set @s[scores={read_map_state=0}] read_map_state 1
+execute if score #read_map_state border matches 0 run function uhc:lobby/settings/map_gen/map_init
+scoreboard players set #read_map_state border 1
 
 #timer
-scoreboard players remove @s timer0_25 1
-execute as @p[tag=read_map] at @s run tp @s ~ 128 ~ ~ 90
-execute if score @s timer0_25 matches ..0 as @p[tag=read_map] run function uhc:lobby/settings/map_gen/map_tp
-scoreboard players set @s[scores={timer0_25=..0}] timer0_25 5
+execute as @a[tag=read_map] at @s run function uhc:lobby/settings/map_gen/map_tp
 
 #progress line
-execute store result bossbar uhc:read_progress value run scoreboard players get @s corner
+execute store result bossbar uhc:read_progress value run scoreboard players get #corner border
 
 #stop condition
-execute if score @s Xchunk > @s width_chunk run tag @s add stop_map
-execute if score @s Xchunk < @s inv_width_chunk run tag @s add stop_map
-execute if score @s Zchunk > @s width_chunk run tag @s add stop_map
-execute if score @s Zchunk < @s inv_width_chunk run tag @s add stop_map
-
-#stop
-execute if entity @s[tag=stop_map] run function uhc:lobby/settings/map_gen/map_stop
+execute if score #x_chunk border > #width_chunk border run return run function uhc:lobby/settings/map_gen/map_stop
+execute if score #x_chunk border < #inv_width_chunk border run return run function uhc:lobby/settings/map_gen/map_stop
+execute if score #z_chunk border > #width_chunk border run return run function uhc:lobby/settings/map_gen/map_stop
+execute if score #z_chunk border < #inv_width_chunk border run return run function uhc:lobby/settings/map_gen/map_stop

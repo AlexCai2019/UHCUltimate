@@ -48,4 +48,4 @@ execute as @a[scores={view_settings=1}] run function uhc:lobby/view_settings/roo
 execute as @a[scores={choose_team=1..}] run function uhc:lobby/settings/self_team/root
 
 #book setting controller
-execute if entity @a[scores={book=1..}] run function uhc:lobby/book/book_controller
+execute as @a[scores={book=1..}] run function uhc:lobby/book/book_controller
