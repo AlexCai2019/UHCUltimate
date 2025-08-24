@@ -25,9 +25,6 @@ kill @e[type=item]
 scoreboard players enable @a[gamemode=creative] book
 scoreboard players enable @a choose_team
 
-#random team stop
-execute unless entity @a[team=solo] run scoreboard players set @s random_team_stop 1
-
 #info display
 execute store result score 人數 information if entity @a[team=!spec]
 
@@ -36,15 +33,7 @@ execute as 00000000-0000-0000-0000-00000000000a at @s run rotate @s ~4 ~
 execute at @s run particle portal ~ ~ ~ .5 .25 .5 .5 1 force
 
 #bee
-execute as @e[tag=bee1] at @s run tellraw @a[tag=!touch_bee, distance=..1.5] [{text: "UHCU >>> ", color: "gray"}, {text: "蜜蜂嗡嗡!", color: "yellow"}]
-execute as @e[tag=bee1] at @s run tag @a[tag=!touch_bee, distance=..1.5] add touch_bee
-execute as @e[tag=bee1] at @s run tag @a[tag=touch_bee, distance=1.5..] remove touch_bee
-
-#nether easter egg
-#execute at @e[tag=nether] if entity @a[distance=..2] unless entity @e[tag=piglin] run summon zombie_pigman ~ ~ ~ {Tags: [piglin], IsBaby: 1b, Silent: 1b, NoAI: 1b, NoGravity: 1b, Invulnerable: 1b}
-#execute at @e[tag=nether] if entity @a[distance=..2] run setblock ~ ~1 ~ dark_oak_wall_sign[facing=south]{Color: "white", Text4:'{text: ""}', Text3:'{text: "(Maybe) Coming Soon"}', Text2:'{text: "-- Nether Trip --"}', Text1:'{text: "《UHC: Evolve》"}'}
-#execute at @e[tag=nether] unless entity @a[distance=..2] run tp @e[tag=piglin] ~ -1000 ~
-#execute at @e[tag=nether] unless entity @a[distance=..2] run setblock ~ ~1 ~ air replace
+execute at @e[tag=bee1] run function uhc:lobby/bee
 
 #initial supply
 execute unless entity @a[tag=set_supply] at @s if data storage uhc:data root.init_items run data modify block ~3 ~ ~7 Items set from storage uhc:data root.init_items
@@ -57,9 +46,6 @@ execute as @a[scores={view_settings=1}] run function uhc:lobby/view_settings/roo
 
 #choose team controller
 execute as @a[scores={choose_team=1..}] run function uhc:lobby/settings/self_team/root
-
-#random team
-execute if score @s random_team_stop matches 0 run function uhc:lobby/settings/random_team
 
 #book setting controller
 execute if entity @a[scores={book=1..}] run function uhc:lobby/book/book_controller

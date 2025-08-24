@@ -12,7 +12,7 @@ tellraw @s {text: "***********************************************************",
 #map size
 tellraw @s ["", {text: "地圖大小", color: "gold"}, " | ", {score: {name: "00000000-0000-0000-0000-000000000001", objective: "map_size"}, color: "yellow", extra: ["格"]}]
 #random team number
-tellraw @s ["", {text: "隨機分隊數量", color: "gold"}, " | ", {score: {name: "00000000-0000-0000-0000-000000000001", objective: "random_team_num"}, color: "yellow", extra: ["隊"]}]
+tellraw @s ["", {text: "隨機分隊數量", color: "gold"}, " | ", {score: {name: "#team_num", objective: "random_team"}, color: "yellow", extra: ["隊"]}]
 #self team permission
 function uhc:lobby/view_settings/boolean {objective: "team_permission", name: "自由選隊"}
 #spectator
@@ -56,11 +56,11 @@ function uhc:lobby/view_settings/boolean_with_time {name_objective: "nether_open
 execute if score 00000000-0000-0000-0000-000000000001 betray matches 1 run tellraw @s ["", {text: "背叛者小隊", color: "gold"}, " | ", {translate: "options.on", color: "green"}, " | ", {text: "人數", color: "gold"}, " | ", {score: {name: "00000000-0000-0000-0000-000000000001", objective: "betray_num"}, color: "yellow", extra: ["人"]}, " | ", {text: "啟動時間", color: "gold"}, " | ", {score: {name: "00000000-0000-0000-0000-000000000001", objective: "betray_time"}, color: "yellow", extra: ["分鐘"]}, " | ", {text: "公佈時間", color: "gold"}, " | ", {score: {name: "00000000-0000-0000-0000-000000000001", objective: "betray_tp"}, color: "yellow", extra: ["分鐘"]}]
 execute if score 00000000-0000-0000-0000-000000000001 betray matches 0 run tellraw @s ["", {text: "背叛者小隊", color: "gold"}, " | ", {translate: "options.off", color: "red"}]
 #stew
-function uhc:lobby/view_settings/boolean {objective: "stew_get", name: "可疑的燉湯"}
+function uhc:lobby/view_settings/boolean_format {objective: "stew_get", name: 'translate: "item.minecraft.suspicious_stew"'}
 #potion
 function uhc:lobby/view_settings/boolean {objective: "potion_brew", name: "釀造藥水"}
 #notch apple
-function uhc:lobby/view_settings/boolean {objective: "notch_apple", name: "附魔金蘋果"}
+function uhc:lobby/view_settings/boolean_format {objective: "notch_apple", name: 'translate: "item.minecraft.enchanted_golden_apple"'}
 #cut clean
 function uhc:lobby/view_settings/boolean {objective: "cut_clean", name: "物品免燒"}
 #exchange

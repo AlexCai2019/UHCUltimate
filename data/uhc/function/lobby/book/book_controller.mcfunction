@@ -19,7 +19,7 @@ execute as @a[scores={book=1..}] at @s run playsound entity.experience_orb.picku
 execute if entity @a[scores={book=1..2}] run function uhc:lobby/settings/team_num
 
 #book = 3, random-teamed
-execute if entity @a[scores={book=3}] run scoreboard players set @s random_team_stop 0
+execute if entity @a[scores={book=3}] run function uhc:lobby/settings/random_team
 
 #book = 10, clear team
 execute if entity @a[scores={book=10}] run team join solo @a[tag=player, team=!spec]

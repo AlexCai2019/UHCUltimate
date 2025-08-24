@@ -80,8 +80,7 @@ execute at 0-0-0-0-1 run setblock ~3 ~1 ~7 oak_wall_sign[facing=north]{front_tex
 scoreboard objectives add state dummy {text: "遊戲狀態"}
 scoreboard objectives add underclock dummy {text: "降頻"}
 #### book0 #########################################################
-scoreboard objectives add random_team_stop dummy {text: "隨機分隊結束"}
-scoreboard objectives add random_team_num dummy {text: "隨機分隊數量"}
+scoreboard objectives add random_team dummy "隨機分隊"
 scoreboard objectives add book trigger {text: "書本設定"}
 scoreboard objectives add team_permission dummy {text: "選隊權限"}
 scoreboard objectives add choose_team trigger {text: "選隊"}
@@ -252,8 +251,7 @@ scoreboard objectives add view_settings trigger {text: "檢視設定"}
 #scoreboard initialize
 scoreboard players set 00000000-0000-0000-0000-000000000001 underclock 0
 #### book0 ##########################################################
-scoreboard players set 00000000-0000-0000-0000-000000000001 random_team_stop 1
-scoreboard players set 00000000-0000-0000-0000-000000000001 random_team_num 7
+scoreboard players set #team_num random_team 7
 scoreboard players set 00000000-0000-0000-0000-000000000001 team_permission 0
 scoreboard players set @e[tag=assist] team_permission 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 spec_permission 1

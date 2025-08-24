@@ -36,8 +36,7 @@ bossbar remove uhc:danger
 #remove scoreboard
 scoreboard objectives remove state
 scoreboard objectives remove underclock
-scoreboard objectives remove random_team_stop
-scoreboard objectives remove random_team_num
+scoreboard objectives remove random_team
 scoreboard objectives remove book
 scoreboard objectives remove team_permission
 scoreboard objectives remove choose_team
