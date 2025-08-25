@@ -31,7 +31,7 @@ execute if score @s[scores={border_on=1}] timer_min >= @s border_start if entity
 execute if score @s[scores={border_on=2}] timer_min >= @s border_move if entity @e[tag=m1, scores={border_mode=1}] run function uhc:gameloop/event/shrink_end
 
 #border mode --- arena
-execute if score @s[scores={border_on=1}] timer_min >= @s border_start if entity @e[tag=m2, scores={border_mode=1}] run function uhc:gameloop/event/arena 
+execute if score @s[scores={border_on=1}] timer_min >= @s border_start if entity @e[tag=m2, scores={border_mode=1}] run function uhc:gameloop/event/arena
 
 #border mode --- battle royale
 execute if score @s[scores={border_on=1}] timer_min >= @s border_start if entity @e[tag=m3, scores={border_mode=1}] run function uhc:gameloop/event/battle_royale/br_controller

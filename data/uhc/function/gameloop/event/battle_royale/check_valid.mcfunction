@@ -8,8 +8,8 @@
 #########################################################
 
 #get new center position
-execute store result score @s posX run data get entity @s Pos[0] 10000  
-execute store result score @s posZ run data get entity @s Pos[2] 10000 
+execute store result score @s posX run data get entity @s Pos[0] 10000
+execute store result score @s posZ run data get entity @s Pos[2] 10000
 
 #calculate diff
 scoreboard players operation @s BR_xdiff = 00000000-0000-0000-0000-00000000000c posX

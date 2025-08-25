@@ -7,6 +7,6 @@
 # func    : Cancel the start_countdown function.
 #########################################################
 
-tellraw @a[gamemode=creative] ["", {text: "UHCE >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "若要開啟隨機縮圈模式，地圖大小至多為1008格!!", color: "gold"}]
+tellraw @a[gamemode=creative] ["", {text: "UHCU >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "若要開啟隨機縮圈模式，地圖大小至多為1008格!!", color: "gold"}]
 
 setblock ~ ~ ~ air

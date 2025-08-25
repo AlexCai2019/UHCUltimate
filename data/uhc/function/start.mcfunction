@@ -35,6 +35,8 @@ fill ~-1 -64 ~-1 ~2 -61 ~3 bedrock hollow
 fill ~ -63 ~2 ~1 -63 ~2 end_portal
 
 #armor_stand settings
+execute align xyz unless entity f-f-f-f-f run summon armor_stand ~ 150 ~ {Tags: ["show", "lobby"], CustomName: ["", {text: "UHC: ", color: "yellow", bold: true}, {text: "Ultimate", color: "light_purple", italic: true}], CustomNameVisible: true, NoGravity: true, Marker: false, Invisible: true, Invulnerable: true, Small: true, UUID: [I; 15, 983055, 983040, 15], DisabledSlots: 2096896, ShowArms: true, equipment: {head: {id: "player_head", components: {profile: {name: "jelly99709"}}}, mainhand: {id: "trident", components: {enchantment_glint_override: true}}, offhand: {id: "trident", components: {enchantment_glint_override: true}}}, Pose: {LeftArm: [330f, 90f, 0f], RightArm: [330f, 270f, 0f]}}
+
 execute align xz run summon marker ~0.5 -63 ~0.5 {Tags: ["main", "book", "lobby", "carry"], CustomName: {text: "✔", color: "green"}, UUID: [I; 0, 0, 0, 1]}
 execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["assist", "book", "carry"], CustomName: {text: "✘", color: "dark_red"}, UUID: [I; 0, 0, 0, 2]}
 execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["sub1", "mode", "m1"], CustomName: {text: "漸縮", color: "red"}, UUID: [I; 0, 0, 0, 3]}
@@ -46,7 +48,6 @@ execute at 0-0-0-0-1 run summon marker ~1 ~ ~1 {Tags: ["sub3"], UUID: [I; 0, 0, 
 execute at 0-0-0-0-1 run summon marker ~ ~1 ~2 {Tags: ["load"], UUID: [I; 0, 0, 0, 8], Rotation: [180.0f, 0.0f]}
 execute at 0-0-0-0-1 run summon marker ~ 319 ~ {Tags: ["center"], UUID: [I; 0, 0, 0, 9]}
 execute at 0-0-0-0-1 run summon armor_stand ~ 319 ~ {Tags: ["move"], Invisible: true, Invulnerable: true, Small: true, NoGravity: true, UUID: [I; 0, 0, 0, 12]} 
-execute at 0-0-0-0-1 run summon armor_stand ~ ~ ~ {Tags: ["show", "lobby"], CustomName: ["", {text: "UHC: ", color: "yellow", bold: true}, {text: "Ultimate", color: "light_purple", italic: true}], CustomNameVisible: true, NoGravity: true, Marker: false, Invisible: true, Invulnerable: true, Small: true, UUID: [I; 0, 0, 0, 10], DisabledSlots: 2096896, ShowArms: true, equipment: {head: {id: "player_head", components: {profile: {name: "jelly99709"}}}, mainhand: {id: "trident", components: {enchantment_glint_override: true}}, offhand: {id: "trident", components: {enchantment_glint_override: true}}}, Pose: {LeftArm: [330f, 90f, 0f], RightArm: [330f, 270f, 0f]}}
 execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["weather", "w1", "carry"], CustomName: {text: "晴朗", color: "dark_gray"}, UUID: [I; 0, 0, 0, 13]}
 execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["weather", "w2", "carry"], CustomName: {text: "下雨", color: "dark_gray"}, UUID: [I; 0, 0, 0, 14]}
 execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["weather", "w3", "carry"], CustomName: {text: "雷暴", color: "dark_gray"}, UUID: [I; 0, 0, 0, 15]}
@@ -58,7 +59,6 @@ execute at 0-0-0-0-1 run summon marker ~ 151 ~ {Tags: ["set"], UUID: [I; 0, 0, 0
 execute at 0-0-0-0-1 run setblock ~ ~1 ~ light_blue_shulker_box replace
 
 #set world center
-execute at 0-0-0-0-1 run tp @e[tag=lobby] ~-0.5 150 ~-0.5
 execute at 0-0-0-0-1 run setworldspawn ~ 150 ~
 execute at 0-0-0-0-1 run worldborder center ~-0.5 ~-0.5
 worldborder set 496
@@ -247,7 +247,9 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 underclock 0
 #### book0 ##########################################################
 scoreboard players set #team_num random_team 7
 scoreboard players set 00000000-0000-0000-0000-000000000001 team_permission 0
+scoreboard players set 00000000-0000-0000-0000-000000000002 team_permission 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 spec_permission 1
+scoreboard players set 00000000-0000-0000-0000-000000000000 spec_permission 1
 scoreboard players set #map_size border 496
 #### read map process ###############################################
 scoreboard players set #width_chunk border 15
@@ -262,25 +264,27 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 timer_min -1
 #### book1 ##########################################################
 scoreboard players set 00000000-0000-0000-0000-000000000001 diff 3
 scoreboard players set 00000000-0000-0000-0000-000000000001 slow_fall 1
-scoreboard players set @e[tag=assist] slow_fall 0
+scoreboard players set 00000000-0000-0000-0000-000000000002 slow_fall 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 tab_health 1
-scoreboard players set @e[tag=assist] tab_health 0
+scoreboard players set 00000000-0000-0000-0000-000000000002 tab_health 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 friend_fire 1
-scoreboard players set @e[tag=assist] friend_fire 0
+scoreboard players set 00000000-0000-0000-0000-000000000002 friend_fire 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 friend_push 1
-scoreboard players set @e[tag=assist] friend_push 0
+scoreboard players set 00000000-0000-0000-0000-000000000002 friend_push 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 name_health 1
-scoreboard players set @e[tag=assist] name_health 0
+scoreboard players set 00000000-0000-0000-0000-000000000002 name_health 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 gold_head 1
-scoreboard players set @e[tag=assist] gold_head 0
-scoreboard players set @e[tag=g1] gh_mode 1
-scoreboard players set @e[tag=g2] gh_mode 0
+scoreboard players set 00000000-0000-0000-0000-000000000002 gold_head 0
+scoreboard players set 00000000-0000-0000-0000-000000000010 gh_mode 1
+scoreboard players set 00000000-0000-0000-0000-000000000011 gh_mode 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 night_vision 0
-scoreboard players set @e[tag=assist] night_vision 1
+scoreboard players set 00000000-0000-0000-0000-000000000002 night_vision 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 advance_announce 1
+scoreboard players set 00000000-0000-0000-0000-000000000002 advance_announce 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 allow_diamond 1
-scoreboard players set @e[tag=assist] allow_diamond 0
+scoreboard players set 00000000-0000-0000-0000-000000000002 allow_diamond 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 invisible 0
-scoreboard players set @e[tag=assist] invisible 1
+scoreboard players set 00000000-0000-0000-0000-000000000002 invisible 1
 #### book2 ##########################################################
 scoreboard players set 00000000-0000-0000-0000-000000000001 nether_open 0
 scoreboard players set @e[tag=assist] nether_open 1
@@ -306,8 +310,6 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 cut_clean 0
 scoreboard players set @e[tag=assist] cut_clean 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 exchange 0
 scoreboard players set @e[tag=assist] exchange 1
-scoreboard players set 00000000-0000-0000-0000-000000000001 advance_announce 1
-scoreboard players set @e[tag=assist] advance_announce 0
 #### book3 ##########################################################
 scoreboard players set 00000000-0000-0000-0000-000000000001 border_on 1
 scoreboard players set @e[tag=assist] border_on 0

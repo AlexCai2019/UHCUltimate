@@ -8,8 +8,8 @@
 #########################################################
 
 # -256 or +256
-execute if score @s book matches 6 run scoreboard players remove #map_size border 256
-execute if score @s book matches 7 run scoreboard players add #map_size border 256
+execute if score @s book matches 8 run scoreboard players remove #map_size border 256
+execute if score @s book matches 9 run scoreboard players add #map_size border 256
 
 #make map_size be 496 752 1008 1264 1520
 execute if score #map_size border matches 1600.. run scoreboard players set #map_size border 496

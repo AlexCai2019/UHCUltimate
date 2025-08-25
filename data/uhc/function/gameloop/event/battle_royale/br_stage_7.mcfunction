@@ -8,7 +8,7 @@
 #########################################################
 
 #stop moving
-data merge entity @s {NoGravity: 1}
+data merge entity @s {NoGravity: 1b}
 scoreboard players set 00000000-0000-0000-0000-000000000001 BR_move 0
 execute at @s run setworldspawn ~ ~ ~
 
@@ -32,8 +32,8 @@ execute as 00000000-0000-0000-0000-000000000009 run function uhc:gameloop/event/
 #get new center coordinate
 execute store result score 00000000-0000-0000-0000-000000000001 posX run data get entity 00000000-0000-0000-0000-000000000009 Pos[0]
 execute store result score 00000000-0000-0000-0000-000000000001 posZ run data get entity 00000000-0000-0000-0000-000000000009 Pos[2]
-execute as 00000000-0000-0000-0000-000000000009 store result score @s posX run data get entity @s Pos[0] 10000  
-execute as 00000000-0000-0000-0000-000000000009 store result score @s posZ run data get entity @s Pos[2] 10000 
+execute as 00000000-0000-0000-0000-000000000009 store result score @s posX run data get entity @s Pos[0] 10000
+execute as 00000000-0000-0000-0000-000000000009 store result score @s posZ run data get entity @s Pos[2] 10000
 
 #tp markers
 execute at 00000000-0000-0000-0000-000000000009 run tp @e[tag=carry] ~ ~ ~

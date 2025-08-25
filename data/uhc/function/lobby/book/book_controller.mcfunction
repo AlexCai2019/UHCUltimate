@@ -52,19 +52,25 @@ execute if score @s book matches 12 run function uhc:lobby/settings/click_start
 #### second book (book1) ##########################################################################################################################
 
 #book = 16 ~ 17, difficulty 
-execute if score @s book matches 16..17 run function uhc:lobby/settings/difficulty
+execute if score @s book matches 13..14 run function uhc:lobby/settings/difficulty
 
 #book = 18 ~ 20, friendly fire & friendly push & teammate position 
-execute if score @s book matches 18..20 run function uhc:lobby/settings/friend
+execute if score @s book matches 15 run function uhc:lobby/settings/boolean {objective: "friend_fire", name: "同隊傷害"}
+execute if score @s book matches 16 run function uhc:lobby/settings/boolean {objective: "friend_push", name: "同隊推擠"}
 
 #book = 21 ~ 22, health display
-execute if score @s book matches 21..22 run function uhc:lobby/settings/health
+execute if score @s book matches 17 run function uhc:lobby/settings/boolean {objective: "tab_health", name: "tab顯示血量"}
+execute if score @s book matches 18 run function uhc:lobby/settings/boolean {objective: "name_health", name: "名條顯示血量"}
 
 #book = 23 ~ 25, gold head
-execute if score @s book matches 23..25 run function uhc:lobby/settings/gold_head
+execute if score @s book matches 19 run function uhc:lobby/settings/boolean {objective: "gold_head", name: "金頭顱模式"}
+execute if score @s book matches 20 run function uhc:lobby/settings/gold_head
 
 #book = 26, night_vision
-execute if score @s book matches 26 run function uhc:lobby/settings/night_vision
+execute if score @s book matches 21 run function uhc:lobby/settings/boolean {objective: "night_vision", name: "夜視效果"}
+
+#book = 42, advancement announce
+execute if score @s book matches 42 run function uhc:lobby/settings/adv
 
 #book = 28, allow_diamond
 execute if score @s book matches 28 run function uhc:lobby/settings/allow_diamond
@@ -88,9 +94,6 @@ execute if score @s book matches 41 run function uhc:lobby/settings/cut_clean
 
 #book = 34, exchange
 execute if score @s book matches 34 run function uhc:lobby/settings/exchange
-
-#book = 42, advancement announce
-execute if score @s book matches 42 run function uhc:lobby/settings/adv
 
 #### fourth book (book3) ##########################################################################################################################
 

@@ -7,6 +7,6 @@
 # func    : Cancel the start_countdown function.
 #########################################################
 
-tellraw @a[gamemode=creative] ["", {text: "UHCE >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "公佈背叛者時間需大於選定背叛者時間!!", color: "gold"}]
+tellraw @a[gamemode=creative] ["", {text: "UHCU >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "公佈背叛者時間需大於選定背叛者時間!!", color: "gold"}]
 
 setblock ~ ~ ~ air

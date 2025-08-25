@@ -118,7 +118,7 @@ execute if score @s shadow_invisible matches 1 run function uhc:apply/shadow_inv
 execute as @e[type=item, nbt={Item: {id: "minecraft:structure_void"}}] at @s run function uhc:apply/random_chest_bad
 
 #battle royale hint.
-execute if score @s BR_stage matches 1..8 as @a run function uhc:gameloop/event/battle_royale/self_check 
+execute if score @s BR_stage matches 1..8 as @a run function uhc:gameloop/event/battle_royale/self_check
 
 #fish bucket craft correction
 execute as @a[scores={cod=1..}] if entity @s[nbt={Inventory: [{id: "minecraft:bucket"}]}] run function uhc:apply/fish/cod

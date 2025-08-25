@@ -8,7 +8,7 @@
 #########################################################
 
 #stop moving
-data merge entity @s {NoGravity: 1}
+data merge entity @s {NoGravity: 1b}
 scoreboard players set 00000000-0000-0000-0000-000000000001 BR_move 0
 execute at @s run setworldspawn ~ ~ ~
 

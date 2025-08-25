@@ -7,6 +7,6 @@
 # func    : Cancel the start_countdown function.
 #########################################################
 
-tellraw @a[gamemode=creative] ["", {text: "UHCE >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "請勿同時開啟隨機縮圈模式與決戰房間!!", color: "gold"}]
+tellraw @a[gamemode=creative] ["", {text: "UHCU >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "請勿同時開啟隨機縮圈模式與決戰房間!!", color: "gold"}]
 
 setblock ~ ~ ~ air replace

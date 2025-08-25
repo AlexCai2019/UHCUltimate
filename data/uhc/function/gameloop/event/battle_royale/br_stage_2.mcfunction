@@ -26,7 +26,7 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 BR_move 1
 scoreboard players operation 00000000-0000-0000-0000-000000000001 border_start += 00000000-0000-0000-0000-000000000001 BR_shrink_time
 
 #start moving
-data merge entity @s {NoGravity: 0}
+data merge entity @s {NoGravity: 0b}
 execute as 00000000-0000-0000-0000-000000000001 if score #map_size border matches 496 run function uhc:gameloop/event/battle_royale/border/496_1
 execute as 00000000-0000-0000-0000-000000000001 if score #map_size border matches 752 run function uhc:gameloop/event/battle_royale/border/752_1
 execute as 00000000-0000-0000-0000-000000000001 if score #map_size border matches 1008 run function uhc:gameloop/event/battle_royale/border/1008_1

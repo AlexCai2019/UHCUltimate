@@ -26,7 +26,7 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 BR_move 1
 scoreboard players operation 00000000-0000-0000-0000-000000000001 border_start += 00000000-0000-0000-0000-000000000001 BR_shrink_time
 
 #start moving
-data merge entity @s {NoGravity: 0}
+data merge entity @s {NoGravity: 0b}
 execute if score 00000000-0000-0000-0000-000000000001 BR_shrink_time matches 1 run worldborder set 16 60
 execute if score 00000000-0000-0000-0000-000000000001 BR_shrink_time matches 2 run worldborder set 16 120
 execute if score 00000000-0000-0000-0000-000000000001 BR_shrink_time matches 4 run worldborder set 16 240

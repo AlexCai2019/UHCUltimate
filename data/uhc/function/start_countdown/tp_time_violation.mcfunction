@@ -7,6 +7,6 @@
 # func    : Cancel the start_countdown function.
 #########################################################
 
-execute as @a[gamemode=creative] run tellraw @s ["", {text: "UHCE >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "請勿同時開啟競技場模式與決戰房間並設定為同一時間傳送!!", color: "gold"}]
+tellraw @a[gamemode=creative] ["", {text: "UHCU >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "請勿同時開啟競技場模式與決戰房間並設定為同一時間傳送!!", color: "gold"}]
 
 setblock ~ ~ ~ air
