@@ -113,7 +113,7 @@ execute if score @s slow_fall matches 1 as @a at @s run playsound minecraft:enti
 execute at @s run fill ~-8 150 ~-8 ~7 160 ~7 air
 execute if score @s betray matches 0 at @s run fill ~-9 149 ~-9 ~8 160 ~8 air
 tp @s 00000000-0000-0000-0000-000000000002
-kill @e[tag=show]
+kill f-f-f-f-f
 kill @e[tag=lottery]
 execute as @e[tag=bee] at @s run tp @s ~ -200 ~
 kill @e[tag=nether]

@@ -15,9 +15,9 @@ scoreboard players set #corner border 1
 scoreboard players set #inv_corner border -1
 scoreboard players set #read_map_state border 0
 
-tp @a[tag=read_map] 00000000-0000-0000-0000-000000000001
+tp @a[tag=read_map] f-f-f-f-f
 tag @a[tag=read_map] remove read_map
 
 bossbar set uhc:read_progress visible false
 
-execute at @e[type=marker, tag=sub2] run setblock ~ ~ ~ air replace
+schedule clear uhc:lobby/settings/read_map

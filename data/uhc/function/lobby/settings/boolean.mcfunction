@@ -1,5 +1,5 @@
 
-$scoreboard players operation 00000000-0000-0000-0000-000000000001 $(objective) >< 00000000-0000-0000-0000-000000000002 $(objective)
+$scoreboard players operation 00000000-0000-0000-0000-000000000000 $(objective) >< 00000000-0000-0000-0000-000000000001 $(objective)
 
 $execute if score 00000000-0000-0000-0000-000000000001 $(objective) matches 1 run return run tellraw @a ["", {text: "UHCU >>> ", color: "gray"}, {text: "設定", color: "aqua"}, " | ", {text: "$(name)", color: "gold"}, " | ", {translate: "options.on", color: "green"}]
 $tellraw @a ["", {text: "UHCU >>> ", color: "gray"}, {text: "設定", color: "aqua"}, " | ", {text: "$(name)", color: "gold"}, " | ", {translate: "options.off", color: "red"}]

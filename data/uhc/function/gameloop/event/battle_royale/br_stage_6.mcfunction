@@ -23,7 +23,7 @@ scoreboard players operation @s BR_zdiff *= 00000000-0000-0000-0000-000000000001
 
 #scoreboard
 scoreboard players set 00000000-0000-0000-0000-000000000001 BR_move 1
-scoreboard players operation 00000000-0000-0000-0000-000000000001 border_start += 00000000-0000-0000-0000-000000000001 BR_shrink_time
+scoreboard players operation #border_start border += 00000000-0000-0000-0000-000000000001 BR_shrink_time
 
 #start moving
 data merge entity @s {NoGravity: 0b}

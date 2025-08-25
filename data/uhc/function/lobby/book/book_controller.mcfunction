@@ -22,7 +22,7 @@ execute if score @s book matches 1..2 run function uhc:lobby/settings/team_num
 execute if score @s book matches 3 run function uhc:lobby/settings/random_team
 
 #book = 10, clear team
-execute if score @s book matches 4 run team join solo @a[tag=player, team=!spec]
+execute if score @s book matches 4 run team join solo @a[team=!spec]
 
 #book = 4, team permission
 execute if score @s book matches 5 run function uhc:lobby/settings/boolean {objective: "team_permission", name: "自由選隊"}
@@ -37,8 +37,8 @@ execute if score @s book matches 7 run function uhc:lobby/settings/boolean {obje
 execute if score @s book matches 8..9 run function uhc:lobby/settings/map_size
 
 #book = 8, pre-read map
-execute if score @s book matches 10 unless entity @a[tag=read_map] at @e[type=marker, tag=sub2] run setblock ~ ~ ~ repeating_command_block{Command: "function uhc:lobby/settings/read_map", auto: true, TrackOutput: false}
 execute if score @s book matches 10 unless entity @a[tag=read_map] run tag @s add read_map
+execute if score @s book matches 10 unless entity @a[tag=read_map] at @e[type=marker, tag=sub2] run function uhc:lobby/settings/map_gen/map_init
 
 #book = 9, stop pre-read map
 execute if score @s book matches 11 if entity @a[tag=read_map] run function uhc:lobby/settings/map_gen/map_stop

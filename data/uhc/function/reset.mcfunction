@@ -72,7 +72,6 @@ scoreboard objectives remove exchange_time
 scoreboard objectives remove advance_announce
 scoreboard objectives remove border_on
 scoreboard objectives remove border_mode
-scoreboard objectives remove border_start
 scoreboard objectives remove border_move
 scoreboard objectives remove border_end
 scoreboard objectives remove BR_cool_time
@@ -269,7 +268,7 @@ kill @e[tag=mode]
 kill @e[tag=pause]
 kill @e[tag=sub3]
 kill @e[tag=load]
-kill @e[tag=show]
+kill f-f-f-f-f
 kill @e[tag=sec]
 kill @e[tag=min]
 kill @e[tag=ref]

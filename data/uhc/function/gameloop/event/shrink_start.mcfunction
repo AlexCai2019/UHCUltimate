@@ -36,4 +36,4 @@ execute if entity @s[scores={border_end=112, border_move=40}] run worldborder se
 execute if entity @s[scores={border_end=112, border_move=50}] run worldborder set 112 3000
 execute if entity @s[scores={border_end=112, border_move=60}] run worldborder set 112 3600
 
-scoreboard players operation @s border_move += @s border_start
+scoreboard players operation @s border_move += #border_start border

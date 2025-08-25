@@ -36,10 +36,10 @@ execute as 00000000-0000-0000-0000-000000000009 store result score @s posX run d
 execute as 00000000-0000-0000-0000-000000000009 store result score @s posZ run data get entity @s Pos[2] 10000
 
 #tp markers
-execute at 00000000-0000-0000-0000-000000000009 run tp @e[tag=carry] ~ ~ ~
+execute at 00000000-0000-0000-0000-000000000009 run tp @e[type=marker, tag=carry] ~ ~ ~
 
 #scoreboard
-scoreboard players operation 00000000-0000-0000-0000-000000000001 border_start += 00000000-0000-0000-0000-000000000001 BR_cool_time
+scoreboard players operation #border_start border += 00000000-0000-0000-0000-000000000001 BR_cool_time
 #scoreboard players set 00000000-0000-0000-0000-000000000001 BR_size 120
 execute if score #map_size border matches 496 run scoreboard players set 安全區半軸長 information 120
 execute if score #map_size border matches 752 run scoreboard players set 安全區半軸長 information 184

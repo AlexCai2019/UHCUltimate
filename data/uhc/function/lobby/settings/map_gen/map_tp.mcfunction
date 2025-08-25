@@ -9,7 +9,7 @@
 
 tp @s ~ 128 ~ ~ 90
 
-execute unless predicate {condition: "entity_properties", entity: "this", predicate: {periodic_tick: 4}} run return fail
+execute unless predicate {condition: "entity_properties", entity: "this", predicate: {periodic_tick: 5}} run return fail
 
 #state-1, tp +Z direction. next state tp -X direction
 execute if score #read_map_state border matches 1 run return run function uhc:lobby/settings/map_gen/tp_stage/tp_1

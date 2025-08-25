@@ -9,7 +9,6 @@
 
 #initial
 execute if score #read_map_state border matches 0 run function uhc:lobby/settings/map_gen/map_init
-scoreboard players set #read_map_state border 1
 
 #timer
 execute as @a[tag=read_map] at @s run function uhc:lobby/settings/map_gen/map_tp
