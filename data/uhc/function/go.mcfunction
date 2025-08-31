@@ -56,10 +56,10 @@ weather clear
 scoreboard players reset 人數 information
 
 #book settings --- difficulty
-execute if score @s diff matches 0 run difficulty peaceful
-execute if score @s diff matches 1 run difficulty easy
-execute if score @s diff matches 2 run difficulty normal
-execute if score @s diff matches 3 run difficulty hard
+execute if score 00000000-0000-0000-0000-000000000002 difficulty matches 3 run difficulty peaceful
+execute if score 00000000-0000-0000-0000-000000000003 difficulty matches 3 run difficulty easy
+execute if score 00000000-0000-0000-0000-000000000004 difficulty matches 3 run difficulty normal
+execute if score 00000000-0000-0000-0000-000000000005 difficulty matches 3 run difficulty hard
 
 #book settings --- friendly fire
 execute if score @s friend_fire matches 0 run function uhc:apply/friend_fire
@@ -163,7 +163,7 @@ scoreboard players operation @s gnd_notifier2 = @s ground_time
 scoreboard players operation @s gnd_notifier2 -= const10 X
 scoreboard players operation @s sky_notifier2 = @s sky_time
 scoreboard players operation @s sky_notifier2 -= const10 X
-scoreboard players operation @s betray_notifier = @s betray_time
+scoreboard players operation @s betray_notifier = #betray_time betray
 scoreboard players operation @s betray_notifier -= const3 III
 
 #stats reset

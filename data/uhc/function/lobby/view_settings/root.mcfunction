@@ -47,7 +47,7 @@ function uhc:lobby/view_settings/boolean {objective: "invisible", name: "隱形�
 #book2
 tellraw @s {text: "-------------------------------", color: "aqua"}
 #nether
-function uhc:lobby/view_settings/boolean_with_time {name_objective: "nether_open", name: "開放地獄", time_objective: "nether_time", time: "關閉時間"}
+function uhc:lobby/view_settings/boolean_with_time {objective: "nether_open", name: "開放地獄", timer: "#nether_time", time: "關閉時間"}
 #betrayer
 execute if score 00000000-0000-0000-0000-000000000001 betray matches 1 run tellraw @s ["", {text: "背叛者小隊", color: "gold"}, " | ", {translate: "options.on", color: "green"}, " | ", {text: "人數", color: "gold"}, " | ", {score: {name: "00000000-0000-0000-0000-000000000001", objective: "betray_num"}, color: "yellow", extra: ["人"]}, " | ", {text: "啟動時間", color: "gold"}, " | ", {score: {name: "00000000-0000-0000-0000-000000000001", objective: "betray_time"}, color: "yellow", extra: ["分鐘"]}, " | ", {text: "公佈時間", color: "gold"}, " | ", {score: {name: "00000000-0000-0000-0000-000000000001", objective: "betray_tp"}, color: "yellow", extra: ["分鐘"]}]
 execute if score 00000000-0000-0000-0000-000000000001 betray matches 0 run tellraw @s ["", {text: "背叛者小隊", color: "gold"}, " | ", {translate: "options.off", color: "red"}]

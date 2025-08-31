@@ -93,7 +93,6 @@ scoreboard objectives add timer_sec dummy {text: "秒計時器"}
 scoreboard objectives add timer_min dummy {text: "分計時器"}
 #### book1 ##########################################################
 scoreboard objectives add difficulty dummy "遊戲難度"
-scoreboard objectives add diff dummy {text: "遊戲難度"}
 scoreboard objectives add slow_fall dummy {text: "緩降(active low)"}
 scoreboard objectives add friend_fire dummy {text: "同隊傷害"}
 scoreboard objectives add friend_push dummy {text: "同隊推擠"}
@@ -108,9 +107,6 @@ scoreboard objectives add invisible dummy {text: "隱形保護"}
 scoreboard objectives add nether_open dummy {text: "開放地獄"}
 scoreboard objectives add nether_time dummy {text: "地獄時間"}
 scoreboard objectives add betray dummy {text: "背叛"}
-scoreboard objectives add betray_time dummy {text: "背叛時間"}
-scoreboard objectives add betray_tp dummy {text: "背叛傳送時間"}
-scoreboard objectives add betray_num dummy {text: "背叛人數"}
 scoreboard objectives add stew_get dummy {text: "可疑的湯"}
 scoreboard objectives add potion_brew dummy {text: "釀造藥水"}
 #scoreboard objectives add potion_regen dummy {text: "回復藥水"}
@@ -267,7 +263,6 @@ scoreboard players set 00000000-0000-0000-0000-000000000002 difficulty 0
 scoreboard players set 00000000-0000-0000-0000-000000000003 difficulty 1
 scoreboard players set 00000000-0000-0000-0000-000000000004 difficulty 2
 scoreboard players set 00000000-0000-0000-0000-000000000005 difficulty 3
-scoreboard players set 00000000-0000-0000-0000-000000000001 diff 3
 scoreboard players set 00000000-0000-0000-0000-000000000000 slow_fall 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 slow_fall 1
 scoreboard players set 00000000-0000-0000-0000-000000000000 tab_health 0
@@ -295,10 +290,10 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 nether_open 0
 scoreboard players set 00000000-0000-0000-0000-000000000000 nether_open 1
 scoreboard players set #nether_time nether_open 80
 scoreboard players set 00000000-0000-0000-0000-000000000001 betray 0
-scoreboard players set @e[tag=assist] betray 1
-scoreboard players set 00000000-0000-0000-0000-000000000001 betray_time 50
-scoreboard players set 00000000-0000-0000-0000-000000000001 betray_tp 60
-scoreboard players set 00000000-0000-0000-0000-000000000001 betray_num 3
+scoreboard players set 00000000-0000-0000-0000-000000000000 betray 1
+scoreboard players set #betray_time betray 50
+scoreboard players set #betray_tp betray 60
+scoreboard players set #betray_num betray 3
 scoreboard players set 00000000-0000-0000-0000-000000000001 stew_get 0
 scoreboard players set @e[tag=assist] stew_get 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 potion_brew 0

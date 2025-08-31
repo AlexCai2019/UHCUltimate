@@ -41,7 +41,7 @@ title @a[tag=betrayer, gamemode=survival] subtitle {text: ""}
 
 tp @a[tag=betrayer] @e[tag=set, limit=1]
 
-scoreboard players set @s betray_tp 999
+scoreboard players set #betray_tp betray 999
 
 execute store result score 剩餘隊伍 information run execute if entity @e[tag=ref]
 

@@ -18,6 +18,3 @@ tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {score: {nam
 
 execute as @e[type=ender_dragon] at @s run tp @s ~ -999999 ~
 execute as @e[type=wither] at @s run tp @s ~ -999999 ~
-#execute if entity @e[tag=main, scores={diff=1}] run difficulty easy
-#execute if entity @e[tag=main, scores={diff=2}] run difficulty normal
-#execute if entity @e[tag=main, scores={diff=3}] run difficulty hard

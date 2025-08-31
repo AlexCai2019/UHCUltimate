@@ -84,16 +84,19 @@ execute if score @s book matches 24 run function uhc:lobby/settings/boolean {obj
 execute if score @s book matches 25..26 run function uhc:lobby/settings/nether
 
 #book = 106 ~ 112, betrayer
-execute if score @s book matches 106..112 run function uhc:lobby/settings/betray
+execute if score @s book matches 27 run function uhc:lobby/settings/boolean {objective: "betray", name: "背叛者小隊"}
+execute if score @s book matches 28..33 run function uhc:lobby/settings/betray
 
 #book = 35 ~ 40, potion, include notch apple and suspicious stew
-execute if score @s book matches 35..40 run function uhc:lobby/settings/potion
+execute if score @s book matches 34 run function uhc:lobby/settings/boolean {objective: "potion_brew", name: "釀造藥水"}
+execute if score @s book matches 35 run function uhc:lobby/settings/boolean {objective: "stew_get", name: "可疑的燉湯"}
+execute if score @s book matches 36 run function uhc:lobby/settings/boolean {objective: "notch_apple", name: "附魔金蘋果"}
 
 #book = 41, cut clean
-execute if score @s book matches 41 run function uhc:lobby/settings/cut_clean
+execute if score @s book matches 37 run function uhc:lobby/settings/boolean {objective: "cut_clean", name: "物品免燒"}
 
 #book = 34, exchange
-execute if score @s book matches 34 run function uhc:lobby/settings/exchange
+execute if score @s book matches 38 run function uhc:lobby/settings/boolean {objective: "exchange", name: "礦物交換"}
 
 #### fourth book (book3) ##########################################################################################################################
 

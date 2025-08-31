@@ -45,7 +45,6 @@ scoreboard objectives remove border
 scoreboard objectives remove map_size
 scoreboard objectives remove timer_sec
 scoreboard objectives remove timer_min
-scoreboard objectives remove diff
 scoreboard objectives remove slow_fall
 scoreboard objectives remove friend_fire
 scoreboard objectives remove friend_push
@@ -57,11 +56,7 @@ scoreboard objectives remove night_vision
 scoreboard objectives remove allow_diamond
 scoreboard objectives remove invisible
 scoreboard objectives remove nether_open
-scoreboard objectives remove nether_time
 scoreboard objectives remove betray
-scoreboard objectives remove betray_time
-scoreboard objectives remove betray_tp
-scoreboard objectives remove betray_num
 scoreboard objectives remove stew_get
 scoreboard objectives remove potion_brew
 scoreboard objectives remove notch_apple

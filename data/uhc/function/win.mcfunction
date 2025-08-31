@@ -11,9 +11,9 @@
 tag @e[tag=main] add win
 
 #betray win before disclosure
-execute if score @s[scores={betray=1}] timer_min < @s betray_tp unless entity @a[gamemode=survival, tag=!betrayer] run team join betrayer @a[tag=betrayer]
-execute if score @s[scores={betray=1}] timer_min < @s betray_tp unless entity @a[gamemode=survival, tag=!betrayer] run kill @e[tag=ref]
-execute if score @s[scores={betray=1}] timer_min < @s betray_tp unless entity @a[gamemode=survival, tag=!betrayer] run summon marker ~ ~ ~ {Tags: [carry, ref, bty]}
+execute if score @s[scores={betray=1}] timer_min < #betray_tp betray unless entity @a[gamemode=survival, tag=!betrayer] run team join betrayer @a[tag=betrayer]
+execute if score @s[scores={betray=1}] timer_min < #betray_tp betray unless entity @a[gamemode=survival, tag=!betrayer] run kill @e[tag=ref]
+execute if score @s[scores={betray=1}] timer_min < #betray_tp betray unless entity @a[gamemode=survival, tag=!betrayer] run summon marker ~ ~ ~ {Tags: [carry, ref, bty]}
 
 #tag winner team
 execute if entity @e[tag=ref, tag=solo] run tag @a[team=solo, gamemode=survival] add win

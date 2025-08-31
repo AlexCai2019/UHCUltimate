@@ -13,5 +13,5 @@ tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {score: {nam
 title @a title {text: "即將產生背叛者", color: "gold"}
 title @a subtitle {text: "隱藏身份 掠奪資源 協助隊友", "italic": true}
 
-scoreboard players operation @s betray_notifier = @s betray_tp
+scoreboard players operation @s betray_notifier = #betray_tp betray
 scoreboard players operation @s betray_notifier -= const3 III

@@ -94,9 +94,49 @@
 							"mode": "append",
 							"lore":
 							[
+								[
+									{
+										"text": "點擊",
+										"color" :"white",
+										"italic": false
+									},
+									{
+										"keybind": "key.use"
+									},
+									"使用"
+								],
+								"",
 								{
-									"text": "點擊右鍵使用，回復8點血量並獲得2分鐘吸收一效果",
-									"color" :"white",
+									"translate": "potion.withDuration",
+									"with":
+									[
+										{
+											"translate": "potion.withAmplifier",
+											"with":
+											[
+												{
+													"translate": "effect.minecraft.regeneration"
+												},
+												{
+													"translate": "potion.potency.1"
+												}
+											]
+										},
+										"00:10"
+									],
+									"color": "blue",
+									"italic": false
+								},
+								{
+									"translate": "potion.withDuration",
+									"with":
+									[
+										{
+											"translate": "effect.minecraft.absorption"
+										},
+										"02:00"
+									],
+									"color": "blue",
 									"italic": false
 								}
 							]
@@ -107,6 +147,7 @@
 							{
 								"minecraft:consumable":
 								{
+									"consume_seconds": 0,
 									"on_consume_effects":
 									[
 										{

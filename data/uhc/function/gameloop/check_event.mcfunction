@@ -19,10 +19,10 @@ execute if score @s[scores={nether_open=1}] timer_min >= @s nether_notifier run 
 execute if score @s[scores={nether_open=1}] timer_min >= #nether_time nether_open run function uhc:gameloop/event/nether_close
 
 #betrayer
-execute if score @s[scores={betray=1}] timer_min >= @s betray_notifier unless score @s betray_time matches 999 run function uhc:gameloop/event/notifier/betray1
-execute if score @s[scores={betray=1}] timer_min >= @s betray_time run function uhc:gameloop/event/betray/select
-execute if score @s[scores={betray=1}] timer_min >= @s betray_notifier if score @s betray_time matches 999 run function uhc:gameloop/event/notifier/betray2
-execute if score @s[scores={betray=1}] timer_min >= @s betray_tp run function uhc:gameloop/event/betray/teleport
+execute if score @s[scores={betray=1}] timer_min >= @s betray_notifier unless score #betray_time betray matches 999 run function uhc:gameloop/event/notifier/betray1
+execute if score @s[scores={betray=1}] timer_min >= #betray_time betray run function uhc:gameloop/event/betray/select
+execute if score @s[scores={betray=1}] timer_min >= @s betray_notifier if score #betray_time betray matches 999 run function uhc:gameloop/event/notifier/betray2
+execute if score @s[scores={betray=1}] timer_min >= #betray_tp betray run function uhc:gameloop/event/betray/teleport
 
 #border mode --- shrink
 execute if score @s[scores={border_on=1}] timer_min >= #border_start border if entity @e[tag=m1, scores={border_mode=1}] run function uhc:gameloop/event/shrink_start
