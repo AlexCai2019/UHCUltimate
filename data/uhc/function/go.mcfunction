@@ -150,7 +150,6 @@ execute if score 00000000-0000-0000-0000-000000000001 rand_silverfish matches 1 
 execute if score 00000000-0000-0000-0000-000000000001 rand_apple matches 1 run tag @a add lucky_leaves
 execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 0 run recipe take @a uhc:gold_head
 execute if score 00000000-0000-0000-0000-000000000006 gh_mode matches 0 run recipe take @a uhc:gold_head
-execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if score 00000000-0000-0000-0000-000000000007 gh_mode matches 1 run tag @a add gold_head_fast
 execute if score 00000000-0000-0000-0000-000000000001 pearl_tear matches 1 run tag @a add pearl_tear
 
 #notifier
@@ -177,9 +176,9 @@ scoreboard players set @a temp_stone_d 0
 scoreboard players set @a temp_diamond_d 0
 scoreboard players set @a temp_gold_d 0
 scoreboard players set @a temp_apple 0
+scoreboard players set @a temp_gold_head 0
 scoreboard players set @a temp_hurt 0
 scoreboard players set @a gold_head 0
-scoreboard players set @a gh_craft 0
 scoreboard players set @a branch_bomb_num 0
 scoreboard players set @a cod 0
 scoreboard players set @a salmon 0

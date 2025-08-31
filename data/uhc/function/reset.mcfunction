@@ -53,7 +53,6 @@ scoreboard objectives remove tab_health
 scoreboard objectives remove name_health
 scoreboard objectives remove gold_head
 scoreboard objectives remove gh_mode
-scoreboard objectives remove gh_craft
 scoreboard objectives remove night_vision
 scoreboard objectives remove allow_diamond
 scoreboard objectives remove invisible
@@ -127,6 +126,7 @@ scoreboard objectives remove temp_gold
 scoreboard objectives remove temp_stone_d
 scoreboard objectives remove temp_gold_d
 scoreboard objectives remove temp_apple
+scoreboard objectives remove temp_gold_head
 scoreboard objectives remove temp_diamond
 scoreboard objectives remove temp_diamond_d
 scoreboard objectives remove temp_hurt
@@ -204,8 +204,6 @@ tag @a remove game_start
 tag @a remove mine_bomb
 tag @a remove silverfish
 tag @a remove lucky_leaves
-tag @a remove gold_head_normal
-tag @a remove gold_head_fast
 tag @a remove betrayer
 tag @a remove candidate
 tag @a remove pearl_tear

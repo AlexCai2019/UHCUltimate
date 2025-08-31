@@ -19,7 +19,6 @@ title @s subtitle ["Designed by ", {text: "Jelly", color: "dark_purple"}, ", upd
 tellraw @s [{text: "\nUHCU >>> ", color: "gray"}, {text: "歡迎您遊玩 ", color: "green"}, {text: "UHC: Ultimate", color: "gold"}]
 tellraw @s [{text: "UHCU >>> ", color: "gray"}, {text: "若有任何建議或bug請", color: "white"}, {text: "點此回報", color: "aqua", hover_event: {action: "show_text", value: "點此進入地圖網站"}, click_event: {action: "open_url", url: "https://forum.gamer.com.tw/C.php?bsn=18673&snA=168664"}}]
 tellraw @s ["", {text: "UHCU >>> ", color: "gray"}, "調整遊戲設定請", {text: "成為", color: "dark_aqua", extra: [{translate: "gameMode.creative"}], hover_event: {action: "show_text", value: ["點我成為", {translate: "gameMode.creative"}]}, click_event: {action: "run_command", command: "/gamemode creative"}}]
-tag @s add gold_head_normal
 recipe give @s *
 scoreboard players enable @s lottery
 scoreboard players enable @s view_settings

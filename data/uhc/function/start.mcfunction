@@ -99,9 +99,8 @@ scoreboard objectives add friend_fire dummy {text: "同隊傷害"}
 scoreboard objectives add friend_push dummy {text: "同隊推擠"}
 scoreboard objectives add tab_health dummy {text: "tab血量"}
 scoreboard objectives add name_health dummy {text: "名條血量"}
-scoreboard objectives add gold_head minecraft.used:minecraft.knowledge_book {text: "金頭顱"}
+scoreboard objectives add gold_head dummy {text: "金頭顱"}
 scoreboard objectives add gh_mode dummy {text: "金頭顱模式"}
-scoreboard objectives add gh_craft minecraft.crafted:minecraft.creeper_head {text: "金頭顱合成"}
 scoreboard objectives add night_vision dummy {text: "夜視效果"}
 scoreboard objectives add allow_diamond dummy {text: "允許鑽裝"}
 scoreboard objectives add invisible dummy {text: "隱形保護"}
@@ -185,7 +184,8 @@ scoreboard objectives add temp_gold mined:gold_ore {text: "挖掘黃金"}
 scoreboard objectives add temp_stone_d mined:deepslate {text: "挖掘深板岩"}
 scoreboard objectives add temp_diamond_d mined:deepslate_diamond_ore {text: "挖掘深板岩鑽石"}
 scoreboard objectives add temp_gold_d mined:deepslate_gold_ore {text: "挖掘深板岩黃金"}
-scoreboard objectives add temp_apple minecraft.used:minecraft.golden_apple {text: "使用金蘋果"}
+scoreboard objectives add temp_apple used:golden_apple {text: "使用金蘋果"}
+scoreboard objectives add temp_gold_head used:totem_of_undying
 scoreboard objectives add temp_hurt minecraft.custom:minecraft.damage_taken {text: "受到傷害"}
 scoreboard objectives add temp_absorb minecraft.custom:minecraft.damage_absorbed {text: "吸收傷害"}
 #####
@@ -402,6 +402,7 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 BR_factor 20
 #### constant ########################################################
 scoreboard players set #-1 constant -1
 scoreboard players set #1 constant 1
+scoreboard players set #2 constant 2
 scoreboard players set #3 constant 3
 scoreboard players set #5 constant 5
 scoreboard players set #7 constant 7

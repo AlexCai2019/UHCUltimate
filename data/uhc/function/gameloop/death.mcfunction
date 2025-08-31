@@ -47,7 +47,3 @@ scoreboard players set @s warn 0
 
 execute store result score 剩餘隊伍 information run execute if entity @e[tag=ref]
 execute store result score 剩餘人數 information run execute if entity @a[team=!spec, gamemode=survival]
-
-#gold head
-#execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if score 00000000-0000-0000-0000-000000000010 gh_mode matches 0 run summon item ~ ~ ~ {Item: {id: "minecraft:knowledge_book", Count: 1b, tag: {display: {Name: "{\"text\":\"§5金頭顱 - 死亡特典\"}", Lore: ["§f點擊右鍵使用，回復8點血量並獲得2分鐘吸收一效果"]}, Recipes: ["minecraft:golden_apple"], Enchantments: [{id: "minecraft:loyalty", lvl: 1}], HideFlags: 1}}, PickupDelay: 40s, Invulnerable: 1}
-#execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if score 00000000-0000-0000-0000-000000000010 gh_mode matches 1 run summon item ~ ~ ~ {Item: {id: "minecraft:player_head", Count: 1b, tag: {display: {Name: "{\"text\":\"§e玩家頭顱\"}", Lore: ["§f以8個金錠圍繞以合成金頭顱-死亡特典"]}, Enchantments: [{id: "minecraft:loyalty", lvl: 1}], HideFlags: 1}}, PickupDelay: 40s, Invulnerable: 1}

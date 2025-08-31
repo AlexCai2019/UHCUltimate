@@ -33,10 +33,6 @@ execute if score 剩餘隊伍 information matches 1 unless entity @a[tag=win] ru
 
 #### option #############################################################################################
 
-#gold head.
-execute as @a[scores={gold_head=1..}] at @s run function uhc:apply/gold_head
-execute as @a[scores={gh_craft=1..}] if entity @s[nbt={Inventory: [{id: "minecraft:creeper_head"}]}] at @s run function uhc:apply/gh_craft
-
 #night_vision.
 execute if score @s night_vision matches 1.. run effect give @a night_vision infinite 0 true
 effect give @a[gamemode=spectator] night_vision infinite 0 true
