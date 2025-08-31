@@ -2,11 +2,10 @@
 # UHC Project 
 # Name    : tp_time_violation.mcfunction 
 # Made by : jelly99709 
-# Path    : /start_countdown/
+# Path    : /start_countdown/check_violation/
 # Loop    : No.
 # func    : Cancel the start_countdown function.
 #########################################################
 
 tellraw @a[gamemode=creative] ["", {text: "UHCU >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "請勿同時開啟競技場模式與決戰房間並設定為同一時間傳送!!", color: "gold"}]
-
-setblock ~ ~ ~ air
+schedule clear uhc:start_countdown/start_countdown

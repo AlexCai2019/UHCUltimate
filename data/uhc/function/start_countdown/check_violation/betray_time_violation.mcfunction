@@ -2,7 +2,7 @@
 # UHC Project 
 # Name    : betray_time_violation.mcfunction 
 # Made by : jelly99709 
-# Path    : /start_countdown/
+# Path    : /start_countdown/check_violation/
 # Loop    : No.
 # func    : Cancel the start_countdown function.
 #########################################################

@@ -39,6 +39,7 @@ execute align xz unless entity f-f-f-f-f run summon armor_stand ~ 150 ~ {CustomN
 
 execute align xz run summon marker ~.5 -63 ~.5 {CustomName: {text: "✘", color: "dark_red"}, UUID: [I; 0, 0, 0, 0], Tags: ["book", "carry"]}
 execute align xz run summon marker ~.5 -63 ~.5 {CustomName: {text: "✔", color: "green"}, UUID: [I; 0, 0, 0, 1], Tags: ["book", "carry"]}
+
 execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["mode", "m1"], CustomName: {text: "漸縮", color: "red"}, UUID: [I; 0, 0, 0, 6]}
 execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["mode", "m2"], CustomName: {text: "競技場", color: "red"}, UUID: [I; 0, 0, 0, 7]}
 execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["mode", "m3", "carry"], CustomName: {text: "隨機縮圈", color: "red"}, UUID: [I; 0, 0, 0, 8]}
@@ -69,9 +70,6 @@ execute at 0-0-0-0-1 run forceload add ~ ~
 execute at 0-0-0-0-1 run place template uhc:lobby_v7 ~-9 ~-1 ~-9
 execute at 0-0-0-0-1 run setblock ~3 ~1 ~7 oak_wall_sign[facing=north]{front_text: {has_glowing_text: true, color: "white", messages: ["", {text: "初始物資"}, "", ""]}, is_waxed: true}
 
-#easter egg
-#execute at 0-0-0-0-1 run summon area_effect_cloud ~7.5 ~ ~-7.5 {Tags: [nether], Duration: 2147483647, Particle: "block air", UUIDLeast: 19, UUIDMost: 0}
-
 #scoreboard creat
 #### state #########################################################
 scoreboard objectives add state dummy {text: "遊戲狀態"}
@@ -86,6 +84,7 @@ scoreboard objectives add map_size dummy {text: "地圖大小"}
 #### read map process ###############################################
 scoreboard objectives add border dummy "邊界"
 #### timer ##########################################################
+scoreboard objectives add timer dummy
 scoreboard objectives add timer_sec dummy {text: "秒計時器"}
 scoreboard objectives add timer_min dummy {text: "分計時器"}
 #### book1 ##########################################################
@@ -255,6 +254,7 @@ scoreboard players set #read_map_state border 0
 scoreboard players set #corner border 1
 scoreboard players set #inv_corner border -1
 #### timer ##########################################################
+scoreboard players set #start_second timer 10
 scoreboard players set 00000000-0000-0000-0000-000000000001 timer_sec 11
 scoreboard players set 00000000-0000-0000-0000-000000000001 timer_min -1
 #### book1 ##########################################################

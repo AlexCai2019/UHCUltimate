@@ -7,6 +7,15 @@
 # func    : Show notifier and adjust timer_sec each second.
 #########################################################
 
+#檢查
+execute if function uhc:start_countdown/check_violation/has_violation run return run function uhc:start_countdown/cancel
+
+execute if score #start_second timer matches ..0 run return run function uhc:go
+
+title @a title [{text: "遊戲開始 倒數", color: "yellow"}, {score: {name: "#start_second", objective: "timer"}, color: "red", bold: true, italic: true}, "秒"]
+execute if score start_second timer matches ..5 as @a at @s run playsound minecraft:block.note_block.hat block @s ~ ~ ~
+scoreboard players remove #start_second timer 1
+
 scoreboard players remove @s timer_sec 1
 execute if score @s timer_sec matches 1..10 run title @a title [{text: "遊戲開始 倒數", color: "yellow"}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "timer_sec"}, color: "red", bold: true, italic: true}, "秒"]
 execute if score @s timer_sec matches 0 run title @a title [{text: ">>> ", color: "dark_gray"}, {text: "戰鬥開始", color: "red"}, " <<<"]
