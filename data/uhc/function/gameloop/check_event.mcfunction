@@ -16,7 +16,7 @@ execute if score @s[scores={invisible=1}] timer_min matches 10.. run function uh
 
 #nether_open
 execute if score @s[scores={nether_open=1}] timer_min >= @s nether_notifier run function uhc:gameloop/event/notifier/nether
-execute if score @s[scores={nether_open=1}] timer_min >= @s nether_time run function uhc:gameloop/event/nether_close
+execute if score @s[scores={nether_open=1}] timer_min >= #nether_time nether_open run function uhc:gameloop/event/nether_close
 
 #betrayer
 execute if score @s[scores={betray=1}] timer_min >= @s betray_notifier unless score @s betray_time matches 999 run function uhc:gameloop/event/notifier/betray1

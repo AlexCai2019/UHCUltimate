@@ -26,7 +26,7 @@ gamerule doInsomnia false
 gamerule playersSleepingPercentage 150
 gamerule doVinesSpread false
 defaultgamemode survival
-weather clear 1
+weather clear
 difficulty hard
 time set day
 
@@ -39,6 +39,12 @@ execute align xz unless entity f-f-f-f-f run summon armor_stand ~ 150 ~ {CustomN
 
 execute align xz run summon marker ~.5 -63 ~.5 {CustomName: {text: "✘", color: "dark_red"}, UUID: [I; 0, 0, 0, 0], Tags: ["book", "carry"]}
 execute align xz run summon marker ~.5 -63 ~.5 {CustomName: {text: "✔", color: "green"}, UUID: [I; 0, 0, 0, 1], Tags: ["book", "carry"]}
+execute align xz run summon marker ~.5 -64 ~.5 {CustomName: {translate: "options.difficulty.peaceful", color: "gray"}, UUID: [I; 0, 0, 0, 2], Tags: ["difficulty"]}
+execute align xz run summon marker ~.5 -64 ~.5 {CustomName: {translate: "options.difficulty.easy", color: "green"}, UUID: [I; 0, 0, 0, 3], Tags: ["difficulty"]}
+execute align xz run summon marker ~.5 -64 ~.5 {CustomName: {translate: "options.difficulty.normal", color: "yellow"}, UUID: [I; 0, 0, 0, 4], Tags: ["difficulty"]}
+execute align xz run summon marker ~.5 -64 ~.5 {CustomName: {translate: "options.difficulty.hard", color: "red"}, UUID: [I; 0, 0, 0, 5], Tags: ["difficulty"]}
+execute align xz run summon marker ~.5 -64 ~.5 {Tags: ["gh", "carry"], CustomName: {text: "標準", color: "dark_purple"}, UUID: [I; 0, 0, 0, 6]}
+execute align xz run summon marker ~.5 -64 ~.5 {Tags: ["gh", "carry"], CustomName: {text: "快速", color: "dark_purple"}, UUID: [I; 0, 0, 0, 7]}
 
 execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["mode", "m1"], CustomName: {text: "漸縮", color: "red"}, UUID: [I; 0, 0, 0, 6]}
 execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["mode", "m2"], CustomName: {text: "競技場", color: "red"}, UUID: [I; 0, 0, 0, 7]}
@@ -53,8 +59,6 @@ execute at 0-0-0-0-1 run summon armor_stand ~ 319 ~ {Tags: ["move"], Invisible: 
 execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["weather", "w1", "carry"], CustomName: {text: "晴朗", color: "dark_gray"}, UUID: [I; 0, 0, 0, 13]}
 execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["weather", "w2", "carry"], CustomName: {text: "下雨", color: "dark_gray"}, UUID: [I; 0, 0, 0, 14]}
 execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["weather", "w3", "carry"], CustomName: {text: "雷暴", color: "dark_gray"}, UUID: [I; 0, 0, 0, 15]}
-execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["gh", "g1", "carry"], CustomName: {text: "標準", color: "dark_purple"}, UUID: [I; 0, 0, 0, 16]}
-execute at 0-0-0-0-1 run summon marker ~ ~ ~ {Tags: ["gh", "g2", "carry"], CustomName: {text: "快速", color: "dark_purple"}, UUID: [I; 0, 0, 0, 17]}
 execute at 0-0-0-0-1 run summon marker ~ 151 ~ {Tags: ["set"], UUID: [I; 0, 0, 0, 18]}
 
 #set initial supplies
@@ -88,6 +92,7 @@ scoreboard objectives add timer dummy
 scoreboard objectives add timer_sec dummy {text: "秒計時器"}
 scoreboard objectives add timer_min dummy {text: "分計時器"}
 #### book1 ##########################################################
+scoreboard objectives add difficulty dummy "遊戲難度"
 scoreboard objectives add diff dummy {text: "遊戲難度"}
 scoreboard objectives add slow_fall dummy {text: "緩降(active low)"}
 scoreboard objectives add friend_fire dummy {text: "同隊傷害"}
@@ -258,6 +263,10 @@ scoreboard players set #start_second timer 10
 scoreboard players set 00000000-0000-0000-0000-000000000001 timer_sec 11
 scoreboard players set 00000000-0000-0000-0000-000000000001 timer_min -1
 #### book1 ##########################################################
+scoreboard players set 00000000-0000-0000-0000-000000000002 difficulty 0
+scoreboard players set 00000000-0000-0000-0000-000000000003 difficulty 1
+scoreboard players set 00000000-0000-0000-0000-000000000004 difficulty 2
+scoreboard players set 00000000-0000-0000-0000-000000000005 difficulty 3
 scoreboard players set 00000000-0000-0000-0000-000000000001 diff 3
 scoreboard players set 00000000-0000-0000-0000-000000000000 slow_fall 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 slow_fall 1
@@ -271,8 +280,8 @@ scoreboard players set 00000000-0000-0000-0000-000000000000 name_health 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 name_health 1
 scoreboard players set 00000000-0000-0000-0000-000000000000 gold_head 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 gold_head 1
-scoreboard players set 00000000-0000-0000-0000-000000000010 gh_mode 1
-scoreboard players set 00000000-0000-0000-0000-000000000011 gh_mode 0
+scoreboard players set 00000000-0000-0000-0000-000000000006 gh_mode 1
+scoreboard players set 00000000-0000-0000-0000-000000000007 gh_mode 0
 scoreboard players set 00000000-0000-0000-0000-000000000000 night_vision 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 night_vision 0
 scoreboard players set 00000000-0000-0000-0000-000000000000 advance_announce 0
@@ -283,8 +292,8 @@ scoreboard players set 00000000-0000-0000-0000-000000000000 invisible 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 invisible 0
 #### book2 ##########################################################
 scoreboard players set 00000000-0000-0000-0000-000000000001 nether_open 0
-scoreboard players set @e[tag=assist] nether_open 1
-scoreboard players set 00000000-0000-0000-0000-000000000001 nether_time 80
+scoreboard players set 00000000-0000-0000-0000-000000000000 nether_open 1
+scoreboard players set #nether_time nether_open 80
 scoreboard players set 00000000-0000-0000-0000-000000000001 betray 0
 scoreboard players set @e[tag=assist] betray 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 betray_time 50

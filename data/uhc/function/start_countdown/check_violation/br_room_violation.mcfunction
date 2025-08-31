@@ -8,5 +8,4 @@
 #########################################################
 
 tellraw @a[gamemode=creative] ["", {text: "UHCU >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "請勿同時開啟隨機縮圈模式與決戰房間!!", color: "gold"}]
-
-setblock ~ ~ ~ air replace
+return 100

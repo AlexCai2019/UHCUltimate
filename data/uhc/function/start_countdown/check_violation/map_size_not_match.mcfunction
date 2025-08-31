@@ -8,5 +8,4 @@
 #########################################################
 
 tellraw @a[gamemode=creative] ["", {text: "UHCU >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "若要開啟隨機縮圈模式，地圖大小至多為1008格!!", color: "gold"}]
-
-setblock ~ ~ ~ air
+return 100

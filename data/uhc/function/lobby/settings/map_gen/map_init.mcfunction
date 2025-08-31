@@ -14,8 +14,8 @@ bossbar set uhc:read_progress value 0
 bossbar set uhc:read_progress players @a
 bossbar set uhc:read_progress visible true
 
-execute as @a[tag=read_map, predicate=uhc:riding] run ride @s dismount
-tp @a[tag=read_map] ~16 128 ~
+ride @s dismount
+tp @s ~16 128 ~
 scoreboard players add #x_chunk border 1
 scoreboard players set #read_map_state border 1
 

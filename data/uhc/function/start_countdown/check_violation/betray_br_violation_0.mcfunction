@@ -8,5 +8,4 @@
 #########################################################
 
 tellraw @a[gamemode=creative] ["", {text: "UHCU >>> ", color: "gray"}, {text: "ERROR!", color: "dark_red"}, " | ", {text: "背叛者傳送時間需早於邊界漸縮啟動時間!!", color: "gold"}]
-
-setblock ~ ~ ~ air
+return 100

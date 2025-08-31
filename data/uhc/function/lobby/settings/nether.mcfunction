@@ -7,14 +7,10 @@
 # func    : Adjust nether settings.
 #########################################################
 
-execute if entity @a[scores={book=31}] run scoreboard players add @e[tag=book] nether_open 1
-execute if entity @a[scores={book=32}] run scoreboard players remove @s nether_time 10
-execute if entity @a[scores={book=33}] run scoreboard players add @s nether_time 10
+execute if score @s book matches 25 run scoreboard players remove #nether_time nether_open 10
+execute if score @s book matches 26 run scoreboard players add #nether_time nether_open 10
 
-scoreboard players set @e[tag=book, scores={nether_open=2..}] nether_open 0
-scoreboard players set @s[scores={nether_time=121..}] nether_time 40
-scoreboard players set @s[scores={nether_time=..39}] nether_time 120
+execute if score #nether_time nether_open matches 121.. run scoreboard players set #nether_time nether_open 40
+execute if score #nether_time nether_open matches ..39 run scoreboard players set #nether_time nether_open 120
 
-execute if entity @a[scores={book=31}] if score @s nether_open matches 1 run tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {text: "設定", color: "aqua"}, {text: " | ", color: "white"}, {text: "開放地獄", color: "gold"}, {text: " | ", color: "white"}, {text: "開啟", color: "green"}]}
-execute if entity @a[scores={book=31}] if score @s nether_open matches 0 run tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {text: "設定", color: "aqua"}, {text: " | ", color: "white"}, {text: "開放地獄", color: "gold"}, {text: " | ", color: "white"}, {text: "關閉", color: "red"}]}
-execute if entity @a[scores={book=32..33}] if score @s nether_open matches 1 run tellraw @a {text: "", "extra": [{text: "UHCE >>> ", color: "gray"}, {text: "設定", color: "aqua"}, {text: " | ", color: "white"}, {text: "地獄關閉時間", color: "gold"}, {text: " | ", color: "white"}, {score: {name: "00000000-0000-0000-0000-000000000001", objective: "nether_time"}, color: "yellow"}, {text: "分鐘", color: "yellow"}]}
+execute if score 00000000-0000-0000-0000-000000000001 nether_open matches 1 run tellraw @a ["", {text: "UHCU >>> ", color: "gray"}, {text: "設定", color: "aqua"}, " | ", {text: "地獄關閉時間", color: "gold"}, " | ", {score: {name: "00000000-0000-0000-0000-000000000001", objective: "nether_time"}, color: "yellow", extra: ["分鐘"]}]

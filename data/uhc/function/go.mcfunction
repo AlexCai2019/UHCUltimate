@@ -13,28 +13,30 @@ clear @a
 xp set @a 0 points
 xp set @a 0 levels
 advancement revoke @a everything
+title @a title [{text: ">>> ", color: "dark_gray"}, {text: "戰鬥開始", color: "red"}, " <<<"]
 
-#kill vehicle
-#execute at @a[predicate=uhc:riding] run kill @e[type=#uhc:rideable, distance=..1.2]
+#清理隊伍
+function uhc:starting/clean_team/root
+
+#gamemode
+gamemode survival @a[team=!spec]
+gamemode spectator @a[team=spec]
+
+#dismount
 execute as @a run ride @s dismount
 
 #initial supply
-execute if score @s init_supply matches 1 at @s as @a[team=!spec] run function uhc:apply/init_items
+execute as 0-0-0-0-1 if score @s init_supply matches 1 at @s as @a[team=!spec] run function uhc:apply/init_items
 
 #give effect
 effect give @a instant_health 1 9 true
 effect give @a[team=!spec] resistance 40 9 true
 effect give @a[team=!spec] hunger 15 3 true
 effect give @a[team=spec] night_vision infinite 0 true
-execute if score @s spec_permission matches 0 run effect give @a[team=spec] blindness infinite 0 true
+execute if score 00000000-0000-0000-0000-000000000001 spec_permission matches 0 run effect give @a[team=spec] blindness infinite 0 true
 #move to start_countdown
-#execute if score @s slow_fall matches 0 run effect give @a levitation 1 55 true
-execute if score @s slow_fall matches 0 run effect give @a slow_falling 30 0 true
-execute if score @s invisible matches 1 run effect give @a invisibility 600 0 true
-
-#gamemode
-gamemode survival @a[team=!spec]
-gamemode spectator @a[team=spec]
+execute if score 00000000-0000-0000-0000-000000000001 slow_fall matches 0 run effect give @a slow_falling 30 0 true
+execute if score 00000000-0000-0000-0000-000000000001 invisible matches 1 run effect give @a invisibility 600 0 true
 
 #gamerule
 gamerule naturalRegeneration false
@@ -48,7 +50,7 @@ gamerule doTraderSpawning true
 gamerule doInsomnia true
 gamerule doLimitedCrafting true
 time set day
-weather thunder 1
+weather clear
 
 #information
 scoreboard players reset 人數 information
@@ -69,7 +71,7 @@ execute if score @s friend_push matches 0 run function uhc:apply/friend_push
 execute if score @s tab_health matches 1 run scoreboard objectives setdisplay list health
 
 #book settings --- belowName health
-execute if score @s name_health matches 1 run scoreboard objectives setdisplay belowName health
+execute if score @s name_health matches 1 run scoreboard objectives setdisplay below_name health
 
 #book settings --- advancement announce
 execute if score @s advance_announce matches 1 run gamerule announceAdvancements true
@@ -114,7 +116,7 @@ execute at @s run fill ~-8 150 ~-8 ~7 160 ~7 air
 execute if score @s betray matches 0 at @s run fill ~-9 149 ~-9 ~8 160 ~8 air
 tp @s 00000000-0000-0000-0000-000000000002
 kill f-f-f-f-f
-kill @e[tag=lottery]
+kill @e[type=armor_stand, tag=lottery]
 execute as @e[tag=bee] at @s run tp @s ~ -200 ~
 kill @e[tag=nether]
 execute as @e[tag=piglin] at @s run tp @s ~ -200 ~
@@ -146,14 +148,13 @@ scoreboard players set @a stone_penalty_d 0
 tag @a add game_start
 execute if score 00000000-0000-0000-0000-000000000001 rand_silverfish matches 1 run tag @a add silverfish
 execute if score 00000000-0000-0000-0000-000000000001 rand_apple matches 1 run tag @a add lucky_leaves
-execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if score 00000000-0000-0000-0000-000000000010 gh_mode matches 1 run tag @a add gold_head_normal
 execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 0 run recipe take @a uhc:gold_head
-execute if score 00000000-0000-0000-0000-000000000010 gh_mode matches 0 run recipe take @a uhc:gold_head
-execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if score 00000000-0000-0000-0000-000000000011 gh_mode matches 1 run tag @a add gold_head_fast
+execute if score 00000000-0000-0000-0000-000000000006 gh_mode matches 0 run recipe take @a uhc:gold_head
+execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if score 00000000-0000-0000-0000-000000000007 gh_mode matches 1 run tag @a add gold_head_fast
 execute if score 00000000-0000-0000-0000-000000000001 pearl_tear matches 1 run tag @a add pearl_tear
 
 #notifier
-scoreboard players operation @s nether_notifier = @s nether_time
+scoreboard players operation @s nether_notifier = #nether_time nether_open
 scoreboard players operation @s nether_notifier -= const5 V
 scoreboard players operation @s gnd_notifier = @s ground_time
 scoreboard players operation @s gnd_notifier -= const5 V
@@ -210,16 +211,16 @@ execute store result score @s posX run data get entity 00000000-0000-0000-0000-0
 execute store result score @s posZ run data get entity 00000000-0000-0000-0000-000000000009 Pos[2]
 
 #remain team number record
-execute store result score 剩餘隊伍 information run execute if entity @e[tag=ref]
+execute store result score 剩餘隊伍 information if entity @e[tag=ref]
 
 #random chest
-execute if score @s random_chest matches 1 run function uhc:apply/random_chest 
+execute if score @s random_chest matches 1 run function uhc:apply/random_chest
 
 #next stage
 scoreboard players set @s state 2
 
 #information
-execute store result score 剩餘人數 information run execute if entity @a[team=!spec, gamemode=survival]
+execute store result score 剩餘人數 information if entity @a[team=!spec, gamemode=survival]
 
 #start timing
 #execute at @e[tag=assist] run summon area_effect_cloud ~ ~ ~ {Tags: [min], Age:-1201, Particle: "block air"}

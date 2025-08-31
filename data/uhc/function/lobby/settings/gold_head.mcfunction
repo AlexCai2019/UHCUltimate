@@ -7,7 +7,5 @@
 # func    : Adjust gold_head.
 #########################################################
 
-scoreboard players operation 00000000-0000-0000-0000-000000000010 gh_mode >< 00000000-0000-0000-0000-000000000011 gh_mode
-
-execute if score 00000000-0000-0000-0000-000000000010 gh_mode matches 1 run return run tellraw @a [{text: "UHCU >>> ", color: "gray"}, {text: "設定", color: "aqua"}, " | ", {text: "金頭顱模式", color: "gold"}, " | ", {text: "標準", color: "light_purple"}]
-tellraw @a [{text: "UHCU >>> ", color: "gray"}, {text: "設定", color: "aqua"}, " | ", {text: "金頭顱模式", color: "gold"}, " | ", {text: "快速", color: "light_purple"}]
+scoreboard players operation 00000000-0000-0000-0000-000000000006 gh_mode >< 00000000-0000-0000-0000-000000000006 gh_mode
+tellraw @a ["", {text: "UHCU >>> ", color: "gray"}, {text: "設定", color: "aqua"}, " | ", {text: "金頭顱模式", color: "gold"}, " | ", {selector: "@e[type=marker, tag=gh, scores={gh_mode=1}]"}]

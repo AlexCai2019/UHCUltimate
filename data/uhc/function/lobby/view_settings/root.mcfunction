@@ -23,10 +23,7 @@ function uhc:lobby/view_settings/boolean {objective: "slow_fall", name: "隨機�
 #book1
 tellraw @s {text: "-------------------------------", color: "aqua"}
 #difficulty
-execute if score 00000000-0000-0000-0000-000000000001 diff matches 0 run tellraw @s ["", {text: "遊戲難度", color: "gold"}, " | ", {translate: "options.difficulty.peaceful", color: "light_purple"}]
-execute if score 00000000-0000-0000-0000-000000000001 diff matches 1 run tellraw @s ["", {text: "遊戲難度", color: "gold"}, " | ", {translate: "options.difficulty.easy", color: "light_purple"}]
-execute if score 00000000-0000-0000-0000-000000000001 diff matches 2 run tellraw @s ["", {text: "遊戲難度", color: "gold"}, " | ", {translate: "options.difficulty.normal", color: "light_purple"}]
-execute if score 00000000-0000-0000-0000-000000000001 diff matches 3 run tellraw @s ["", {text: "遊戲難度", color: "gold"}, " | ", {translate: "options.difficulty.hard", color: "light_purple"}]
+tellraw @s ["", {text: "遊戲難度", color: "gold"}, " | ", {selector: "@e[type=marker, tag=difficulty, scores={difficulty=3}]"}]
 #friend fire
 function uhc:lobby/view_settings/boolean {objective: "friend_fire", name: "同隊傷害"}
 #friend push
@@ -36,8 +33,7 @@ function uhc:lobby/view_settings/boolean {objective: "tab_health", name: "tab顯
 #name health
 function uhc:lobby/view_settings/boolean {objective: "name_health", name: "名條顯示血量"}
 #golden head
-execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if score 00000000-0000-0000-0000-000000000010 gh_mode matches 1 run tellraw @s ["", {text: "金頭顱模式", color: "gold"}, " | ", {translate: "options.on", color: "green"}, " | ", {text: "標準", color: "light_purple"}]
-execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 if score 00000000-0000-0000-0000-000000000011 gh_mode matches 1 run tellraw @s ["", {text: "金頭顱模式", color: "gold"}, " | ", {translate: "options.on", color: "green"}, " | ", {text: "快速", color: "light_purple"}]
+execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 1 run tellraw @s ["", {text: "金頭顱模式", color: "gold"}, " | ", {translate: "options.on", color: "green"}, " | ", {selector: "@e[type=marker, tag=gh, scores={gh_mode=1}]"}]
 execute if score 00000000-0000-0000-0000-000000000001 gold_head matches 0 run tellraw @s ["", {text: "金頭顱模式", color: "gold"}, " | ", {translate: "options.off", color: "red"}]
 #night vision
 function uhc:lobby/view_settings/boolean {objective: "night_vision", name: "夜視效果"}
