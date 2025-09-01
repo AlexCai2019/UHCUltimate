@@ -25,16 +25,16 @@ execute if score @s[scores={betray=1}] timer_min >= @s betray_notifier if score 
 execute if score @s[scores={betray=1}] timer_min >= #betray_tp betray run function uhc:gameloop/event/betray/teleport
 
 #border mode --- shrink
-execute if score @s[scores={border_on=1}] timer_min >= #border_start border if entity @e[tag=m1, scores={border_mode=1}] run function uhc:gameloop/event/shrink_start
+execute if score @s[scores={border_on=1}] timer_min >= #border_start border if score 00000000-0000-0000-0000-000000000008 border matches 2 run function uhc:gameloop/event/shrink_start
 
 #border mode --- shrink end
-execute if score @s[scores={border_on=2}] timer_min >= @s border_move if entity @e[tag=m1, scores={border_mode=1}] run function uhc:gameloop/event/shrink_end
-
-#border mode --- arena
-execute if score @s[scores={border_on=1}] timer_min >= #border_start border if entity @e[tag=m2, scores={border_mode=1}] run function uhc:gameloop/event/arena
+execute if score @s[scores={border_on=2}] timer_min >= #border_move border if score 00000000-0000-0000-0000-000000000008 border matches 2 run function uhc:gameloop/event/shrink_end
 
 #border mode --- battle royale
-execute if score @s[scores={border_on=1}] timer_min >= #border_start border if entity @e[tag=m3, scores={border_mode=1}] run function uhc:gameloop/event/battle_royale/br_controller
+execute if score @s[scores={border_on=1}] timer_min >= #border_start border if score 00000000-0000-0000-0000-000000000009 border matches 2 run function uhc:gameloop/event/battle_royale/br_controller
+
+#border mode --- arena
+execute if score @s[scores={border_on=1}] timer_min >= #border_start border if score 00000000-0000-0000-0000-00000000000a border matches 2 run function uhc:gameloop/event/arena
 
 #time stop
 execute if score @s[scores={day_stop=1}] timer_min >= @s day_time run function uhc:gameloop/event/day

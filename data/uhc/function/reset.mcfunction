@@ -65,9 +65,6 @@ scoreboard objectives remove exchange
 scoreboard objectives remove exchange_time
 scoreboard objectives remove advance_announce
 scoreboard objectives remove border_on
-scoreboard objectives remove border_mode
-scoreboard objectives remove border_move
-scoreboard objectives remove border_end
 scoreboard objectives remove BR_cool_time
 scoreboard objectives remove BR_shrink_time
 scoreboard objectives remove day_stop

@@ -45,10 +45,9 @@ execute align xz run summon marker ~.5 -64 ~.5 {CustomName: {translate: "options
 execute align xz run summon marker ~.5 -64 ~.5 {CustomName: {translate: "options.difficulty.hard", color: "red"}, UUID: [I; 0, 0, 0, 5], Tags: ["difficulty"]}
 execute align xz run summon marker ~.5 -64 ~.5 {Tags: ["gh", "carry"], CustomName: {text: "標準", color: "dark_purple"}, UUID: [I; 0, 0, 0, 6]}
 execute align xz run summon marker ~.5 -64 ~.5 {Tags: ["gh", "carry"], CustomName: {text: "快速", color: "dark_purple"}, UUID: [I; 0, 0, 0, 7]}
-
-execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["mode", "m1"], CustomName: {text: "漸縮", color: "red"}, UUID: [I; 0, 0, 0, 6]}
-execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["mode", "m2"], CustomName: {text: "競技場", color: "red"}, UUID: [I; 0, 0, 0, 7]}
-execute at 0-0-0-0-1 run summon marker ~1 ~ ~ {Tags: ["mode", "m3", "carry"], CustomName: {text: "隨機縮圈", color: "red"}, UUID: [I; 0, 0, 0, 8]}
+execute align xz run summon marker ~.5 -64 ~.5 {Tags: ["mode", "m1"], CustomName: {text: "漸縮", color: "red"}, UUID: [I; 0, 0, 0, 8]}
+execute align xz run summon marker ~.5 -64 ~.5 {Tags: ["mode", "m3", "carry"], CustomName: {text: "隨機縮圈", color: "red"}, UUID: [I; 0, 0, 0, 9]}
+execute align xz run summon marker ~.5 -64 ~.5 {Tags: ["mode", "m2"], CustomName: {text: "競技場", color: "red"}, UUID: [I; 0, 0, 0, 10]}
 #===
 execute at 0-0-0-0-1 run summon marker ~ ~ ~1 {Tags: ["sub2", "pause", "p1", "carry"], CustomName: {text: "永晝", color: "gold"}, UUID: [I; 0, 0, 0, 5]}
 execute at 0-0-0-0-1 run summon marker ~ ~ ~1 {Tags: ["pause", "p2", "carry"], CustomName: {text: "永夜", color: "gold"}, UUID: [I; 0, 0, 0, 6]}
@@ -72,7 +71,7 @@ execute at 0-0-0-0-1 run forceload add ~ ~
 
 #construct lobby
 execute at 0-0-0-0-1 run place template uhc:lobby_v7 ~-9 ~-1 ~-9
-execute at 0-0-0-0-1 run setblock ~3 ~1 ~7 oak_wall_sign[facing=north]{front_text: {has_glowing_text: true, color: "white", messages: ["", {text: "初始物資"}, "", ""]}, is_waxed: true}
+execute at 0-0-0-0-1 run setblock ~3 ~1 ~7 oak_wall_sign[facing=north]{front_text: {has_glowing_text: true, color: "white", messages: ["", "初始物資", "", ""]}, is_waxed: true}
 
 #scoreboard creat
 #### state #########################################################
@@ -119,9 +118,6 @@ scoreboard objectives add exchange_time dummy {text: "礦物交換冷卻"}
 scoreboard objectives add advance_announce dummy {text: "成就通知"}
 #### book3 ##########################################################
 scoreboard objectives add border_on dummy {text: "啟動邊界模式"}
-scoreboard objectives add border_mode dummy {text: "邊界模式"}
-scoreboard objectives add border_move dummy {text: "收縮持續時間"}
-scoreboard objectives add border_end dummy {text: "邊界最終大小"}
 scoreboard objectives add BR_cool_time dummy {text: "隨機縮圈冷卻時間"}
 scoreboard objectives add BR_shrink_time dummy {text: "隨機縮圈收縮時間"}
 scoreboard objectives add day_stop dummy {text: "日夜暫停"}
@@ -295,30 +291,24 @@ scoreboard players set #betray_time betray 50
 scoreboard players set #betray_tp betray 60
 scoreboard players set #betray_num betray 3
 scoreboard players set 00000000-0000-0000-0000-000000000001 stew_get 0
-scoreboard players set @e[tag=assist] stew_get 1
+scoreboard players set 00000000-0000-0000-0000-000000000000 stew_get 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 potion_brew 0
-scoreboard players set @e[tag=assist] potion_brew 1
-#scoreboard players set 00000000-0000-0000-0000-000000000001 potion_regen 0
-#scoreboard players set @e[tag=assist] potion_regen 1
-#scoreboard players set 00000000-0000-0000-0000-000000000001 potion_reinforce 0
-#scoreboard players set @e[tag=assist] potion_reinforce 1
-#scoreboard players set 00000000-0000-0000-0000-000000000001 potion_turtle 0
-#scoreboard players set @e[tag=assist] potion_turtle 1
+scoreboard players set 00000000-0000-0000-0000-000000000000 potion_brew 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 notch_apple 0
-scoreboard players set @e[tag=assist] notch_apple 1
+scoreboard players set 00000000-0000-0000-0000-000000000000 notch_apple 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 cut_clean 0
-scoreboard players set @e[tag=assist] cut_clean 1
+scoreboard players set 00000000-0000-0000-0000-000000000000 cut_clean 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 exchange 0
-scoreboard players set @e[tag=assist] exchange 1
+scoreboard players set 00000000-0000-0000-0000-000000000000 exchange 1
 #### book3 ##########################################################
-scoreboard players set 00000000-0000-0000-0000-000000000001 border_on 1
-scoreboard players set @e[tag=assist] border_on 0
-scoreboard players set @e[tag=m1] border_mode 0
-scoreboard players set @e[tag=m2] border_mode 2
-scoreboard players set @e[tag=m3] border_mode 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 border 1
+scoreboard players set 00000000-0000-0000-0000-000000000000 border 0
+scoreboard players set 00000000-0000-0000-0000-000000000008 border 2
+scoreboard players set 00000000-0000-0000-0000-000000000009 border 1
+scoreboard players set 00000000-0000-0000-0000-00000000000a border 0
 scoreboard players set #border_start border 70
-scoreboard players set 00000000-0000-0000-0000-000000000001 border_move 30
-scoreboard players set 00000000-0000-0000-0000-000000000001 border_end 16
+scoreboard players set #border_move border 30
+scoreboard players set #border_end border 16
 scoreboard players set 00000000-0000-0000-0000-000000000001 BR_cool_time 2
 scoreboard players set 00000000-0000-0000-0000-000000000001 BR_shrink_time 5
 scoreboard players set 00000000-0000-0000-0000-000000000001 day_stop 1

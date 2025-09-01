@@ -65,8 +65,8 @@ function uhc:lobby/view_settings/boolean {objective: "exchange", name: "礦物�
 #book3
 tellraw @s {text: "-------------------------------", color: "aqua"}
 #border mode
-execute if score 00000000-0000-0000-0000-000000000001 border_on matches 1 run function uhc:lobby/view_settings/border_on
-execute if score 00000000-0000-0000-0000-000000000001 border_on matches 0 run tellraw @s ["", {text: "特殊邊界模式", color: "gold"}, " | ", {translate: "options.off", color: "red"}]
+execute if score 00000000-0000-0000-0000-000000000001 border matches 1 run function uhc:lobby/view_settings/border_on
+execute if score 00000000-0000-0000-0000-000000000001 border matches 0 run tellraw @s ["", {text: "特殊邊界模式", color: "gold"}, " | ", {translate: "options.off", color: "red"}]
 #time stop
 execute if score 00000000-0000-0000-0000-000000000001 day_stop matches 1 if score 00000000-0000-0000-0000-000000000005 day_mode matches 1 run tellraw @s ["", {text: "日夜暫停", color: "gold"}, " | ", {translate: "options.on", color: "green"}, " | ", {text: "狀態", color: "gold"}, " | ", {text: "永晝", color: "light_purple"}, " | ", {text: "啟動時間", color: "gold"}, " | ", {score: {name: "00000000-0000-0000-0000-000000000001", objective: "day_time"}, color: "yellow", extra: ["分鐘"]}]
 execute if score 00000000-0000-0000-0000-000000000001 day_stop matches 1 if score 00000000-0000-0000-0000-000000000006 day_mode matches 1 run tellraw @s ["", {text: "日夜暫停", color: "gold"}, " | ", {translate: "options.on", color: "green"}, " | ", {text: "狀態", color: "gold"}, " | ", {text: "永夜", color: "light_purple"}, " | ", {text: "啟動時間", color: "gold"}, " | ", {score: {name: "00000000-0000-0000-0000-000000000001", objective: "day_time"}, color: "yellow", extra: ["分鐘"]}]

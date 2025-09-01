@@ -101,7 +101,11 @@ execute if score @s book matches 38 run function uhc:lobby/settings/boolean {obj
 #### fourth book (book3) ##########################################################################################################################
 
 #book = 43 ~ 51, border settings
-execute if score @s book matches 43..51 run function uhc:lobby/settings/border_mode
+execute if score @s book matches 39 run function uhc:lobby/settings/boolean {objective: "border", name: "特殊邊界模式"}
+execute if score @s book matches 40 run function uhc:lobby/settings/border_mode
+execute if score @s book matches 41..42 run function uhc:lobby/settings/border_start
+execute if score @s book matches 43..44 run function uhc:lobby/settings/border_end
+execute if score @s book matches 45..46 run function uhc:lobby/settings/border_move
 
 #book = 66 ~ 67, battle royale time interval
 execute if score @s book matches 66..69 run function uhc:lobby/settings/br_interval
